@@ -4,3 +4,4 @@ draw.mvg
 map.png
 winframe.lua
 lupa/
+__pycache__/
