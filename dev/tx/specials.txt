@@ -1,0 +1,14 @@
+254/254:202>
+look
+Edge of a pit (n,s,enter)
+0
+254/254:202>
+jump down
+You jump down into the pit.
+Bottom of the pit (u)
+0
+254/254:202>
+u
+Edge of a pit (n,s,enter)
+0
+254/254:202>

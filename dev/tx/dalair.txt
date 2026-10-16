@@ -1,0 +1,80 @@
+254/254:202>
+look
+You are on Mane Street, an unpaved road which has the dubious distinction of
+being the principal avenue of Dalair.  Rudely constructed shacks are to
+either side.  To the south you can see the south gate.  The street continues
+north. There is a closed oak door leading east and a closed pine door leading
+west.
+ Obvious directions are:
+  north, south.
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+west
+The pine door is closed.
+0
+254/254:202>
+north
+You find yourself in Senter Plaza, the central crossroads and chief market
+place for the city of Dalair.  A statue carved out of wood stands silently on
+a mound in the center of the plaza, surrounded by the dirty blankets of
+kobold and orcish merchants noisily hawking their wares.  A small pen
+contains loudly complaining livestock.  Streets lead to the north, south,
+east and west. 
+ Obvious directions are:
+  north, east, south, west.
+A cow.
+A goat.
+0
+254/254:202>
+south
+You are on Mane Street, an unpaved road which has the dubious distinction of
+being the principal avenue of Dalair.  Rudely constructed shacks are to
+either side.  To the south you can see the south gate.  The street continues
+north. There is a closed oak door leading east and a closed pine door leading
+west.
+ Obvious directions are:
+  north, south.
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+Papergoblin arrives.
+The papergoblin asks you, "Buy a newspaper, mister?"
+o w
+You open the pine door.
+0
+254/254:202>
+west
+You are in a slovenly hovel built of rough wooden planks.  A small firepit is
+in the center of the dirt floor, surrounded by a few crude wooden stools.
+There is an open pine door leading east.
+ The only obvious exit is east.
+A hobgoblin.
+A goblin.
+0
+254/254:202>
+close w
+Close what?
+0
+254/254:202>
+l
+You are in a slovenly hovel built of rough wooden planks.  A small firepit is
+in the center of the dirt floor, surrounded by a few crude wooden stools.
+There is an open pine door leading east.
+ The only obvious exit is east.
+A hobgoblin.
+A goblin.
+0
+254/254:202>
+close e
+You close the pine door.
+0
+254/254:202>
+l
+You are in a slovenly hovel built of rough wooden planks.  A small firepit is
+in the center of the dirt floor, surrounded by a few crude wooden stools.
+There is a closed pine door leading east.
+A hobgoblin.
+A goblin.
+0
+254/254:202>

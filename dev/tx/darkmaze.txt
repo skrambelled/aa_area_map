@@ -1,0 +1,343 @@
+254/254:202>
+X:[-6]Y:[26]
+north
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+west
+Harkke's Portal (e)
+0
+254/254:202>
+X:[-6]Y:[26]
+ep
+You take a deep breath and plunge through the pulsating portal.
+Outside a strange portal (n,e,s,w)
+0
+254/254:202>
+X:[-6]Y:[26]
+west
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-7]Y:[26]
+west
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-8]Y:[26]
+west
+Light and pleasant forest (n,e,s)
+0
+254/254:202>
+X:[-9]Y:[26]
+east
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-8]Y:[26]
+north
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-8]Y:[27]
+south
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-8]Y:[26]
+east
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-7]Y:[26]
+east
+Outside a strange portal (n,e,s,w)
+0
+254/254:202>
+X:[-6]Y:[26]
+east
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-5]Y:[26]
+east
+Light and pleasant forest (n,e,s,w)
+An owl.
+0
+254/254:202>
+X:[-4]Y:[26]
+west
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-5]Y:[26]
+west
+Outside a strange portal (n,e,s,w)
+0
+254/254:202>
+X:[-6]Y:[26]
+ep
+You enter the portal and find yourself in a strange place.
+Harkke's Portal (e)
+0
+254/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+south
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+north
+There is no such exit.
+0
+254/254:202>
+X:[-6]Y:[26]
+north
+You do not think you can go there.
+0
+254/254:202>
+X:[-6]Y:[26]
+north
+Maybe you should look for another exit.
+0
+254/254:202>
+X:[-6]Y:[26]
+north
+What?
+0
+254/254:202>
+X:[-6]Y:[26]
+south
+You do not think you can go there.
+0
+254/254:202>
+X:[-6]Y:[26]
+east
+There is no such exit.
+0
+254/254:202>
+X:[-6]Y:[26]
+ne
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+south
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+west
+There is no such exit.
+0
+254/254:202>
+X:[-6]Y:[26]
+west
+You do not think you can go there.
+0
+254/254:202>
+X:[-6]Y:[26]
+south
+You do not think you can go there.
+0
+254/254:202>
+X:[-6]Y:[26]
+west
+You do not think you can go there.
+0
+254/254:202>
+X:[-6]Y:[26]
+north
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+sw
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+west
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+south
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+west
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+west
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+west
+You do not think you can go there.
+0
+254/254:202>
+X:[-6]Y:[26]
+south
+There is no such exit.
+0
+254/254:202>
+X:[-6]Y:[26]
+west
+There is no such exit.
+0
+254/254:202>
+X:[-6]Y:[26]
+south
+There is no such exit.
+0
+254/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+south
+What?
+0
+254/254:202>
+X:[-6]Y:[26]
+east
+Maybe you should look for another exit.
+0
+254/254:202>
+X:[-6]Y:[26]
+se
+Maybe you should look for another exit.
+0
+254/254:202>
+X:[-6]Y:[26]
+ne
+You do not think you can go there.
+0
+254/254:202>
+X:[-6]Y:[26]
+east
+What?
+0
+254/254:202>
+X:[-6]Y:[26]
+south
+What?
+0
+254/254:202>
+X:[-6]Y:[26]
+west
+sw
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+You do not think you can go there.
+0
+254/254:202>
+X:[-6]Y:[26]
+sw
+You do not think you can go there.
+0
+254/254:202>
+X:[-6]Y:[26]
+south
+There is no such exit.
+0
+254/254:202>
+X:[-6]Y:[26]
+se
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+east
+There is no such exit.
+0
+254/254:202>
+X:[-6]Y:[26]
+west
+nw
+west
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+There is no such exit.
+0
+254/254:202>
+X:[-6]Y:[26]
+nw
+You do not think you can go there.
+0
+254/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+north
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+north
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+west
+Harkke's Portal (e)
+0
+254/254:202>
+X:[-6]Y:[26]
+ep
+You take a deep breath and plunge through the pulsating portal.
+Outside a strange portal (n,e,s,w)
+0
+254/254:202>
+X:[-6]Y:[26]
+ep
+You enter the portal and find yourself in a strange place.
+Harkke's Portal (e)
+0
+254/254:202>
+X:[-6]Y:[26]
+ep
+You take a deep breath and plunge through the pulsating portal.
+Outside a strange portal (n,e,s,w)
+0
+254/254:202>
+X:[-6]Y:[26]

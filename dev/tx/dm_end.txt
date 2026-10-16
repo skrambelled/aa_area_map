@@ -1,0 +1,10 @@
+X:[-6]Y:[26]
+ep
+Harkke's Portal (e)
+X:[-6]Y:[26]
+east
+A dark room.
+X:[-6]Y:[26]
+south
+A dark room.
+X:[-6]Y:[26]

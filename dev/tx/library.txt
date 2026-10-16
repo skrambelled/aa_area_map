@@ -1,0 +1,39 @@
+254/254:202>
+look
+A hallway (e,w)
+0
+254/254:202>
+east
+A library (n,w)
+A cairn of stones with a gold monkstaff banner.
+A library pass.
+Buku, the librarian.
+0
+254/254:202>
+north
+The librarian stops you and says: Sorry, you may not enter the closed stacks
+                                  without a pass.
+0
+254/254:202>
+south
+Maybe you should look for another exit.
+0
+254/254:202>
+north
+The librarian stops you and says: Sorry, you may not enter the closed stacks
+                                  without a pass.
+0
+254/254:202>
+south
+What?
+0
+254/254:202>
+north
+The librarian stops you and says: Sorry, you may not enter the closed stacks
+                                  without a pass.
+0
+254/254:202>
+west
+A hallway (e,w)
+0
+254/254:202>

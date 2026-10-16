@@ -1,0 +1,67 @@
+254/254:202>
+amap irregular off
+look
+Main Street (n,s)
+0
+254/254:202>
+ep
+Harkke's Portal (e)
+0
+254/254:202>
+e
+Main Street (n,s)
+0
+254/254:202>
+alias
+cu         = climb up
+ep         = enter portal
+p          = peer
+A          = alias
+x          = >rlfb
+--More--(5/9)
+<enter>
+
+rlfb       = roll large fireball
+,          = >gc all
+gc         = get $* from cont
+flu        = do A x >rlfb, A c throw fb at opp, A 1 rescue tank1
+0
+254/254:202>
+nick
+cont       = large silk pack
+fb         = fireball
+opp        = opponent
+0
+254/254:202>
+n
+Trader Lane (n,s)
+0
+254/254:202>
+p north
+Bakery (s)
+0
+254/254:202>
+x
+You roll a large fireball.
+0
+254/254:202>
+flu
+0
+254/254:202>
+c
+You throw a fireball at the opponent.
+Bakery (s)
+0
+254/254:202>
+,
+You get everything from the large silk pack.
+0
+254/254:202>
+s
+Main Street (n,s)
+0
+254/254:202>
+ep
+Harkke's Portal (e)
+0
+254/254:202>

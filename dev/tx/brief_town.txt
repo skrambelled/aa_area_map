@@ -1,0 +1,111 @@
+254/254:202>
+west
+Main Street (n,e,s,w)
+A shimmering blue door.
+0
+254/254:202>
+west
+Main Street (e,w)
+0
+254/254:202>
+west
+Village Centre (n,e,s,w)
+A shimmering blue door.
+A young paperboy.
+0
+254/254:202>
+west
+Main Street (e,w)
+0
+254/254:202>
+west
+Trader Lane (n,e,s,w)
+A stone statue of Ire.
+A shimmering blue door.
+0
+254/254:202>
+west
+Main Street (n,e,s,w)
+A shimmering blue door.
+A handsome, white horse.
+A large coach.
+0
+254/254:202>
+north
+Ancient Inn of Tantallon (n,s)
+A player usage graph.
+0
+254/254:202>
+north
+At a cozy firepit (s)
+2024 Move Info Board.
+A shimmering blue door.
+0
+254/254:202>
+north
+What?
+0
+254/254:202>
+north
+There is no such exit.
+0
+254/254:202>
+south
+Ancient Inn of Tantallon (n,s)
+A player usage graph.
+0
+254/254:202>
+south
+Main Street (n,e,s,w)
+A shimmering blue door.
+A handsome, white horse.
+A large coach.
+0
+254/254:202>
+east
+Trader Lane (n,e,s,w)
+A stone statue of Ire.
+A shimmering blue door.
+0
+254/254:202>
+east
+Main Street (e,w)
+0
+254/254:202>
+east
+Village Centre (n,e,s,w)
+A shimmering blue door.
+A young paperboy.
+0
+254/254:202>
+east
+Main Street (e,w)
+0
+254/254:202>
+east
+Main Street (n,e,s,w)
+A shimmering blue door.
+0
+254/254:202>
+east
+East Village Crossroads (n,e,s,w)
+A forged scorpion.
+PrEcisiON the Unyielding Warrior of the Black Bear (good).
+A stone statue of Shadap.
+0
+254/254:202>
+east
+Rickety quay (e,w)
+A shimmering blue door.
+0
+254/254:202>
+east
+Harbour (n,s,w,d)
+A shimmering blue door.
+Dermott the fishmonger.
+0
+254/254:202>
+east
+Maybe you should look for another exit.
+0
+254/254:202>

@@ -1,0 +1,24 @@
+254/254:202>
+look
+Main Street (e,n,s,w)
+0
+254/254:202>
+chat $
+[Chat] Bashers: fill pouch (when outdoor)
+0
+254/254:202>
+pwho
+
+Players that are in no party:
+GRiXiS the Guardian of the House of Midiar (evil)
+Dara the inept spell fizzler (neutral), who is sitting
+0
+254/254:202>
+zap
+Calva the wandering vagrant (neutral)
+0
+254/254:202>
+e
+Maker's Forge (no exits)
+0
+254/254:202>

@@ -1,0 +1,40 @@
+254/254:202>
+look
+Corner A (n,e)
+0
+254/254:202>
+east
+Corner B (n,w)
+0
+254/254:202>
+north
+Corner C (s,w)
+0
+254/254:202>
+west
+Corner D (s,e)
+0
+254/254:202>
+south
+Corner A (n,e)
+0
+254/254:202>
+recall
+You pray and are whisked away.
+Corner C (s,w)
+0
+254/254:202>
+jump down
+You jump down into the pit.
+A dark pit (u)
+0
+254/254:202>
+u
+Corner C (s,w)
+0
+254/254:202>
+jump down
+You jump down into the pit.
+A dark pit (u)
+0
+254/254:202>

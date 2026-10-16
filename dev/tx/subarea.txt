@@ -1,0 +1,39 @@
+254/254:202>
+look
+Palace Gates (e,w)
+0
+254/254:202>
+w
+Palace Courtyard (e,n,w)
+0
+254/254:202>
+n
+Palace Gardens (s)
+0
+254/254:202>
+s
+Palace Courtyard (e,n,w)
+0
+254/254:202>
+e
+Palace Gates (e,w)
+0
+254/254:202>
+amap boundary w
+amap boundary
+w
+Palace Courtyard (e,n,w)
+0
+254/254:202>
+amap subarea Palace
+amap subarea
+e
+Palace Gates (e,w)
+0
+254/254:202>
+amap subarea
+w
+Palace Courtyard (e,n,w)
+0
+254/254:202>
+amap boundary e

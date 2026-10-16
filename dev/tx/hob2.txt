@@ -1,0 +1,678 @@
+254/254:202>
+X:[0]Y:[26]
+search
+north
+You search around for a while, but do not find anything interesting.
+0
+254/254:202>
+X:[0]Y:[26]
+The central road of Hobbitat (s,ne)
+0
+254/254:202>
+X:[0]Y:[26]
+north
+What?
+0
+254/254:202>
+X:[0]Y:[26]
+north
+Maybe you should look for another exit.
+0
+254/254:202>
+X:[0]Y:[26]
+north
+Maybe you should look for another exit.
+0
+254/254:202>
+X:[0]Y:[26]
+south
+A road running through the village (n,s)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+You walk south out of the village and leave the small valley. A big sign
+saying 'WELCOME BACK to Hobbitat' hangs over the gates.
+Round hills south of village (n,e,s,w)
+14 gold coins.
+0
+254/254:202>
+X:[0]Y:[25]
+south
+Light and pleasant forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[24]
+south
+Light and pleasant forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[23]
+north
+Light and pleasant forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[24]
+north
+Round hills south of village (n,e,s,w)
+14 gold coins.
+0
+254/254:202>
+X:[0]Y:[25]
+north
+You walk north into the small valley and enter the village. A big sign saying
+'WELCOME to Hobbitat' hangs over the gates.
+A road running through the village (n,s)
+0
+254/254:202>
+X:[0]Y:[26]
+north
+The central road of Hobbitat (s,ne)
+0
+254/254:202>
+X:[0]Y:[26]
+north
+What?
+0
+254/254:202>
+X:[0]Y:[26]
+ne
+A tunnel (n,e,sw)
+0
+254/254:202>
+X:[0]Y:[26]
+west
+What?
+0
+254/254:202>
+X:[0]Y:[26]
+sw
+The central road of Hobbitat (s,ne)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+A road running through the village (n,s)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+south
+You walk south out of the village and leave the small valley. A big sign
+saying 'WELCOME BACK to Hobbitat' hangs over the gates.
+Round hills south of village (n,e,s,w)
+14 gold coins.
+0
+254/254:202>
+X:[0]Y:[25]
+Light and pleasant forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[24]
+west
+Round hills (n,e,s,w)
+A black-tailed jackrabbit.
+0
+254/254:202>
+X:[-1]Y:[24]
+north
+Round hills (n,e,s,w)
+0
+254/254:202>
+X:[-1]Y:[25]
+north
+West of village (n,s,w)
+A forest hare.
+0
+254/254:202>
+X:[-1]Y:[26]
+north
+Large, round hills (n,e,s,w)
+A black-tailed jackrabbit.
+0
+254/254:202>
+X:[-1]Y:[27]
+east
+Round hills north of village (n,e,s,w)
+A forest hare.
+2 gold coins.
+0
+254/254:202>
+X:[0]Y:[27]
+south
+You walk south into the small valley and enter the village. A big sign saying
+'WELCOME to Hobbitat' hangs over the gates.
+A road running through the village (n,s)
+0
+254/254:202>
+X:[0]Y:[26]
+east
+Maybe you should look for another exit.
+0
+254/254:202>
+X:[0]Y:[26]
+south
+A road running west-east in Hobbitat (n,e,w,ne)
+0
+254/254:202>
+X:[0]Y:[26]
+north
+A road running through the village (n,s)
+0
+254/254:202>
+X:[0]Y:[26]
+north
+You walk north out of the village and leave the small valley. A big sign
+saying 'WELCOME BACK to Hobbitat' hangs over the gates.
+Round hills north of village (n,e,s,w)
+A forest hare.
+2 gold coins.
+0
+254/254:202>
+X:[0]Y:[27]
+north
+Light and pleasant forest (e,s,w)
+0
+254/254:202>
+X:[0]Y:[28]
+south
+Round hills north of village (n,e,s,w)
+A forest hare.
+2 gold coins.
+0
+254/254:202>
+X:[0]Y:[27]
+south
+You walk south into the small valley and enter the village. A big sign saying
+'WELCOME to Hobbitat' hangs over the gates.
+A road running through the village (n,s)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+A road running west-east in Hobbitat (n,e,w,ne)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+You do not think you can go there.
+0
+254/254:202>
+X:[0]Y:[26]
+south
+You do not think you can go there.
+0
+254/254:202>
+X:[0]Y:[26]
+north
+A road running through the village (n,s)
+0
+254/254:202>
+X:[0]Y:[26]
+north
+You walk north out of the village and leave the small valley. A big sign
+saying 'WELCOME BACK to Hobbitat' hangs over the gates.
+Round hills north of village (n,e,s,w)
+A forest hare.
+2 gold coins.
+0
+254/254:202>
+X:[0]Y:[27]
+north
+Light and pleasant forest (e,s,w)
+0
+254/254:202>
+X:[0]Y:[28]
+south
+Round hills north of village (n,e,s,w)
+A forest hare.
+2 gold coins.
+0
+254/254:202>
+X:[0]Y:[27]
+south
+You walk south into the small valley and enter the village. A big sign saying
+'WELCOME to Hobbitat' hangs over the gates.
+A road running through the village (n,s)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+A road running west-east in Hobbitat (n,e,w,ne)
+0
+254/254:202>
+X:[0]Y:[26]
+east
+A road running through Hobbitat (e,s,w)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+A tunnel in Hobbitat (n,s,sw)
+0
+254/254:202>
+X:[0]Y:[26]
+east
+There is no such exit.
+0
+254/254:202>
+X:[0]Y:[26]
+west
+There is no such exit.
+0
+254/254:202>
+X:[0]Y:[26]
+sw
+One of the central parts of Hobbitat (s,w,ne)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+One of the central parts of Hobbitat (n,e,w)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+You do not think you can go there.
+0
+254/254:202>
+X:[0]Y:[26]
+south
+There is no such exit.
+0
+254/254:202>
+X:[0]Y:[26]
+south
+There is no such exit.
+0
+254/254:202>
+X:[0]Y:[26]
+south
+Maybe you should look for another exit.
+0
+254/254:202>
+X:[0]Y:[26]
+south
+There is no such exit.
+0
+254/254:202>
+X:[0]Y:[26]
+west
+One of the central parts of Hobbitat (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+A tunnel (n,e,sw)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+There is no such exit.
+0
+254/254:202>
+X:[0]Y:[26]
+south
+There is no such exit.
+0
+254/254:202>
+X:[0]Y:[26]
+south
+What?
+0
+254/254:202>
+X:[0]Y:[26]
+south
+Maybe you should look for another exit.
+0
+254/254:202>
+X:[0]Y:[26]
+west
+What?
+0
+254/254:202>
+X:[0]Y:[26]
+sw
+The central road of Hobbitat (s,ne)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+A road running through the village (n,s)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+You walk south out of the village and leave the small valley. A big sign
+saying 'WELCOME BACK to Hobbitat' hangs over the gates.
+Round hills south of village (n,e,s,w)
+14 gold coins.
+0
+254/254:202>
+X:[0]Y:[25]
+south
+Light and pleasant forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[24]
+west
+Round hills (n,e,s,w)
+0
+254/254:202>
+X:[-1]Y:[24]
+north
+Round hills (n,e,s,w)
+A black-tailed jackrabbit.
+0
+254/254:202>
+X:[-1]Y:[25]
+north
+West of village (n,s,w)
+A black-tailed jackrabbit.
+0
+254/254:202>
+X:[-1]Y:[26]
+north
+Large, round hills (n,e,s,w)
+A forest hare.
+A forest hare.
+0
+254/254:202>
+X:[-1]Y:[27]
+north
+Large, round hills (n,e,s,w)
+A forest hare.
+0
+254/254:202>
+X:[-1]Y:[28]
+north
+Light but chilly forest (s,w,ne)
+A wooden signpost.
+0
+254/254:202>
+X:[-1]Y:[29]
+east
+You do not want to dive into the river.
+0
+254/254:202>
+X:[-1]Y:[29]
+south
+Large, round hills (n,e,s,w)
+A forest hare.
+0
+254/254:202>
+X:[-1]Y:[28]
+east
+Light and pleasant forest (e,s,w)
+0
+254/254:202>
+X:[0]Y:[28]
+south
+Round hills north of village (n,e,s,w)
+2 gold coins.
+0
+254/254:202>
+X:[0]Y:[27]
+south
+You walk south into the small valley and enter the village. A big sign saying
+'WELCOME to Hobbitat' hangs over the gates.
+A road running through the village (n,s)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+A road running west-east in Hobbitat (n,e,w,ne)
+0
+254/254:202>
+X:[0]Y:[26]
+east
+A road running through Hobbitat (e,s,w)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+A tunnel in Hobbitat (n,s,sw)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+The Brown Door (n,s)
+A shimmering blue door.
+Chomart.
+0
+254/254:202>
+X:[0]Y:[26]
+sw
+What?
+0
+254/254:202>
+X:[0]Y:[26]
+north
+A tunnel in Hobbitat (n,s,sw)
+0
+254/254:202>
+X:[0]Y:[26]
+sw
+One of the central parts of Hobbitat (s,w,ne)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+One of the central parts of Hobbitat (n,e,w)
+0
+254/254:202>
+X:[0]Y:[26]
+west
+One of the central parts of Hobbitat (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+A tunnel (n,e,sw)
+0
+254/254:202>
+X:[0]Y:[26]
+sw
+The central road of Hobbitat (s,ne)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+A road running through the village (n,s)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+You walk south out of the village and leave the small valley. A big sign
+saying 'WELCOME BACK to Hobbitat' hangs over the gates.
+Round hills south of village (n,e,s,w)
+14 gold coins.
+0
+254/254:202>
+X:[0]Y:[25]
+north
+You walk north into the small valley and enter the village. A big sign saying
+'WELCOME to Hobbitat' hangs over the gates.
+A road running through the village (n,s)
+0
+254/254:202>
+X:[0]Y:[26]
+north
+The central road of Hobbitat (s,ne)
+0
+254/254:202>
+X:[0]Y:[26]
+ne
+A tunnel (n,e,sw)
+0
+254/254:202>
+X:[0]Y:[26]
+sw
+sw
+The central road of Hobbitat (s,ne)
+0
+254/254:202>
+X:[0]Y:[26]
+What?
+0
+254/254:202>
+X:[0]Y:[26]
+south
+A road running through the village (n,s)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+You walk south out of the village and leave the small valley. A big sign
+saying 'WELCOME BACK to Hobbitat' hangs over the gates.
+Round hills south of village (n,e,s,w)
+14 gold coins.
+0
+254/254:202>
+X:[0]Y:[25]
+north
+You walk north into the small valley and enter the village. A big sign saying
+'WELCOME to Hobbitat' hangs over the gates.
+A road running through the village (n,s)
+0
+254/254:202>
+X:[0]Y:[26]
+north
+The central road of Hobbitat (s,ne)
+0
+254/254:202>
+X:[0]Y:[26]
+ne
+A tunnel (n,e,sw)
+0
+254/254:202>
+X:[0]Y:[26]
+north
+One of the central parts of Hobbitat (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+A tunnel (n,e,sw)
+0
+254/254:202>
+X:[0]Y:[26]
+west
+Maybe you should look for another exit.
+0
+254/254:202>
+X:[0]Y:[26]
+sw
+The central road of Hobbitat (s,ne)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+A road running through the village (n,s)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+You walk south out of the village and leave the small valley. A big sign
+saying 'WELCOME BACK to Hobbitat' hangs over the gates.
+Round hills south of village (n,e,s,w)
+14 gold coins.
+0
+254/254:202>
+X:[0]Y:[25]
+west
+Round hills (n,e,s,w)
+0
+254/254:202>
+X:[-1]Y:[25]
+north
+West of village (n,s,w)
+A black-tailed jackrabbit.
+A black-tailed jackrabbit.
+0
+254/254:202>
+X:[-1]Y:[26]
+north
+Large, round hills (n,e,s,w)
+0
+254/254:202>
+X:[-1]Y:[27]
+north
+Large, round hills (n,e,s,w)
+A forest hare.
+0
+254/254:202>
+X:[-1]Y:[28]
+north
+Light but chilly forest (s,w,ne)
+A wooden signpost.
+0
+254/254:202>
+X:[-1]Y:[29]
+east
+You do not want to dive into the river.
+0
+254/254:202>
+X:[-1]Y:[29]
+west
+Deep and chilly forest (n,e,s,w)
+A giant ogre.
+0
+254/254:202>
+X:[-2]Y:[29]
+south
+Light and pleasant forest (n,e,s,w)
+0
+254/254:202>
+X:[-2]Y:[28]
+east
+Large, round hills (n,e,s,w)
+A forest hare.
+0
+254/254:202>
+X:[-1]Y:[28]
+east
+Light and pleasant forest (e,s,w)
+0
+254/254:202>
+X:[0]Y:[28]
+south
+Round hills north of village (n,e,s,w)
+A forest hare.
+2 gold coins.
+0
+254/254:202>
+X:[0]Y:[27]
+south
+You walk south into the small valley and enter the village. A big sign saying
+'WELCOME to Hobbitat' hangs over the gates.
+A road running through the village (n,s)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+A road running west-east in Hobbitat (n,e,w,ne)
+0
+254/254:202>
+X:[0]Y:[26]
+north
+A road running through the village (n,s)
+0
+254/254:202>
+X:[0]Y:[26]
+north
+You walk north out of the village and leave the small valley. A big sign
+saying 'WELCOME BACK to Hobbitat' hangs over the gates.
+Round hills north of village (n,e,s,w)
+A forest hare.
+2 gold coins.
+0
+254/254:202>
+X:[0]Y:[27]
+south
+You walk south into the small valley and enter the village. A big sign saying
+'WELCOME to Hobbitat' hangs over the gates.
+A road running through the village (n,s)
+0
+254/254:202>
+X:[0]Y:[26]

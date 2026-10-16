@@ -1,0 +1,69 @@
+Serpentari arrives.
+A male serpentari says: Tabaq good for help one think.
+
+0
+452/470:192>
+X:[-11]Y:[-37]
+Serpentari leaves southeast.
+se
+Drakhiya, Armoury (nw)
+A male serpentari.
+A cairn of stones with a bloody scythe banner.
+A desert orc armourer.
+0
+455/470:197>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Street of Pigs (ne,se,sw)
+A cairn of stones with a bloody scythe banner.
+0
+455/470:197>
+X:[-11]Y:[-37]
+nw
+What?
+0
+455/470:196>
+X:[-11]Y:[-37]
+nw
+What?
+0
+455/470:196>
+X:[-11]Y:[-37]
+nw
+There is no such exit.
+0
+455/470:196>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Street of Pigs (ne,se,sw,|d|)
+A desert orc carpenter.
+A cairn of stones with a bloody scythe banner.
+0
+455/470:195>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Street of Pigs (ne,se,sw)
+A cairn of stones with a bloody scythe banner.
+0
+455/470:195>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Gates of Dusk (w,ne,se,u)
+A cairn of stones with a bloody scythe banner.
+An orcish gate guard.
+0
+455/470:195>
+X:[-11]Y:[-37]
+sw
+There is no such exit.
+0
+455/470:195>
+X:[-11]Y:[-37]
+sw
+Maybe you should look for another exit.
+0
+455/470:195>
+X:[-11]Y:[-37]
+sw
+What?
+0

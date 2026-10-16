@@ -1,0 +1,821 @@
+west
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+west
+Harkke's Portal (e)
+A Harkke squirrel.
+0
+254/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+east
+HP: 244  SP: 202
+Harkke wolf bit your head very hard.
+A dark room.
+0
+244/254:202>
+X:[-6]Y:[26]
+east
+There is no such exit.
+0
+244/254:202>
+X:[-6]Y:[26]
+east
+You do not think you can go there.
+0
+244/254:202>
+X:[-6]Y:[26]
+west
+You are now hunted by Harkke wolf.
+A dark room.
+0
+244/254:202>
+X:[-6]Y:[26]
+south
+What?
+0
+244/254:202>
+X:[-6]Y:[26]
+west
+A dark room.
+0
+244/254:202>
+X:[-6]Y:[26]
+south
+A dark room.
+0
+244/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+244/254:202>
+X:[-6]Y:[26]
+west
+A dark room.
+0
+244/254:202>
+X:[-6]Y:[26]
+south
+You do not think you can go there.
+0
+248/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+248/254:202>
+X:[-6]Y:[26]
+south
+A dark room.
+0
+248/254:202>
+X:[-6]Y:[26]
+west
+A dark room.
+0
+248/254:202>
+X:[-6]Y:[26]
+Harkke wolf missed you.
+Harkke wolf missed you.
+west
+sw
+You are now hunted by Harkke wolf.
+You are now hunted by Harkke wolf.
+A dark room.
+0
+248/254:202>
+X:[-6]Y:[26]
+You do not think you can go there.
+0
+248/254:202>
+X:[-6]Y:[26]
+sw
+Maybe you should look for another exit.
+0
+248/254:202>
+X:[-6]Y:[26]
+south
+Maybe you should look for another exit.
+0
+248/254:202>
+X:[-6]Y:[26]
+east
+Harkke wolf missed you.
+HP: 244  SP: 202
+Harkke wolf bit your body.
+A dark room.
+0
+244/254:202>
+X:[-6]Y:[26]
+sw
+Maybe you should look for another exit.
+0
+244/254:202>
+X:[-6]Y:[26]
+east
+You are now hunted by Harkke wolf.
+You are now hunted by Harkke wolf.
+A dark room.
+0
+244/254:202>
+X:[-6]Y:[26]
+south
+What?
+0
+244/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+244/254:202>
+X:[-6]Y:[26]
+east
+What?
+0
+244/254:202>
+X:[-6]Y:[26]
+east
+The Black Unicorn carves into you with its hatred.
+There is no such exit.
+0
+244/254:202>
+X:[-6]Y:[26]
+west
+A dark room.
+0
+244/254:202>
+X:[-6]Y:[26]
+north
+A dark room.
+0
+244/254:202>
+X:[-6]Y:[26]
+east
+There is no such exit.
+0
+244/254:202>
+X:[-6]Y:[26]
+east
+You do not think you can go there.
+0
+244/254:202>
+X:[-6]Y:[26]
+north
+There is no such exit.
+0
+244/254:202>
+X:[-6]Y:[26]
+You take a quick step backwards, avoiding Harkke wolf's attack.
+Harkke wolf missed you.
+west
+You are now hunted by Harkke wolf.
+A dark room.
+0
+244/254:202>
+X:[-6]Y:[26]
+north
+A dark room.
+0
+244/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+244/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+244/254:202>
+X:[-6]Y:[26]
+sw
+Harkke wolf missed you.
+A dark room.
+0
+244/254:202>
+X:[-6]Y:[26]
+You socked Harkke wolf's body.
+You take a quick step backwards, avoiding Harkke wolf's attack.
+Harkke wolf missed you.
+HP: 239  SP: 202
+Harkke wolf bit your arm hard.
+ne
+You are now hunted by Harkke wolf.
+You are now hunted by Harkke wolf.
+A dark room.
+0
+239/254:202>
+X:[-6]Y:[26]
+sw
+Harkke wolf missed you.
+HP: 236  SP: 202
+Harkke wolf bit your leg.
+A dark room.
+0
+236/254:202>
+X:[-6]Y:[26]
+east
+What?
+0
+236/254:202>
+X:[-6]Y:[26]
+You beat Harkke wolf's body soundly.
+HP: 234  SP: 202
+Harkke wolf clawed your body.
+You take a quick step backwards, avoiding Harkke wolf's attack.
+Harkke wolf missed you.
+south
+You are now hunted by Harkke wolf.
+You are now hunted by Harkke wolf.
+A dark room.
+0
+234/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+234/254:202>
+X:[-6]Y:[26]
+sw
+There is no such exit.
+0
+234/254:202>
+X:[-6]Y:[26]
+se
+There is no such exit.
+0
+234/254:202>
+X:[-6]Y:[26]
+south
+What?
+0
+234/254:202>
+X:[-6]Y:[26]
+sw
+Maybe you should look for another exit.
+0
+234/254:202>
+X:[-6]Y:[26]
+ne
+Maybe you should look for another exit.
+0
+234/254:202>
+X:[-6]Y:[26]
+nw
+You do not think you can go there.
+0
+234/254:202>
+X:[-6]Y:[26]
+west
+A dark room.
+0
+234/254:202>
+X:[-6]Y:[26]
+west
+You have dried out a bit.
+A dark room.
+0
+234/254:202>
+X:[-6]Y:[26]
+west
+A dark room.
+0
+234/254:202>
+X:[-6]Y:[26]
+west
+There is no such exit.
+0
+234/254:202>
+X:[-6]Y:[26]
+sw
+You do not think you can go there.
+0
+234/254:202>
+X:[-6]Y:[26]
+south
+There is no such exit.
+0
+234/254:202>
+X:[-6]Y:[26]
+se
+Maybe you should look for another exit.
+0
+234/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+234/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+234/254:202>
+X:[-6]Y:[26]
+north
+HP: 227  SP: 202
+Harkke wolf bit your leg hard.
+Harkke wolf missed you.
+A dark room.
+0
+227/254:202>
+X:[-6]Y:[26]
+west
+You are now hunted by Harkke wolf.
+You are now hunted by Harkke wolf.
+A dark room.
+0
+227/254:202>
+X:[-6]Y:[26]
+west
+There is no such exit.
+0
+227/254:202>
+X:[-6]Y:[26]
+west
+Maybe you should look for another exit.
+0
+227/254:202>
+X:[-6]Y:[26]
+north
+A dark room.
+0
+227/254:202>
+X:[-6]Y:[26]
+sw
+A dark room.
+0
+231/254:202>
+X:[-6]Y:[26]
+west
+A dark room.
+0
+231/254:202>
+X:[-6]Y:[26]
+west
+Maybe you should look for another exit.
+0
+231/254:202>
+X:[-6]Y:[26]
+sw
+A dark room.
+0
+231/254:202>
+X:[-6]Y:[26]
+south
+You do not think you can go there.
+0
+231/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+231/254:202>
+X:[-6]Y:[26]
+south
+There is no such exit.
+0
+231/254:202>
+X:[-6]Y:[26]
+sw
+There is no such exit.
+0
+231/254:202>
+X:[-6]Y:[26]
+west
+A dark room.
+0
+231/254:202>
+X:[-6]Y:[26]
+sw
+There is no such exit.
+0
+231/254:202>
+X:[-6]Y:[26]
+south
+There is no such exit.
+0
+231/254:202>
+X:[-6]Y:[26]
+west
+Maybe you should look for another exit.
+0
+231/254:202>
+X:[-6]Y:[26]
+nw
+There is no such exit.
+0
+231/254:202>
+X:[-6]Y:[26]
+north
+There is no such exit.
+0
+231/254:202>
+X:[-6]Y:[26]
+south
+You do not think you can go there.
+0
+231/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+231/254:202>
+X:[-6]Y:[26]
+south
+You do not think you can go there.
+0
+231/254:202>
+X:[-6]Y:[26]
+east
+You do not think you can go there.
+0
+231/254:202>
+X:[-6]Y:[26]
+north
+A dark room.
+0
+231/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+231/254:202>
+X:[-6]Y:[26]
+south
+What?
+0
+231/254:202>
+X:[-6]Y:[26]
+sw
+What?
+0
+231/254:202>
+X:[-6]Y:[26]
+east
+There is no such exit.
+0
+231/254:202>
+X:[-6]Y:[26]
+ne
+A dark room.
+0
+231/254:202>
+X:[-6]Y:[26]
+south
+search
+A dark room.
+0
+231/254:202>
+X:[-6]Y:[26]
+It is too dark here.
+0
+231/254:202>
+X:[-6]Y:[26]
+south
+You do not think you can go there.
+0
+231/254:202>
+X:[-6]Y:[26]
+east
+Harkke wolf missed you.
+A dark room.
+0
+231/254:202>
+X:[-6]Y:[26]
+south
+You are now hunted by Harkke wolf.
+A dark room.
+0
+231/254:202>
+X:[-6]Y:[26]
+west
+You duck your head quickly as Harkke wolf's blow flies over you.
+Harkke wolf missed you.
+You are now hunted by Harkke wolf.
+A dark room.
+0
+231/254:202>
+X:[-6]Y:[26]
+sw
+You do not think you can go there.
+0
+231/254:202>
+X:[-6]Y:[26]
+west
+A dark room.
+0
+231/254:202>
+X:[-6]Y:[26]
+sw
+What?
+0
+231/254:202>
+X:[-6]Y:[26]
+nw
+A dark room.
+0
+231/254:202>
+X:[-6]Y:[26]
+se
+A dark room.
+0
+231/254:202>
+X:[-6]Y:[26]
+sw
+Maybe you should look for another exit.
+0
+231/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+231/254:202>
+X:[-6]Y:[26]
+sw
+Maybe you should look for another exit.
+0
+231/254:202>
+X:[-6]Y:[26]
+se
+What?
+0
+231/254:202>
+X:[-6]Y:[26]
+south
+There is no such exit.
+0
+231/254:202>
+X:[-6]Y:[26]
+east
+HP: 228  SP: 202
+Harkke wolf bit your leg.
+A dark room.
+0
+228/254:202>
+X:[-6]Y:[26]
+sw
+There is no such exit.
+0
+228/254:202>
+X:[-6]Y:[26]
+se
+Maybe you should look for another exit.
+0
+228/254:202>
+X:[-6]Y:[26]
+You pelted Harkke wolf's body with a series of quick jabs.
+You take a quick step backwards, avoiding Harkke wolf's attack.
+Harkke wolf missed you.
+HP: 223  SP: 202
+Harkke wolf bit your head hard.
+south
+Maybe you should look for another exit.
+0
+223/254:202>
+X:[-6]Y:[26]
+sw
+You do not think you can go there.
+0
+223/254:202>
+X:[-6]Y:[26]
+se
+What?
+0
+223/254:202>
+X:[-6]Y:[26]
+east
+You are now hunted by Harkke wolf.
+You are now hunted by Harkke wolf.
+A dark room.
+0
+223/254:202>
+X:[-6]Y:[26]
+se
+What?
+0
+223/254:202>
+X:[-6]Y:[26]
+sw
+Maybe you should look for another exit.
+0
+223/254:202>
+X:[-6]Y:[26]
+HP: 218  SP: 202
+Harkke wolf bit your body hard.
+south
+Maybe you should look for another exit.
+0
+218/254:202>
+X:[-6]Y:[26]
+east
+Maybe you should look for another exit.
+0
+218/254:202>
+X:[-6]Y:[26]
+west
+You are now hunted by Harkke wolf.
+A dark room.
+0
+218/254:202>
+X:[-6]Y:[26]
+north
+A dark room.
+0
+218/254:202>
+X:[-6]Y:[26]
+east
+Maybe you should look for another exit.
+0
+218/254:202>
+X:[-6]Y:[26]
+HP: 210  SP: 202
+Harkke wolf bit your leg hard.
+west
+You are now hunted by Harkke wolf.
+A dark room.
+0
+210/254:202>
+X:[-6]Y:[26]
+west
+Maybe you should look for another exit.
+0
+210/254:202>
+X:[-6]Y:[26]
+east
+HP: 207  SP: 202
+Harkke wolf bit your arm.
+A dark room.
+0
+207/254:202>
+X:[-6]Y:[26]
+south
+You are now hunted by Harkke wolf.
+A dark room.
+0
+207/254:202>
+X:[-6]Y:[26]
+west
+A dark room.
+0
+207/254:202>
+X:[-6]Y:[26]
+You take a quick step backwards, avoiding Harkke wolf's attack.
+Harkke wolf missed you.
+Harkke wolf missed you.
+west
+You are now hunted by Harkke wolf.
+You are now hunted by Harkke wolf.
+A dark room.
+0
+207/254:202>
+X:[-6]Y:[26]
+nw
+A dark room.
+0
+207/254:202>
+X:[-6]Y:[26]
+north
+A dark room.
+0
+207/254:202>
+X:[-6]Y:[26]
+south
+A dark room.
+0
+207/254:202>
+X:[-6]Y:[26]
+south
+A dark room.
+0
+207/254:202>
+X:[-6]Y:[26]
+south
+What?
+0
+207/254:202>
+X:[-6]Y:[26]
+se
+There is no such exit.
+0
+207/254:202>
+X:[-6]Y:[26]
+south
+What?
+0
+207/254:202>
+X:[-6]Y:[26]
+sw
+There is no such exit.
+0
+207/254:202>
+X:[-6]Y:[26]
+sw
+Maybe you should look for another exit.
+0
+207/254:202>
+X:[-6]Y:[26]
+west
+A dark room.
+0
+207/254:202>
+X:[-6]Y:[26]
+nw
+There is no such exit.
+0
+207/254:202>
+X:[-6]Y:[26]
+north
+You do not think you can go there.
+0
+207/254:202>
+X:[-6]Y:[26]
+ne
+A dark room.
+0
+207/254:202>
+X:[-6]Y:[26]
+west
+You do not think you can go there.
+0
+207/254:202>
+X:[-6]Y:[26]
+nw
+You do not think you can go there.
+0
+207/254:202>
+X:[-6]Y:[26]
+sw
+west
+A dark room.
+0
+207/254:202>
+X:[-6]Y:[26]
+What?
+0
+207/254:202>
+X:[-6]Y:[26]
+west
+Maybe you should look for another exit.
+0
+207/254:202>
+X:[-6]Y:[26]
+sw
+There is no such exit.
+0
+207/254:202>
+X:[-6]Y:[26]
+south
+You do not think you can go there.
+0
+207/254:202>
+X:[-6]Y:[26]
+sw
+What?
+0
+207/254:202>
+X:[-6]Y:[26]
+ne
+A dark room.
+0
+207/254:202>
+X:[-6]Y:[26]
+north
+A dark room.
+0
+207/254:202>
+X:[-6]Y:[26]
+west
+Harkke's Portal (e)
+A Harkke hare.
+0
+207/254:202>
+X:[-6]Y:[26]
+ep
+You take a deep breath and plunge through the pulsating portal.
+Outside a strange portal (n,e,s,w)
+0
+207/254:202>
+X:[-6]Y:[26]

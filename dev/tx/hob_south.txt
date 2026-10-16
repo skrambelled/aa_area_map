@@ -1,0 +1,10 @@
+X:[0]Y:[25]
+look
+Round hills south of village (n,e,s,w)
+X:[0]Y:[25]
+north
+A road running through the village (n,s)
+X:[0]Y:[26]
+north
+The central road of Hobbitat (s,ne)
+X:[0]Y:[26]

@@ -1,0 +1,4 @@
+area_map.db
+area_map.db-shm
+area_map.db-wal
+area_map-before-*.db

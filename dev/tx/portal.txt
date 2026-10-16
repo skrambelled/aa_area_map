@@ -1,0 +1,73 @@
+14 gold coins.
+0
+254/254:202>
+X:[0]Y:[25]
+west
+Round hills (n,e,s,w)
+0
+254/254:202>
+X:[-1]Y:[25]
+west
+Light and pleasant forest (n,e,s,w)
+A warty toad.
+0
+254/254:202>
+X:[-2]Y:[25]
+west
+Light and pleasant forest (n,e,s,w)
+A pileated woodpecker.
+0
+254/254:202>
+X:[-3]Y:[25]
+west
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-4]Y:[25]
+west
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-5]Y:[25]
+north
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-5]Y:[26]
+west
+Outside a strange portal (n,e,s,w)
+0
+254/254:202>
+X:[-6]Y:[26]
+ep
+You enter the portal and find yourself in a strange place.
+Harkke's Portal (e)
+0
+254/254:202>
+X:[-6]Y:[26]
+east
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+south
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+north
+A dark room.
+0
+254/254:202>
+X:[-6]Y:[26]
+west
+Harkke's Portal (e)
+0
+254/254:202>
+X:[-6]Y:[26]
+ep
+You take a deep breath and plunge through the pulsating portal.
+Outside a strange portal (n,e,s,w)
+0
+254/254:202>
+X:[-6]Y:[26]

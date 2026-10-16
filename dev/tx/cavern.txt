@@ -1,0 +1,46 @@
+X:[-10]Y:[30]
+west
+The mountains are too steep and dangerous for you to climb.
+0
+254/254:202>
+X:[-10]Y:[30]
+north
+Light and pleasant forest (e,s,w)
+0
+254/254:202>
+X:[-10]Y:[31]
+west
+Light and pleasant forest (n,e,w)
+0
+254/254:202>
+X:[-11]Y:[31]
+west
+Cavern entrance (n,e,w)
+0
+254/254:202>
+X:[-12]Y:[31]
+north
+A dark room.
+0
+254/254:202>
+X:[-12]Y:[32]
+south
+search
+Cavern entrance (n,e,w)
+0
+254/254:202>
+X:[-12]Y:[31]
+You search around for a while, but do not find anything interesting.
+0
+254/254:202>
+X:[-12]Y:[31]
+east
+Light and pleasant forest (n,e,w)
+0
+254/254:202>
+X:[-11]Y:[31]
+west
+Cavern entrance (n,e,w)
+0
+254/254:202>
+X:[-12]Y:[31]

@@ -1,0 +1,1737 @@
+X:[-7]Y:[22]
+(:Newbie:) Armaguy begins touring Ancient Anguish.
+(:Newbie:) Armaguy: Hello.
+east
+On a well-worn path in the wood (n,e,s,w)
+0
+254/254:202>
+X:[-6]Y:[22]
+east
+Outside Burnham Wood (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+east
+Northwestern corner of Burnham Wood (e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+east
+Northern edge of Burnham Wood (e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+east
+Northern edge of Burnham Wood (e,s,w)
+A messenger.
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+east
+Northern edge of Burnham Wood (e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+east
+Northern edge of Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+east
+Northern edge of Burnham Wood (e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-4]Y:[22]
+east
+Northern edge of Burnham Wood (e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-4]Y:[22]
+east
+Northern edge of Burnham Wood (e,s,w)
+A clump of pipeweed.
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-4]Y:[22]
+north
+You do not think you can go there.
+0
+254/254:202>
+X:[-4]Y:[22]
+east
+Northern edge of Burnham Wood (e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-4]Y:[22]
+east
+Northeastern corner of Burnham Wood (n,s,w)
+A cairn of stones with a gold monkstaff banner.
+A guard.
+0
+254/254:202>
+X:[-4]Y:[22]
+north
+Outside Burnham Wood (n,s)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-4]Y:[22]
+north
+On a well-worn path in the wood (n,e,s,w)
+0
+254/254:202>
+X:[-4]Y:[23]
+north
+Dark but inviting forest (n,e,s,w)
+6 gold coins.
+0
+254/254:202>
+X:[-4]Y:[24]
+east
+Light and pleasant forest (n,e,s,w)
+0
+254/254:202>
+X:[-3]Y:[24]
+south
+Light and pleasant forest (n,e,s,w)
+0
+254/254:202>
+X:[-3]Y:[23]
+south
+HP: 253  SP: 202
+White-striped skunk battered your leg.
+On a well-worn path in the wood (n,e,s,w)
+A cardinal.
+A white-striped skunk.
+0
+253/254:202>
+X:[-3]Y:[22]
+west
+You are now hunted by White-striped skunk.
+Outside Burnham Wood (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+253/254:202>
+X:[-4]Y:[22]
+west
+Eastern edge of Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+253/254:202>
+X:[-4]Y:[22]
+east
+Outside Burnham Wood (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+253/254:202>
+X:[-4]Y:[22]
+south
+You do not think you can go there.
+0
+253/254:202>
+X:[-4]Y:[22]
+south
+You do not think you can go there.
+0
+253/254:202>
+X:[-4]Y:[22]
+south
+What?
+0
+253/254:202>
+X:[-4]Y:[22]
+east
+White-striped skunk missed you.
+White-striped skunk missed you.
+On a well-worn path in the wood (n,e,s,w)
+A cardinal.
+A white-striped skunk.
+0
+253/254:202>
+X:[-3]Y:[22]
+east
+You are now hunted by White-striped skunk.
+Light and pleasant forest (n,e,s,w)
+0
+253/254:202>
+X:[-2]Y:[22]
+west
+White-striped skunk missed you.
+White-striped skunk missed you.
+On a well-worn path in the wood (n,e,s,w)
+A cardinal.
+A white-striped skunk.
+0
+253/254:202>
+X:[-3]Y:[22]
+south
+You are now hunted by White-striped skunk.
+On a well-worn path in the wood (n,e,s,w)
+A warty toad.
+0
+253/254:202>
+X:[-3]Y:[21]
+west
+Outside Burnham Wood (e,w)
+A cairn of stones with a gold monkstaff banner.
+0
+253/254:202>
+X:[-4]Y:[21]
+west
+Southeastern corner of Burnham Wood (n,e,w)
+A root of parsnip.
+A clump of pipeweed.
+A clump of pipeweed.
+A clump of pipeweed.
+A clump of pipeweed.
+A cairn of stones with a gold monkstaff banner.
+0
+253/254:202>
+X:[-4]Y:[21]
+west
+Southern edge of Burnham Wood (n,e,w)
+A cairn of stones with a gold monkstaff banner.
+A messenger.
+0
+253/254:202>
+X:[-4]Y:[21]
+west
+Southern edge of Burnham Wood (n,e,w)
+A cairn of stones with a gold monkstaff banner.
+0
+253/254:202>
+X:[-4]Y:[21]
+west
+Southern edge of Burnham Wood (n,e,w)
+A cat.
+A cairn of stones with a gold monkstaff banner.
+0
+253/254:202>
+X:[-4]Y:[21]
+north
+Southern Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+253/254:202>
+X:[-4]Y:[21]
+north
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+A foot soldier.
+A sergeant.
+The Thane of Fife.
+0
+253/254:202>
+X:[-4]Y:[21]
+north
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+253/254:202>
+X:[-4]Y:[21]
+north
+Burnham Wood (n,e,s,w)
+A fawn.
+A doe.
+A cairn of stones with a gold monkstaff banner.
+0
+253/254:202>
+X:[-4]Y:[21]
+north
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+253/254:202>
+X:[-4]Y:[22]
+north
+Burnham Wood (n,e,s,w)
+A whiteleaf.
+A whiteleaf.
+A cairn of stones with a gold monkstaff banner.
+0
+253/254:202>
+X:[-4]Y:[22]
+north
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+253/254:202>
+X:[-4]Y:[22]
+north
+Northern Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+253/254:202>
+X:[-4]Y:[22]
+north
+Northern edge of Burnham Wood (e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+253/254:202>
+X:[-4]Y:[22]
+north
+Maybe you should look for another exit.
+0
+253/254:202>
+X:[-4]Y:[22]
+north
+What?
+0
+253/254:202>
+X:[-4]Y:[22]
+north
+What?
+0
+253/254:202>
+X:[-4]Y:[22]
+north
+You do not think you can go there.
+0
+253/254:202>
+X:[-4]Y:[22]
+north
+You do not think you can go there.
+0
+253/254:202>
+X:[-4]Y:[22]
+north
+What?
+0
+253/254:202>
+X:[-4]Y:[22]
+north
+Maybe you should look for another exit.
+0
+253/254:202>
+X:[-4]Y:[22]
+north
+What?
+0
+253/254:202>
+X:[-4]Y:[22]
+north
+Maybe you should look for another exit.
+0
+253/254:202>
+X:[-4]Y:[22]
+north
+Maybe you should look for another exit.
+0
+253/254:202>
+X:[-4]Y:[22]
+north
+You do not think you can go there.
+0
+253/254:202>
+X:[-4]Y:[22]
+west
+Northern edge of Burnham Wood (e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+253/254:202>
+X:[-4]Y:[22]
+north
+What?
+0
+253/254:202>
+X:[-4]Y:[22]
+north
+What?
+0
+253/254:202>
+X:[-4]Y:[22]
+west
+Northern edge of Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+253/254:202>
+X:[-5]Y:[22]
+north
+Outside Burnham Wood (n,s)
+A cairn of stones with a gold monkstaff banner.
+0
+253/254:202>
+X:[-5]Y:[22]
+south
+Northern edge of Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+253/254:202>
+X:[-5]Y:[22]
+east
+Northern edge of Burnham Wood (e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+253/254:202>
+X:[-4]Y:[22]
+west
+Northern edge of Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+253/254:202>
+X:[-5]Y:[22]
+north
+Outside Burnham Wood (n,s)
+A cairn of stones with a gold monkstaff banner.
+0
+253/254:202>
+X:[-5]Y:[22]
+north
+On a well-worn path in the wood (n,e,s,w)
+0
+253/254:202>
+X:[-5]Y:[23]
+north
+Dark but inviting forest (n,e,s,w)
+0
+253/254:202>
+X:[-5]Y:[24]
+east
+Dark but inviting forest (n,e,s,w)
+6 gold coins.
+0
+253/254:202>
+X:[-4]Y:[24]
+east
+Light and pleasant forest (n,e,s,w)
+0
+253/254:202>
+X:[-3]Y:[24]
+east
+Light and pleasant forest (n,e,s,w)
+0
+253/254:202>
+X:[-2]Y:[24]
+east
+Round hills (n,e,s,w)
+0
+253/254:202>
+X:[-1]Y:[24]
+east
+Light and pleasant forest (n,e,s,w)
+0
+253/254:202>
+X:[0]Y:[24]
+south
+Light and pleasant forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[23]
+west
+Light and pleasant forest (n,e,s,w)
+A large jay.
+0
+254/254:202>
+X:[-1]Y:[23]
+west
+Light and pleasant forest (n,e,s,w)
+A big grasshopper.
+0
+254/254:202>
+X:[-2]Y:[23]
+west
+Light and pleasant forest (n,e,s,w)
+A cardinal.
+0
+254/254:202>
+X:[-3]Y:[23]
+south
+HP: 251  SP: 202
+White-striped skunk clubbed your head.
+White-striped skunk missed you.
+On a well-worn path in the wood (n,e,s,w)
+A white-striped skunk.
+0
+251/254:202>
+X:[-3]Y:[22]
+south
+You are now hunted by White-striped skunk.
+On a well-worn path in the wood (n,e,s,w)
+A warty toad.
+0
+251/254:202>
+X:[-3]Y:[21]
+west
+Outside Burnham Wood (e,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-4]Y:[21]
+north
+You do not think you can go there.
+0
+251/254:202>
+X:[-4]Y:[21]
+north
+What?
+0
+251/254:202>
+X:[-4]Y:[21]
+north
+What?
+0
+251/254:202>
+X:[-4]Y:[21]
+east
+On a well-worn path in the wood (n,e,s,w)
+A warty toad.
+0
+251/254:202>
+X:[-3]Y:[21]
+east
+Light and pleasant forest (n,e,s,w)
+0
+251/254:202>
+X:[-2]Y:[21]
+west
+On a well-worn path in the wood (n,e,s,w)
+A warty toad.
+0
+251/254:202>
+X:[-3]Y:[21]
+Toad leaves north.
+west
+Outside Burnham Wood (e,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-4]Y:[21]
+north
+What?
+0
+251/254:202>
+X:[-4]Y:[21]
+west
+Southeastern corner of Burnham Wood (n,e,w)
+A root of parsnip.
+A clump of pipeweed.
+A clump of pipeweed.
+A clump of pipeweed.
+A clump of pipeweed.
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-4]Y:[21]
+north
+Eastern edge of Burnham Wood (n,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-4]Y:[21]
+north
+Eastern edge of Burnham Wood (n,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-4]Y:[21]
+north
+Eastern edge of Burnham Wood (n,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-4]Y:[21]
+north
+Eastern edge of Burnham Wood (n,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-4]Y:[21]
+north
+Eastern edge of Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+north
+Eastern edge of Burnham Wood (n,s,w)
+A fuzzy bunny.
+A cairn of stones with a bloody scythe banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+north
+Eastern edge of Burnham Wood (n,s,w)
+A clump of pipeweed.
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+north
+Eastern edge of Burnham Wood (n,s,w)
+A buck.
+A doe.
+A fawn.
+A fawn.
+A cairn of stones with a bloody scythe banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+north
+Northeastern corner of Burnham Wood (n,s,w)
+A cairn of stones with a gold monkstaff banner.
+A guard.
+0
+251/254:202>
+X:[-4]Y:[22]
+north
+Outside Burnham Wood (n,s)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+north
+On a well-worn path in the wood (n,e,s,w)
+0
+251/254:202>
+X:[-4]Y:[23]
+north
+Dark but inviting forest (n,e,s,w)
+6 gold coins.
+0
+251/254:202>
+X:[-4]Y:[24]
+east
+Light and pleasant forest (n,e,s,w)
+0
+251/254:202>
+X:[-3]Y:[24]
+south
+Light and pleasant forest (n,e,s,w)
+0
+251/254:202>
+X:[-3]Y:[23]
+west
+On a well-worn path in the wood (n,e,s,w)
+0
+251/254:202>
+X:[-4]Y:[23]
+south
+Outside Burnham Wood (n,s)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+south
+Northeastern corner of Burnham Wood (n,s,w)
+A cairn of stones with a gold monkstaff banner.
+A guard.
+0
+251/254:202>
+X:[-4]Y:[22]
+south
+Eastern edge of Burnham Wood (n,s,w)
+A buck.
+A doe.
+A fawn.
+A fawn.
+A cairn of stones with a bloody scythe banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+south
+Eastern edge of Burnham Wood (n,s,w)
+A clump of pipeweed.
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+west
+Eastern Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+west
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+west
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+west
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+west
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-5]Y:[22]
+south
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-5]Y:[22]
+east
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+east
+Burnham Wood (n,e,s,w)
+A whiteleaf.
+A whiteleaf.
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+east
+Just outside a castle in Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+east
+Eastern Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+east
+Eastern edge of Burnham Wood (n,s,w)
+A fuzzy bunny.
+A cairn of stones with a bloody scythe banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+south
+Eastern edge of Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+west
+Eastern Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+west
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+west
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+west
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+west
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-5]Y:[22]
+west
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+The first hag.
+The second hag.
+The third hag.
+The Thane of Glamis.
+0
+251/254:202>
+X:[-5]Y:[22]
+west
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-5]Y:[22]
+west
+Western Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-5]Y:[22]
+east
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-5]Y:[22]
+east
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+The first hag.
+The second hag.
+The third hag.
+The Thane of Glamis.
+0
+251/254:202>
+X:[-5]Y:[22]
+east
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-5]Y:[22]
+Speak. Demand. We'll answer.
+Speak. Demand. We'll answer.
+north
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-5]Y:[22]
+north
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-5]Y:[22]
+north
+Northern Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-5]Y:[22]
+north
+Northern edge of Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-5]Y:[22]
+north
+Outside Burnham Wood (n,s)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-5]Y:[22]
+north
+On a well-worn path in the wood (n,e,s,w)
+0
+251/254:202>
+X:[-5]Y:[23]
+north
+Dark but inviting forest (n,e,s,w)
+0
+251/254:202>
+X:[-5]Y:[24]
+west
+Dark but inviting forest (n,e,s,w)
+0
+251/254:202>
+X:[-6]Y:[24]
+west
+Grasslands (n,e,s,w)
+0
+251/254:202>
+X:[-7]Y:[24]
+south
+Grasslands (n,e,s,w)
+A campfire (burning).
+0
+251/254:202>
+X:[-7]Y:[23]
+south
+Grasslands (n,e,s,w)
+0
+251/254:202>
+X:[-7]Y:[22]
+east
+On a well-worn path in the wood (n,e,s,w)
+0
+251/254:202>
+X:[-6]Y:[22]
+east
+Outside Burnham Wood (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+251/254:202>
+X:[-5]Y:[22]
+east
+Northwestern corner of Burnham Wood (e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-5]Y:[22]
+east
+Northern edge of Burnham Wood (e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-5]Y:[22]
+east
+Northern edge of Burnham Wood (e,s,w)
+A messenger.
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-5]Y:[22]
+east
+Northern edge of Burnham Wood (e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-5]Y:[22]
+east
+Northern edge of Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+251/254:202>
+X:[-5]Y:[22]
+east
+Northern edge of Burnham Wood (e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+251/254:202>
+X:[-4]Y:[22]
+west
+Northern edge of Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+west
+Northern edge of Burnham Wood (e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+east
+Northern edge of Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+north
+Outside Burnham Wood (n,s)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+north
+On a well-worn path in the wood (n,e,s,w)
+0
+254/254:202>
+X:[-5]Y:[23]
+north
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-5]Y:[24]
+west
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-6]Y:[24]
+west
+Grasslands (n,e,s,w)
+0
+254/254:202>
+X:[-7]Y:[24]
+west
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-8]Y:[24]
+south
+Grasslands (n,e,s,w)
+0
+254/254:202>
+X:[-8]Y:[23]
+south
+Dark but inviting forest (n,e,s,w)
+An owl.
+0
+254/254:202>
+X:[-8]Y:[22]
+east
+Grasslands (n,e,s,w)
+0
+254/254:202>
+X:[-7]Y:[22]
+east
+On a well-worn path in the wood (n,e,s,w)
+0
+254/254:202>
+X:[-6]Y:[22]
+east
+Outside Burnham Wood (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+west
+On a well-worn path in the wood (n,e,s,w)
+0
+254/254:202>
+X:[-6]Y:[22]
+south
+On a well-worn path in the wood (n,e,s,w)
+0
+254/254:202>
+X:[-6]Y:[21]
+east
+Outside Burnham Wood (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+east
+Western edge of Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+east
+Western Burnham Wood (n,e,s,w)
+A ginseng root.
+A fuzzy bunny.
+A fuzzy bunny.
+A hare.
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+east
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+east
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+east
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+east
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-4]Y:[21]
+east
+Burnham Wood (n,e,s,w)
+A fawn.
+A doe.
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-4]Y:[21]
+east
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-4]Y:[21]
+east
+Eastern Burnham Wood (n,e,s,w)
+A clump of pipeweed.
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-4]Y:[21]
+east
+Eastern edge of Burnham Wood (n,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-4]Y:[21]
+east
+There is no such exit.
+0
+254/254:202>
+X:[-4]Y:[21]
+east
+You do not think you can go there.
+0
+254/254:202>
+X:[-4]Y:[21]
+east
+What?
+0
+254/254:202>
+X:[-4]Y:[21]
+east
+Maybe you should look for another exit.
+0
+254/254:202>
+X:[-4]Y:[21]
+east
+You do not think you can go there.
+0
+254/254:202>
+X:[-4]Y:[21]
+north
+Eastern edge of Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-4]Y:[22]
+north
+Eastern edge of Burnham Wood (n,s,w)
+A fuzzy bunny.
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-4]Y:[22]
+north
+Eastern edge of Burnham Wood (n,s,w)
+A clump of pipeweed.
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-4]Y:[22]
+south
+Eastern edge of Burnham Wood (n,s,w)
+A fuzzy bunny.
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-4]Y:[22]
+west
+Eastern Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-4]Y:[22]
+south
+Eastern Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-4]Y:[22]
+west
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-4]Y:[22]
+west
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-4]Y:[22]
+south
+Burnham Wood (n,e,s,w)
+A fawn.
+A doe.
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-4]Y:[21]
+west
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-4]Y:[21]
+west
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+west
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+west
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+west
+Western Burnham Wood (n,e,s,w)
+A ginseng root.
+A fuzzy bunny.
+A fuzzy bunny.
+A hare.
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+west
+Western edge of Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+west
+Outside Burnham Wood (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+west
+On a well-worn path in the wood (n,e,s,w)
+0
+254/254:202>
+X:[-6]Y:[21]
+west
+Light and pleasant forest (n,e,s,w)
+A vicious-looking snake.
+0
+254/254:202>
+X:[-7]Y:[21]
+north
+Grasslands (n,e,s,w)
+0
+254/254:202>
+X:[-7]Y:[22]
+east
+On a well-worn path in the wood (n,e,s,w)
+0
+254/254:202>
+X:[-6]Y:[22]
+east
+Outside Burnham Wood (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+east
+Northwestern corner of Burnham Wood (e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+west
+Outside Burnham Wood (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+east
+Northwestern corner of Burnham Wood (e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+south
+Western edge of Burnham Wood (n,e,s)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+south
+Western edge of Burnham Wood (n,e,s)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+south
+Western edge of Burnham Wood (n,e,s)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+south
+Western edge of Burnham Wood (n,e,s)
+A deer.
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+south
+Western edge of Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+east
+Western Burnham Wood (n,e,s,w)
+A ginseng root.
+A fuzzy bunny.
+A fuzzy bunny.
+A hare.
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+north
+Western Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+west
+Western edge of Burnham Wood (n,e,s)
+A deer.
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+east
+Western Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+north
+Western Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+west
+Western edge of Burnham Wood (n,e,s)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+east
+Western Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+east
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+east
+Burnham Wood (n,e,s,w)
+A squirrel.
+A squirrel.
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+west
+Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+west
+Western Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+west
+Western edge of Burnham Wood (n,e,s)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+west
+There is no such exit.
+0
+254/254:202>
+X:[-5]Y:[22]
+west
+What?
+0
+254/254:202>
+X:[-5]Y:[22]
+west
+What?
+0
+254/254:202>
+X:[-5]Y:[22]
+west
+What?
+0
+254/254:202>
+X:[-5]Y:[22]
+north
+Western edge of Burnham Wood (n,e,s)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+north
+Western edge of Burnham Wood (n,e,s)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+north
+Northwestern corner of Burnham Wood (e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+west
+Outside Burnham Wood (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+west
+On a well-worn path in the wood (n,e,s,w)
+0
+254/254:202>
+X:[-6]Y:[22]
+west
+Grasslands (n,e,s,w)
+0
+254/254:202>
+X:[-7]Y:[22]
+south
+Light and pleasant forest (n,e,s,w)
+A vicious-looking snake.
+0
+254/254:202>
+X:[-7]Y:[21]
+south
+Light and pleasant forest (n,e,s)
+A grackle.
+0
+254/254:202>
+X:[-7]Y:[20]
+south
+Light and pleasant forest (n,e,s,w)
+A small wooden shield.
+0
+254/254:202>
+X:[-7]Y:[19]
+south
+Grasslands (n,e,s,w)
+0
+254/254:202>
+X:[-7]Y:[18]
+east
+West of a small village (n,s,w)
+0
+254/254:202>
+X:[-6]Y:[18]
+east
+You can't make your way past the buildings. Try going around them instead.
+0
+254/254:202>
+X:[-6]Y:[18]
+north
+Light and pleasant forest (n,e,s,w)
+0
+254/254:202>
+X:[-6]Y:[19]
+east
+North of a small village (n,e,s,w)
+A forest hare.
+0
+254/254:202>
+X:[-5]Y:[19]
+north
+On a well-worn path in the wood (n,e,s,w)
+0
+254/254:202>
+X:[-5]Y:[20]
+north
+Outside Burnham Wood (n,s)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+north
+Southwestern corner of Burnham Wood (n,e,s)
+A guard.
+A messenger.
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+north
+Western edge of Burnham Wood (n,e,s)
+A clump of pipeweed.
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+north
+Western edge of Burnham Wood (n,e,s)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+north
+Western edge of Burnham Wood (n,e,s)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+north
+Western edge of Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+north
+Western edge of Burnham Wood (n,e,s)
+A deer.
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[22]
+south
+Western edge of Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+south
+Western edge of Burnham Wood (n,e,s)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+south
+Western edge of Burnham Wood (n,e,s)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+south
+Western edge of Burnham Wood (n,e,s)
+A clump of pipeweed.
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+south
+Southwestern corner of Burnham Wood (n,e,s)
+A guard.
+A messenger.
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+south
+Outside Burnham Wood (n,s)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+south
+On a well-worn path in the wood (n,e,s,w)
+0
+254/254:202>
+X:[-5]Y:[20]
+south
+North of a small village (n,e,s,w)
+A forest hare.
+0
+254/254:202>
+X:[-5]Y:[19]
+east
+Light and pleasant forest (n,e,s,w)
+0
+254/254:202>
+X:[-4]Y:[19]
+north
+On a well-worn path in the wood (n,e,s,w)
+A forest hare.
+0
+254/254:202>
+X:[-4]Y:[20]
+north
+Outside Burnham Wood (n,s)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-4]Y:[21]
+north
+Southern edge of Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-4]Y:[21]
+north
+Southern Burnham Wood (n,e,s,w)
+A clump of pipeweed.
+A clump of pipeweed.
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-4]Y:[21]
+north
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-4]Y:[21]
+north
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-4]Y:[21]
+north
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-4]Y:[21]
+north
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-4]Y:[22]
+north
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-4]Y:[22]
+north
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-4]Y:[22]
+south
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-4]Y:[22]
+south
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-4]Y:[22]
+south
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-4]Y:[21]
+south
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-4]Y:[21]
+south
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-4]Y:[21]
+west
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+west
+Burnham Wood (n,e,s,w)
+A cairn of stones with a bloody scythe banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+west
+Burnham Wood (n,e,s,w)
+A deer.
+A deer.
+A whiteleaf.
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+west
+Western Burnham Wood (n,e,s,w)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+west
+Western edge of Burnham Wood (n,e,s)
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+south
+Western edge of Burnham Wood (n,e,s)
+A clump of pipeweed.
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+west
+Maybe you should look for another exit.
+0
+254/254:202>
+X:[-5]Y:[21]
+south
+Southwestern corner of Burnham Wood (n,e,s)
+A guard.
+A messenger.
+A cairn of stones with a gold monkstaff banner.
+0
+254/254:202>
+X:[-5]Y:[21]
+The messenger says: The King shall reward the Thane handsomely for the
+                    victory.
+west
+What?
+0
+254/254:202>
+X:[-5]Y:[21]
+west
+You do not think you can go there.
+0
+254/254:202>
+X:[-5]Y:[21]
+west
+What?
+0
+254/254:202>
+X:[-5]Y:[21]
+west
+There is no such exit.
+0
+254/254:202>
+X:[-5]Y:[21]
+west
+What?
+0
+254/254:202>
+X:[-5]Y:[21]
+west
+What?
+0
+254/254:202>
+X:[-5]Y:[21]
+The messenger says: Glamis has distinguished himself well in battle.
+The messenger says: Glamis has distinguished himself well in battle.
+The messenger says: The apparitions have a message for Glamis as well,
+                    the hags can help.
+The messenger says: Glamis has distinguished himself well in battle.

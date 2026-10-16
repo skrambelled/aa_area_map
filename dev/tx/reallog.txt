@@ -1,0 +1,671 @@
+|COLOUR*bblue||SESSIONXP/MIN||COLOUR*reset||NEWLINE||HP|/|COLOUR*green||MAXHP
+||COLOUR*none|:|SP|>|NEWLINE|X:[|XCOORD|]Y:[|YCOORD|]|NEWLINE|
+0
+254/254:202>
+X:[0]Y:[0]
+
+0
+254/254:202>
+X:[0]Y:[0]
+[Chat] Zzzzzzz grumbles.
+south
+Shoreline Road (n,s)
+A shimmering blue door.
+0
+254/254:202>
+X:[0]Y:[0]
+east
+Maybe you should look for another exit.
+0
+254/254:202>
+X:[0]Y:[0]
+south
+Shoreline Road (n,s)
+A shimmering blue door.
+0
+254/254:202>
+X:[0]Y:[0]
+north
+Shoreline Road (n,s)
+A shimmering blue door.
+0
+254/254:202>
+X:[0]Y:[0]
+north
+East Village Crossroads (n,e,s,w)
+A stone statue of Shadap.
+A stone statue of Office.
+A shimmering blue door.
+A huge hardwood trunk.
+0
+254/254:202>
+X:[0]Y:[0]
+l
+You stand at a major crossroads of the village. Main Street runs to the west
+towards the centre of the village. Shoreline Road leads south along the
+shore. Glory Walk leads north towards the Fighter's Guild and the north gate,
+and the harbour can be entered to the east via a rickety quay. 
+ Obvious directions are:
+  north, east, south, west.
+A stone statue of Shadap.
+A stone statue of Office.
+A shimmering blue door.
+A huge hardwood trunk.
+0
+254/254:202>
+X:[0]Y:[0]
+west
+Main Street (n,e,s,w)
+A shimmering blue door.
+0
+254/254:202>
+X:[0]Y:[0]
+l
+You stand near the eastern end of Main Street, amongst a cluster of large
+buildings. To the north you can see the entrance to a general equipment shop.
+To the south of you rises the mighty structure of the Adventurers' Hall, a
+large complex containing many resources for the intrepid adventurer. Main
+Street leads east and west. 
+ Obvious directions are:
+  north, east, south, west.
+A shimmering blue door.
+0
+254/254:202>
+X:[0]Y:[0]
+south
+Adventurers' Hall (n,e,w,u,d)
+The Adventurers' Cat Board.
+0
+254/254:202>
+X:[0]Y:[0]
+west
+The Flame Room (e)
+The Mortal Flames Board.
+0
+254/254:202>
+X:[0]Y:[0]
+l
+This room was formerly an administrative office of the hall, but the former
+clerk who was stationed here has long since fled, upsetting his desk and
+chair in his haste. The centre of the room is dominated by a massive multi-
+sided cat board which glows evilly. The room is heated to an uncomfortable
+temperature by an unseen source. To the east, you see the entrance room of
+the Adventurers' Hall. 
+ The only obvious exit is east.
+The Mortal Flames Board.
+0
+254/254:202>
+X:[0]Y:[0]
+east
+Adventurers' Hall (n,e,w,u,d)
+The Adventurers' Cat Board.
+0
+254/254:202>
+X:[0]Y:[0]
+north
+Main Street (n,e,s,w)
+A shimmering blue door.
+0
+254/254:202>
+X:[0]Y:[0]
+east
+East Village Crossroads (n,e,s,w)
+A stone statue of Shadap.
+A stone statue of Office.
+A shimmering blue door.
+A huge hardwood trunk.
+0
+254/254:202>
+X:[0]Y:[0]
+l
+You stand at a major crossroads of the village. Main Street runs to the west
+towards the centre of the village. Shoreline Road leads south along the
+shore. Glory Walk leads north towards the Fighter's Guild and the north gate,
+and the harbour can be entered to the east via a rickety quay. 
+ Obvious directions are:
+  north, east, south, west.
+A stone statue of Shadap.
+A stone statue of Office.
+A shimmering blue door.
+A huge hardwood trunk.
+0
+254/254:202>
+X:[0]Y:[0]
+south
+Shoreline Road (n,s)
+A shimmering blue door.
+0
+254/254:202>
+X:[0]Y:[0]
+l
+You are standing along the village shore just south of Main street. To the
+west is the side of the Adventurers' Hall. The road overlooks the village
+harbour to the east, and you can see the run-down shacks which make up the
+harbour businesses. At the southern end of the harbour you can see the open
+sea. The road continues to the south. 
+ Obvious directions are:
+  north, south.
+A shimmering blue door.
+0
+254/254:202>
+X:[0]Y:[0]
+view
+Shoreline Road (n,s)
+A shimmering blue door.
+0
+254/254:202>
+X:[0]Y:[0]
+west
+Maybe you should look for another exit.
+0
+254/254:202>
+X:[0]Y:[0]
+south
+Shoreline Road (n,s)
+A shimmering blue door.
+0
+254/254:202>
+X:[0]Y:[0]
+north
+Shoreline Road (n,s)
+A shimmering blue door.
+0
+254/254:202>
+X:[0]Y:[0]
+north
+East Village Crossroads (n,e,s,w)
+A stone statue of Shadap.
+A stone statue of Office.
+A shimmering blue door.
+A huge hardwood trunk.
+0
+254/254:202>
+X:[0]Y:[0]
+Zzzzzzz arrives.
+Zzzzzzz leaves south.
+north
+Glory Walk (n,e,s)
+A shimmering blue door.
+0
+254/254:202>
+X:[0]Y:[0]
+north
+north
+north
+Glory Walk (n,s,w)
+A shimmering blue door.
+0
+254/254:202>
+X:[0]Y:[0]
+Glory Walk (n,s)
+A shimmering blue door.
+0
+254/254:202>
+X:[0]Y:[0]
+Glory Walk (n,s)
+A shimmering blue door.
+0
+254/254:202>
+X:[0]Y:[0]
+north
+Glory Walk (n,e,s,w)
+Vargas the village bully.
+A bronze statue of Bazhi.
+0
+254/254:202>
+X:[0]Y:[0]
+north
+north
+north
+North gate (n,s)
+A cairn of stones with a bloody scythe banner.
+A town militiaman.
+0
+254/254:202>
+X:[0]Y:[0]
+north
+north
+East road (n,e,s)
+0
+254/254:202>
+X:[0]Y:[1]
+north
+north
+Nice forest (n,e,s)
+0
+254/254:202>
+X:[0]Y:[2]
+north
+north
+Light forest (n,e,s)
+0
+254/254:202>
+X:[0]Y:[3]
+Nice forest (n,e,s)
+0
+254/254:202>
+X:[0]Y:[4]
+north
+north
+Nice forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[5]
+Nice forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[6]
+north
+north
+Nice forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[7]
+Pine forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[8]
+north
+north
+Nice forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[9]
+Nice forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[10]
+north
+north
+Nice forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[11]
+Nice forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[12]
+north
+north
+Nice forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[13]
+Nice forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[14]
+north
+north
+Nice forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[15]
+Dark but inviting forest (n,e,s)
+A bat.
+0
+254/254:202>
+X:[0]Y:[16]
+north
+north
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[17]
+Light and pleasant forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[18]
+north
+north
+Light and pleasant forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[19]
+Grasslands (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[20]
+north
+north
+Grasslands (n,e,s,w)
+A curved knife.
+0
+254/254:202>
+X:[0]Y:[21]
+Grasslands (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[22]
+north
+north
+Light and pleasant forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[23]
+Light and pleasant forest (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[24]
+north
+north
+Round hills south of village (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[25]
+You walk north into the small valley and enter the village. A big sign saying
+'WELCOME to Hobbitat' hangs over the gates.
+A road running through the village (n,s)
+0
+254/254:202>
+X:[0]Y:[26]
+The central road of Hobbitat (s,ne)
+0
+254/254:202>
+X:[0]Y:[26]
+Maybe you should look for another exit.
+0
+254/254:202>
+X:[0]Y:[26]
+Maybe you should look for another exit.
+0
+254/254:202>
+X:[0]Y:[26]
+There is no such exit.
+0
+254/254:202>
+X:[0]Y:[26]
+north
+north
+north
+north
+north
+north
+north
+north
+north
+north
+north
+north
+north
+north
+north
+north
+north
+What?
+0
+254/254:202>
+X:[0]Y:[26]
+Maybe you should look for another exit.
+0
+254/254:202>
+X:[0]Y:[26]
+You do not think you can go there.
+0
+254/254:202>
+X:[0]Y:[26]
+What?
+0
+254/254:202>
+X:[0]Y:[26]
+Maybe you should look for another exit.
+0
+254/254:202>
+X:[0]Y:[26]
+There is no such exit.
+0
+254/254:202>
+X:[0]Y:[26]
+Maybe you should look for another exit.
+0
+254/254:202>
+X:[0]Y:[26]
+There is no such exit.
+0
+254/254:202>
+X:[0]Y:[26]
+What?
+0
+254/254:202>
+X:[0]Y:[26]
+You do not think you can go there.
+0
+254/254:202>
+X:[0]Y:[26]
+What?
+0
+254/254:202>
+X:[0]Y:[26]
+You do not think you can go there.
+0
+254/254:202>
+X:[0]Y:[26]
+You do not think you can go there.
+0
+254/254:202>
+X:[0]Y:[26]
+Maybe you should look for another exit.
+0
+254/254:202>
+X:[0]Y:[26]
+There is no such exit.
+0
+254/254:202>
+X:[0]Y:[26]
+You do not think you can go there.
+0
+254/254:202>
+X:[0]Y:[26]
+north
+You do not think you can go there.
+0
+254/254:202>
+X:[0]Y:[26]
+What?
+0
+254/254:202>
+X:[0]Y:[26]
+north
+What?
+0
+254/254:202>
+X:[0]Y:[26]
+south
+A road running through the village (n,s)
+0
+254/254:202>
+X:[0]Y:[26]
+south
+You walk south out of the village and leave the small valley. A big sign
+saying 'WELCOME BACK to Hobbitat' hangs over the gates.
+Round hills south of village (n,e,s,w)
+0
+254/254:202>
+X:[0]Y:[25]
+west
+Round hills (n,e,s,w)
+0
+254/254:202>
+X:[-1]Y:[25]
+west
+Light and pleasant forest (n,e,s,w)
+0
+254/254:202>
+X:[-2]Y:[25]
+west
+Light and pleasant forest (n,e,s,w)
+0
+254/254:202>
+X:[-3]Y:[25]
+west
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-4]Y:[25]
+west
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-5]Y:[25]
+west
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-6]Y:[25]
+west
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-7]Y:[25]
+west
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-8]Y:[25]
+west
+Forest (n,e,s,w)
+0
+254/254:202>
+X:[-9]Y:[25]
+west
+Path (e,u)
+A cairn of stones with a gold monkstaff banner.
+A blackbird.
+0
+254/254:202>
+X:[-9]Y:[25]
+west
+Maybe you should look for another exit.
+0
+254/254:202>
+X:[-9]Y:[25]
+east
+Forest (n,e,s,w)
+0
+254/254:202>
+X:[-9]Y:[25]
+east
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-8]Y:[25]
+north
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-8]Y:[26]
+north
+Dark but inviting forest (n,e,s,w)
+0
+254/254:202>
+X:[-8]Y:[27]
+north
+Dark but inviting forest (n,e,s,w)
+A large spider.
+0
+254/254:202>
+X:[-8]Y:[28]
+north
+Dark but inviting forest (n,e,s,w)
+A small knife.
+0
+254/254:202>
+X:[-8]Y:[29]
+north
+Dark but inviting forest (n,e,s,w)
+A big grasshopper.
+0
+254/254:202>
+X:[-8]Y:[30]
+east
+Light forest (n,e,s,w,ne)
+0
+254/254:202>
+X:[-7]Y:[30]
+ne
+Wooded Path (e,sw)
+0
+254/254:202>
+X:[-7]Y:[30]
+east
+Wooded Path (s,w)
+0
+254/254:202>
+X:[-7]Y:[30]
+south
+Wooded Path (n,e)
+0
+254/254:202>
+X:[-7]Y:[30]
+east
+The Wooded Path (n,w)
+A knight.
+A horse.
+0
+254/254:202>
+X:[-7]Y:[30]
+north
+Wooded Path (s,se)
+0
+254/254:202>
+X:[-7]Y:[30]
+south
+The Wooded Path (n,w)
+A knight.
+A horse.
+0
+254/254:202>
+X:[-7]Y:[30]
+west
+Wooded Path (n,e)
+0
+254/254:202>
+X:[-7]Y:[30]
+north
+Wooded Path (s,w)
+0
+254/254:202>
+X:[-7]Y:[30]
+west
+Wooded Path (e,sw)
+0
+254/254:202>
+X:[-7]Y:[30]
+sw
+Light forest (n,e,s,w,ne)
+0
+254/254:202>
+X:[-7]Y:[30]
+west
+Dark but inviting forest (n,e,s,w)
+A big grasshopper.
+0
+254/254:202>
+X:[-8]Y:[30]
+south
+Dark but inviting forest (n,e,s,w)
+A small knife.
+0
+254/254:202>
+X:[-8]Y:[29]
+north
+Dark but inviting forest (n,e,s,w)
+A big grasshopper.
+0
+254/254:202>
+X:[-8]Y:[30]
+east
+Light forest (n,e,s,w,ne)
+0
+254/254:202>
+X:[-7]Y:[30]
+ne
+Wooded Path (e,sw)
+0
+254/254:202>
+X:[-7]Y:[30]
+sw
+Light forest (n,e,s,w,ne)
+0
+254/254:202>
+X:[-7]Y:[30]

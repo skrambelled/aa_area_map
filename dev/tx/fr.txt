@@ -1,0 +1,4 @@
+X:[-1]Y:[16]
+look
+Just inside a fairy ring (ne,s)
+X:[-1]Y:[16]

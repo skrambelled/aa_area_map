@@ -1,0 +1,5410 @@
+0
+431/470:198>
+X:[-11]Y:[-37]
+Serpentari arrives.
+A male serpentari says: Tabaq good for help one think.
+
+0
+452/470:192>
+X:[-11]Y:[-37]
+Serpentari leaves southeast.
+se
+Drakhiya, Armoury (nw)
+A male serpentari.
+A cairn of stones with a bloody scythe banner.
+A desert orc armourer.
+0
+455/470:197>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Street of Pigs (ne,se,sw)
+A cairn of stones with a bloody scythe banner.
+0
+455/470:197>
+X:[-11]Y:[-37]
+nw
+What?
+0
+455/470:196>
+X:[-11]Y:[-37]
+nw
+What?
+0
+455/470:196>
+X:[-11]Y:[-37]
+nw
+There is no such exit.
+0
+455/470:196>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Street of Pigs (ne,se,sw,|d|)
+A desert orc carpenter.
+A cairn of stones with a bloody scythe banner.
+0
+455/470:195>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Street of Pigs (ne,se,sw)
+A cairn of stones with a bloody scythe banner.
+0
+455/470:195>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Gates of Dusk (w,ne,se,u)
+A cairn of stones with a bloody scythe banner.
+An orcish gate guard.
+0
+455/470:195>
+X:[-11]Y:[-37]
+sw
+There is no such exit.
+0
+455/470:195>
+X:[-11]Y:[-37]
+sw
+Maybe you should look for another exit.
+0
+455/470:195>
+X:[-11]Y:[-37]
+sw
+What?
+0
+455/470:195>
+X:[-11]Y:[-37]
+west
+Harsh desert west of city (n,e,s,w)
+0
+455/470:195>
+X:[-12]Y:[-37]
+east
+Drakhiya, Gates of Dusk (w,ne,se,u)
+A cairn of stones with a bloody scythe banner.
+An orcish gate guard.
+0
+455/470:194>
+X:[-11]Y:[-37]
+se
+Drakhiya, Street of Snakes (ne,se,nw)
+A cairn of stones with a bloody scythe banner.
+0
+455/470:194>
+X:[-11]Y:[-37]
+se
+Drakhiya, Street of Snakes (ne,se,nw,|d|)
+A serpentari militiaman.
+0
+455/470:194>
+X:[-11]Y:[-37]
+se
+Drakhiya, Street of Snakes (ne,se,nw)
+A cairn of stones with a bloody scythe banner.
+0
+455/470:194>
+X:[-11]Y:[-37]
+se
+Drakhiya, Grand Hammam Entrance (s,ne,nw)
+A male serpentari.
+A cairn of stones with a bloody scythe banner.
+0
+455/470:194>
+X:[-11]Y:[-37]
+se
+What?
+0
+455/470:194>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Street of Faith (s,ne,sw,nw)
+A cairn of stones with a bloody scythe banner.
+0
+455/470:194>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Street of Faith (ne,sw,nw,|d|)
+A serpentari militiaman.
+0
+455/470:194>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Street of Faith (ne,sw,nw)
+A cairn of stones with a bloody scythe banner.
+0
+455/470:194>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Gates of Dawn (e,w,sw,nw,u)
+An orcish gate guard.
+A cairn of stones with a bloody scythe banner.
+0
+455/470:194>
+X:[-11]Y:[-37]
+ne
+There is no such exit.
+0
+455/470:194>
+X:[-11]Y:[-37]
+east
+Rocky desert east of city (n,s,w)
+A peccary.
+0
+455/470:194>
+X:[-10]Y:[-37]
+west
+Drakhiya, Gates of Dawn (e,w,sw,nw,u)
+An orcish gate guard.
+A cairn of stones with a bloody scythe banner.
+0
+455/470:194>
+X:[-11]Y:[-37]
+north
+What?
+0
+455/470:193>
+X:[-11]Y:[-37]
+west
+Drakhiya, Avenue of Dawn (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+455/470:193>
+X:[-11]Y:[-37]
+west
+Drakhiya, Avenue of Dawn (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+455/470:193>
+X:[-11]Y:[-37]
+west
+Drakhiya, Palace Gates (e,w,ne,se)
+A palace guard.
+A palace guard.
+A cairn of stones with a bloody scythe banner.
+0
+455/470:193>
+X:[-11]Y:[-37]
+A palace guard scans the room watchfully.
+west
+A palace guard stops you from going west.
+A palace guard says: No admittance.
+0
+455/470:192>
+X:[-11]Y:[-37]
+west
+A palace guard stops you from going west.
+A palace guard says: No admittance.
+0
+455/470:192>
+X:[-11]Y:[-37]
+north
+There is no such exit.
+0
+455/470:192>
+X:[-11]Y:[-37]
+A palace guard flicks an imaginary fleck of dust off his armour.
+x
+You form a ball of fire from yourself.
+HP: 455/457  SP: 192/202
+0
+455/457:192>
+X:[-11]Y:[-37]
+qo
+Changed nickname target = orc
+0
+457/457:198>
+X:[-11]Y:[-37]
+a
+You sizzled Guard's body lightly.
+0
+457/457:198>
+X:[-11]Y:[-37]
+
+0
+457/457:198>
+X:[-11]Y:[-37]
+
+0
+457/457:198>
+X:[-11]Y:[-37]
+
+0
+457/457:198>
+X:[-11]Y:[-37]
+You missed.
+You deftly sidestep Guard's attack.
+Guard missed you.
+The fireball cools a little.
+
+0
+456/456:197>
+X:[-11]Y:[-37]
+
+0
+456/456:197>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Guard with a medium-sized smoldering fireball!
+The fireball explodes into tiny little cinders.
+0
+456/456:197>
+X:[-11]Y:[-37]
+
+0
+456/456:197>
+X:[-11]Y:[-37]
+
+0
+456/456:197>
+X:[-11]Y:[-37]
+
+You look for an opening.
+You fried Guard's leg brutally.
+HP: 440  SP: 197
+Guard slashed your arm.
+HP: 439  SP: 197
+Guard barely scratched your leg.
+1
+439/455:197>
+X:[-11]Y:[-37]
+
+1
+439/455:197>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 428/428  SP: 197/202
+1
+428/428:197>
+X:[-11]Y:[-37]
+
+1
+428/428:197>
+X:[-11]Y:[-37]
+
+1
+428/428:197>
+X:[-11]Y:[-37]
+
+You missed.
+You deftly sidestep Guard's attack.
+Guard missed you.
+HP: 422  SP: 196
+Guard cut your head deep.
+1
+422/427:196>
+X:[-11]Y:[-37]
+
+1
+422/427:196>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Guard with a gigantic smoldering fireball!
+The fireball explodes into tiny little cinders.
+3
+422/427:196>
+X:[-11]Y:[-37]
+
+3
+422/427:196>
+X:[-11]Y:[-37]
+
+3
+422/427:196>
+X:[-11]Y:[-37]
+You scorched Guard's body.
+HP: 412  SP: 196
+Guard slashed your leg.
+HP: 406  SP: 196
+Guard cut your body deep.
+]
+The guard is a burly desert orc, with deep green skin and thick pointed
+tusks. He watches closely to ensure no troublemakers penetrate the Caliph's
+palace.
+He is in bad shape.
+        Opponent is carrying:
+A curved scimitar (wielded in right hand).
+A shirt of fine mail (worn).
+A curved sheath (worn).
+A red turban (worn).
+3
+406/426:196>
+X:[-11]Y:[-37]
+
+3
+406/426:196>
+X:[-11]Y:[-37]
+
+3
+406/426:196>
+X:[-11]Y:[-37]
+
+3
+406/426:196>
+X:[-11]Y:[-37]
+You sizzled Guard's body lightly.
+You duck your head quickly as Guard's blow flies over you.
+Guard missed you.
+HP: 394  SP: 195
+Guard slashed your arm.
+
+3
+394/425:195>
+X:[-11]Y:[-37]
+
+3
+394/425:195>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 394/403  SP: 195/202
+3
+394/403:195>
+X:[-11]Y:[-37]
+
+3
+394/403:195>
+X:[-11]Y:[-37]
+
+3
+394/403:195>
+X:[-11]Y:[-37]
+You fried Guard's body brutally.
+HP: 378  SP: 194
+Guard slashed your body.
+HP: 374  SP: 194
+Guard cut your leg.
+c
+You wield your fireball in your right hand.
+You hit Guard with an enormous smoldering fireball!
+The fireball explodes into tiny little cinders.
+5
+374/402:194>
+X:[-11]Y:[-37]
+
+5
+374/402:194>
+X:[-11]Y:[-37]
+l
+You fried Guard's head brutally.
+You duck your head quickly as Guard's blow flies over you.
+Guard missed you.
+You deftly sidestep Guard's attack.
+Guard missed you.
+Three broad avenues converge here before the front gate of the Palace of the
+Caliph, a magnificent edifice housing the ruler of the desert. The widest of
+the roads, the Avenue of Dawn, leads due east towards the city gates; the
+Avenue of Prosperity heads northeast into a wealthy neighbourhood, and the
+Avenue of Drakh goes southeast into the temple district. The palace gates
+stand just west of you. 
+ Obvious directions are:
+  east, west, northeast, southeast.
+A palace guard.
+A palace guard.
+A cairn of stones with a bloody scythe banner.
+5
+374/401:193>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 374/380  SP: 193/202
+5
+374/380:193>
+X:[-11]Y:[-37]
+
+5
+374/380:193>
+X:[-11]Y:[-37]
+
+5
+374/380:193>
+X:[-11]Y:[-37]
+You fried Guard's body brutally.
+HP: 371  SP: 193
+Guard cut your body.
+A palace guard charges at you!
+HP: 358  SP: 193
+Guard slashed your arm.
+c
+You wield your fireball in your right hand.
+You hit Guard with a huge smoldering fireball!
+The fireball explodes into tiny little cinders.
+Guard died.
+You killed Guard.
+55
+358/379:193>
+X:[-11]Y:[-37]
+zz
+You absorb the corpse of Guard, claimed by Lavalamp into yourself, leaving
+something else behind.
+HP: 374/395  SP: 193/202
+55
+374/395:193>
+X:[-11]Y:[-37]
+z
+You deftly sidestep Guard's attack.
+Guard missed you.
+You absorb a red turban into yourself.
+You absorb a curved sheath into yourself.
+You absorb a shirt of fine mail into yourself.
+You absorb a curved scimitar into yourself.
+HP: 450/471  SP: 193/202
+55
+450/471:193>
+X:[-11]Y:[-37]
+a
+Yes, yes.
+55
+450/471:193>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 450/456  SP: 193/202
+55
+450/456:193>
+X:[-11]Y:[-37]
+c
+You cannot throw that fast!
+55
+450/456:193>
+X:[-11]Y:[-37]
+You fried Guard's body brutally.
+You duck your head quickly as Guard's blow flies over you.
+Guard missed you.
+l
+Three broad avenues converge here before the front gate of the Palace of the
+Caliph, a magnificent edifice housing the ruler of the desert. The widest of
+the roads, the Avenue of Dawn, leads due east towards the city gates; the
+Avenue of Prosperity heads northeast into a wealthy neighbourhood, and the
+Avenue of Drakh goes southeast into the temple district. The palace gates
+stand just west of you. 
+ Obvious directions are:
+  east, west, northeast, southeast.
+4 gold coins.
+A palace guard.
+A cairn of stones with a bloody scythe banner.
+55
+450/455:192>
+X:[-11]Y:[-37]
+
+55
+450/455:192>
+X:[-11]Y:[-37]
+
+55
+450/455:192>
+X:[-11]Y:[-37]
+
+55
+450/455:192>
+X:[-11]Y:[-37]
+You scorched Guard's body.
+You duck your head quickly as Guard's blow flies over you.
+Guard missed you.
+
+56
+453/454:198>
+X:[-11]Y:[-37]
+]
+The guard is a burly desert orc, with deep green skin and thick pointed
+tusks. He watches closely to ensure no troublemakers penetrate the Caliph's
+palace.
+He is in good shape.
+        Opponent is carrying:
+A curved scimitar (wielded in right hand).
+A shirt of fine mail (worn).
+A curved sheath (worn).
+A red turban (worn).
+56
+453/454:198>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You barely missed Guard with a large smoldering fireball.
+The fireball explodes into tiny little cinders.
+56
+453/454:198>
+X:[-11]Y:[-37]
+You scorched Guard's body.
+HP: 450  SP: 198
+Guard cut your arm.
+c
+What?
+56
+450/453:198>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 438/438  SP: 198/202
+56
+438/438:198>
+X:[-11]Y:[-37]
+You missed.
+You duck your head quickly as Guard's blow flies over you.
+Guard missed you.
+
+56
+437/437:198>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Guard with a large smoldering fireball!
+The fireball explodes into tiny little cinders.
+57
+437/437:198>
+X:[-11]Y:[-37]
+
+57
+437/437:198>
+X:[-11]Y:[-37]
+
+57
+437/437:198>
+X:[-11]Y:[-37]
+Guard's parry only manages to slow the force of your attack.
+You burnt Guard's body painfully.
+You duck your head quickly as Guard's blow flies over you.
+Guard missed you.
+x
+You form a ball of fire from yourself.
+HP: 409/409  SP: 197/202
+57
+409/409:197>
+X:[-11]Y:[-37]
+c
+You cannot throw that fast!
+57
+409/409:197>
+X:[-11]Y:[-37]
+You burnt Guard's body painfully.
+Guard missed you.
+
+57
+408/408:196>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Guard with a gigantic smoldering fireball!
+The fireball explodes into tiny little cinders.
+59
+408/408:196>
+X:[-11]Y:[-37]
+x
+You are too busy throwing a fireball to roll a fireball!
+59
+408/408:196>
+X:[-11]Y:[-37]
+
+59
+408/408:196>
+X:[-11]Y:[-37]
+You scorched Guard's body.
+You duck your head quickly as Guard's blow flies over you.
+Guard missed you.
+]
+The guard is a burly desert orc, with deep green skin and thick pointed
+tusks. He watches closely to ensure no troublemakers penetrate the Caliph's
+palace.
+He is hurt.
+        Opponent is carrying:
+A curved scimitar (wielded in right hand).
+A shirt of fine mail (worn).
+A curved sheath (worn).
+A red turban (worn).
+59
+407/407:195>
+X:[-11]Y:[-37]
+
+59
+407/407:195>
+X:[-11]Y:[-37]
+c
+What?
+59
+407/407:195>
+X:[-11]Y:[-37]
+
+59
+407/407:195>
+X:[-11]Y:[-37]
+You scorched Guard's body.
+You take a quick step backwards, avoiding Guard's attack.
+Guard missed you.
+
+59
+406/406:195>
+X:[-11]Y:[-37]
+c
+What?
+59
+406/406:195>
+X:[-11]Y:[-37]
+
+59
+406/406:195>
+X:[-11]Y:[-37]
+
+59
+406/406:195>
+X:[-11]Y:[-37]
+c
+What?
+59
+406/406:195>
+X:[-11]Y:[-37]
+You scorched Guard's leg.
+HP: 392  SP: 195
+Guard slashed your leg.
+x
+You form a ball of fire from yourself.
+HP: 378/378  SP: 195/202
+59
+378/378:195>
+X:[-11]Y:[-37]
+
+59
+378/378:195>
+X:[-11]Y:[-37]
+
+59
+378/378:195>
+X:[-11]Y:[-37]
+You fried Guard's head brutally.
+HP: 374  SP: 195
+Guard cut your head.
+Orc master arrives.
+
+60
+374/377:195>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Guard with a gigantic smoldering fireball!
+The fireball explodes into tiny little cinders.
+63
+374/377:195>
+X:[-11]Y:[-37]
+
+63
+374/377:195>
+X:[-11]Y:[-37]
+l
+Three broad avenues converge here before the front gate of the Palace of the
+Caliph, a magnificent edifice housing the ruler of the desert. The widest of
+the roads, the Avenue of Dawn, leads due east towards the city gates; the
+Avenue of Prosperity heads northeast into a wealthy neighbourhood, and the
+Avenue of Drakh goes southeast into the temple district. The palace gates
+stand just west of you. 
+ Obvious directions are:
+  east, west, northeast, southeast.
+A rich orc master.
+4 gold coins.
+A palace guard.
+A cairn of stones with a bloody scythe banner.
+63
+374/377:195>
+X:[-11]Y:[-37]
+You burnt Guard's body painfully.
+HP: 372  SP: 195
+Guard grazed your arm.
+]
+The guard is a burly desert orc, with deep green skin and thick pointed
+tusks. He watches closely to ensure no troublemakers penetrate the Caliph's
+palace.
+He is almost dead.
+        Opponent is carrying:
+A curved scimitar (wielded in right hand).
+A shirt of fine mail (worn).
+A curved sheath (worn).
+A red turban (worn).
+63
+372/376:195>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 363/363  SP: 195/202
+63
+363/363:195>
+X:[-11]Y:[-37]
+
+63
+363/363:195>
+X:[-11]Y:[-37]
+l
+Three broad avenues converge here before the front gate of the Palace of the
+Caliph, a magnificent edifice housing the ruler of the desert. The widest of
+the roads, the Avenue of Dawn, leads due east towards the city gates; the
+Avenue of Prosperity heads northeast into a wealthy neighbourhood, and the
+Avenue of Drakh goes southeast into the temple district. The palace gates
+stand just west of you. 
+ Obvious directions are:
+  east, west, northeast, southeast.
+A rich orc master.
+4 gold coins.
+A palace guard.
+A cairn of stones with a bloody scythe banner.
+63
+363/363:195>
+X:[-11]Y:[-37]
+Guard died.
+You killed Guard.
+
+134
+362/362:194>
+X:[-11]Y:[-37]
+
+134
+362/362:194>
+X:[-11]Y:[-37]
+z
+You absorb the corpse of Guard, claimed by Lavalamp into yourself.
+You absorb 4 gold coins into yourself.
+HP: 378/378  SP: 194/202
+134
+378/378:194>
+X:[-11]Y:[-37]
+z
+You absorb a red turban into yourself.
+You absorb a curved sheath into yourself.
+You absorb a shirt of fine mail into yourself.
+You absorb a curved scimitar into yourself.
+HP: 471/471  SP: 194/202
+134
+471/471:194>
+X:[-11]Y:[-37]
+l
+Three broad avenues converge here before the front gate of the Palace of the
+Caliph, a magnificent edifice housing the ruler of the desert. The widest of
+the roads, the Avenue of Dawn, leads due east towards the city gates; the
+Avenue of Prosperity heads northeast into a wealthy neighbourhood, and the
+Avenue of Drakh goes southeast into the temple district. The palace gates
+stand just west of you. 
+ Obvious directions are:
+  east, west, northeast, southeast.
+10 gold coins.
+A rich orc master.
+A cairn of stones with a bloody scythe banner.
+134
+471/471:194>
+X:[-11]Y:[-37]
+north
+There is no such exit.
+134
+471/471:199>
+X:[-11]Y:[-37]
+west
+Drakhiya, Palace Courtyard (n,e,s,w)
+134
+471/471:199>
+X:[-11]Y:[-37]
+west
+Drakhiya, Presence Chamber of the Caliph (n,e,s)
+Masrur, the Caliph's bodyguard.
+Kutusov, the Commander of the Faithful, Caliph of Drakhiya.
+134
+471/471:199>
+X:[-11]Y:[-37]
+west
+What?
+134
+471/471:199>
+X:[-11]Y:[-37]
+The fireball cools a little.
+a
+Masrur brings up his falchion just in time to deflect your blow.
+You missed.
+134
+471/471:199>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Masrur with a medium-sized smoldering fireball!
+The fireball explodes into tiny little cinders.
+135
+471/471:199>
+X:[-11]Y:[-37]
+
+135
+471/471:199>
+X:[-11]Y:[-37]
+[
+There is no svlad here.
+135
+471/471:199>
+X:[-11]Y:[-37]
+Your strike slides off Masrur's falchion!
+You missed.
+HP: 466  SP: 198
+Masrur chopped your leg bluntly.
+
+135
+466/470:198>
+X:[-11]Y:[-37]
+
+135
+466/470:198>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 440/440  SP: 198/202
+135
+440/440:198>
+X:[-11]Y:[-37]
+
+135
+440/440:198>
+X:[-11]Y:[-37]
+]
+Masrur is a burly orc, tanned a dark olive drab, with large, protruding tusks
+and a powerful build. His beady eyes flicker from here to there, cautiously
+watching everyone and everything with great suspicion. His features are
+heavyset and his movements are graceful in the manner of a feral panther.
+He is in good shape.
+        Opponent is carrying:
+A falchion (wielded in right hand).
+A shirt of fine mail (worn).
+A red turban (worn).
+135
+440/440:198>
+X:[-11]Y:[-37]
+
+135
+440/440:198>
+X:[-11]Y:[-37]
+c
+You scorched Masrur's head.
+You deftly sidestep Masrur's attack.
+Masrur missed you.
+You wield your fireball in your right hand.
+You hit Masrur with a gigantic smoldering fireball!
+The fireball explodes into tiny little cinders.
+136
+439/439:198>
+X:[-11]Y:[-37]
+
+136
+439/439:198>
+X:[-11]Y:[-37]
+
+136
+439/439:198>
+X:[-11]Y:[-37]
+
+136
+439/439:198>
+X:[-11]Y:[-37]
+
+136
+439/439:198>
+X:[-11]Y:[-37]
+
+136
+439/439:198>
+X:[-11]Y:[-37]
+You scorched Masrur's arm.
+HP: 438  SP: 198
+Masrur nicked your body.
+
+136
+438/438:198>
+X:[-11]Y:[-37]
+c
+What?
+136
+438/438:198>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 416/416  SP: 198/202
+136
+416/416:198>
+X:[-11]Y:[-37]
+Masrur brings up his falchion just in time to deflect your blow.
+You missed.
+You duck your head quickly as Masrur's blow flies over you.
+Masrur missed you.
+
+136
+415/415:197>
+X:[-11]Y:[-37]
+
+136
+415/415:197>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Masrur with an enormous smoldering fireball!
+The fireball explodes into tiny little cinders.
+138
+415/415:197>
+X:[-11]Y:[-37]
+
+138
+415/415:197>
+X:[-11]Y:[-37]
+
+138
+415/415:197>
+X:[-11]Y:[-37]
+
+138
+415/415:197>
+X:[-11]Y:[-37]
+You burnt Masrur's body painfully.
+HP: 407  SP: 196
+Masrur chopped your leg bluntly.
+
+138
+407/414:196>
+X:[-11]Y:[-37]
+c
+What?
+138
+407/414:196>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 386/386  SP: 196/202
+138
+386/386:196>
+X:[-11]Y:[-37]
+Your strike slides off Masrur's falchion!
+You scorched Masrur's body.
+You deftly sidestep Masrur's attack.
+Masrur missed you.
+Yassar arrives.
+
+138
+385/385:195>
+X:[-11]Y:[-37]
+
+138
+385/385:195>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Masrur with a gigantic smoldering fireball!
+The fireball explodes into tiny little cinders.
+141
+385/385:195>
+X:[-11]Y:[-37]
+l
+You find yourself in a vast hall of marble with high vaulted ceilings.
+Intricate carvings adorn the marble walls. A great throne is mounted upon a
+dais on the western end of the chamber. Side passages lead north and south. 
+ Obvious directions are:
+  north, east, south.
+Yassar, the Grand Wazir.
+Masrur, the Caliph's bodyguard.
+Kutusov, the Commander of the Faithful, Caliph of Drakhiya.
+141
+385/385:195>
+X:[-11]Y:[-37]
+You sizzled Masrur's body lightly.
+You take a quick step backwards, avoiding Masrur's attack.
+Masrur missed you.
+
+141
+384/384:194>
+X:[-11]Y:[-37]
+
+141
+384/384:194>
+X:[-11]Y:[-37]
+
+141
+384/384:194>
+X:[-11]Y:[-37]
+
+141
+384/384:194>
+X:[-11]Y:[-37]
+You missed.
+You take a quick step backwards, avoiding Masrur's attack.
+Masrur missed you.
+x
+You form a ball of fire from yourself.
+HP: 365/365  SP: 194/202
+140
+365/365:194>
+X:[-11]Y:[-37]
+]
+Masrur is a burly orc, tanned a dark olive drab, with large, protruding tusks
+and a powerful build. His beady eyes flicker from here to there, cautiously
+watching everyone and everything with great suspicion. His features are
+heavyset and his movements are graceful in the manner of a feral panther.
+He is seriously wounded.
+        Opponent is carrying:
+A falchion (wielded in right hand).
+A shirt of fine mail (worn).
+A red turban (worn).
+140
+365/365:194>
+X:[-11]Y:[-37]
+
+140
+365/365:194>
+X:[-11]Y:[-37]
+
+140
+365/365:194>
+X:[-11]Y:[-37]
+You missed.
+Masrur missed you.
+
+140
+364/364:193>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Masrur with a large smoldering fireball!
+The fireball explodes into tiny little cinders.
+141
+364/364:193>
+X:[-11]Y:[-37]
+
+141
+364/364:193>
+X:[-11]Y:[-37]
+
+141
+364/364:193>
+X:[-11]Y:[-37]
+c
+What?
+141
+364/364:193>
+X:[-11]Y:[-37]
+
+141
+364/364:193>
+X:[-11]Y:[-37]
+You missed.
+HP: 337  SP: 199
+Masrur cleaved your leg into hash.
+Yassar, the Grand Wazir returns from his chambers.
+
+141
+337/363:199>
+X:[-11]Y:[-37]
+c
+What?
+141
+337/363:199>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 333/333  SP: 199/202
+141
+333/333:199>
+X:[-11]Y:[-37]
+
+141
+333/333:199>
+X:[-11]Y:[-37]
+You missed.
+HP: 322  SP: 198
+Masrur slashed your leg viciously.
+
+141
+322/332:198>
+X:[-11]Y:[-37]
+
+141
+322/332:198>
+X:[-11]Y:[-37]
+
+141
+322/332:198>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Masrur with a gigantic smoldering fireball!
+The fireball explodes into tiny little cinders.
+Masrur died.
+You killed Masrur.
+386
+322/332:198>
+X:[-11]Y:[-37]
+
+386
+322/332:198>
+X:[-11]Y:[-37]
+z
+You absorb the corpse of Masrur, claimed by Lavalamp into yourself.
+HP: 340/350  SP: 198/202
+386
+340/350:198>
+X:[-11]Y:[-37]
+z
+You absorb a red turban into yourself.
+You absorb a shirt of fine mail into yourself.
+You absorb a falchion into yourself.
+HP: 461/471  SP: 198/202
+386
+461/471:198>
+X:[-11]Y:[-37]
+l
+You find yourself in a vast hall of marble with high vaulted ceilings.
+Intricate carvings adorn the marble walls. A great throne is mounted upon a
+dais on the western end of the chamber. Side passages lead north and south. 
+ Obvious directions are:
+  north, east, south.
+Yassar, the Grand Wazir.
+Kutusov, the Commander of the Faithful, Caliph of Drakhiya.
+386
+461/471:198>
+X:[-11]Y:[-37]
+west
+What?
+386
+461/471:198>
+X:[-11]Y:[-37]
+south
+Drakhiya, Palace Guard Post (n,w,d)
+A palace guard.
+386
+461/471:198>
+X:[-11]Y:[-37]
+west
+Drakhiya, Palace Corridor (n,e,w)
+386
+461/471:198>
+X:[-11]Y:[-37]
+west
+Drakhiya, Palace Servants' Quarters (e,w)
+386
+461/471:198>
+X:[-11]Y:[-37]
+west
+Drakhiya, Palace Laundry Room (n,e)
+385
+461/471:197>
+X:[-11]Y:[-37]
+west
+There is no such exit.
+385
+461/471:197>
+X:[-11]Y:[-37]
+north
+Drakhiya, Palace Kitchens (n,s,w,|d|)
+A desert orc cook.
+A cookfire (burning).
+385
+461/471:197>
+X:[-11]Y:[-37]
+west
+Drakhiya, Servants' Entrance (e,sw,nw)
+A palace guard.
+385
+461/471:197>
+X:[-11]Y:[-37]
+west
+You do not think you can go there.
+385
+461/471:197>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Avenue of Suvarov (ne,se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+385
+461/471:197>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Street of Pigs (ne,se,sw,|d|)
+A cairn of stones with a bloody scythe banner.
+385
+461/471:197>
+X:[-11]Y:[-37]
+nw
+What?
+385
+461/471:197>
+X:[-11]Y:[-37]
+nw
+You do not think you can go there.
+385
+461/471:196>
+X:[-11]Y:[-37]
+nw
+You do not think you can go there.
+385
+461/471:196>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Street of Pigs (ne,se,sw)
+A cairn of stones with a bloody scythe banner.
+385
+461/471:196>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Gates of Dusk (w,ne,se,u)
+A cairn of stones with a bloody scythe banner.
+An orcish gate guard.
+385
+461/471:196>
+X:[-11]Y:[-37]
+sw
+Maybe you should look for another exit.
+385
+461/471:196>
+X:[-11]Y:[-37]
+sw
+What?
+385
+461/471:196>
+X:[-11]Y:[-37]
+sw
+You do not think you can go there.
+385
+461/471:196>
+X:[-11]Y:[-37]
+An orcish gate guard says: It's LavaLamp, the foul murderer!  Get him!
+HP: 453  SP: 195
+Guard cut your leg deep.
+ne
+You are now hunted by Guard.
+Drakhiya, Street of Pigs (ne,se,sw)
+A cairn of stones with a bloody scythe banner.
+385
+453/471:195>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Street of Pigs (ne,se,sw,|d|)
+A cairn of stones with a bloody scythe banner.
+385
+453/471:195>
+X:[-11]Y:[-37]
+se
+Drakhiya, Avenue of Suvarov (ne,se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+385
+453/471:195>
+X:[-11]Y:[-37]
+se
+Drakhiya, Servants' Entrance (e,sw,nw)
+A palace guard.
+385
+453/471:195>
+X:[-11]Y:[-37]
+A palace guard says: It's LavaLamp, the foul murderer!  Get him!
+HP: 450  SP: 195
+Guard cut your body.
+east
+A palace guard stops you from going east.
+A palace guard says: No admittance.
+384
+450/470:195>
+X:[-11]Y:[-37]
+east
+A palace guard stops you from going east.
+A palace guard says: No admittance.
+384
+450/470:195>
+X:[-11]Y:[-37]
+You scorched Guard's body.
+You deftly sidestep Guard's attack.
+Guard missed you.
+a
+Yes, yes.
+384
+450/469:194>
+X:[-11]Y:[-37]
+
+384
+450/469:194>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 445/445  SP: 194/202
+384
+445/445:194>
+X:[-11]Y:[-37]
+c
+You cannot throw that fast!
+384
+445/445:194>
+X:[-11]Y:[-37]
+
+384
+445/445:194>
+X:[-11]Y:[-37]
+
+384
+445/445:194>
+X:[-11]Y:[-37]
+You scorched Guard's body.
+HP: 439  SP: 200
+Guard cut your leg deep.
+c
+You wield your fireball in your right hand.
+You hit Guard with an enormous smoldering fireball!
+The fireball explodes into tiny little cinders.
+385
+439/444:200>
+X:[-11]Y:[-37]
+
+385
+439/444:200>
+X:[-11]Y:[-37]
+
+385
+439/444:200>
+X:[-11]Y:[-37]
+c
+What?
+385
+439/444:200>
+X:[-11]Y:[-37]
+
+385
+439/444:200>
+X:[-11]Y:[-37]
+l
+You find yourself before the servants' entrance to the Palace of the Caliph.
+The stone walls of the palace flank the portal on either side. The Avenue of
+Suvarov leads to the northwest and the Avenue of Sand to the southwest. 
+ Obvious directions are:
+  east, southwest, northwest.
+A palace guard.
+385
+439/444:200>
+X:[-11]Y:[-37]
+You scorched Guard's leg.
+You deftly sidestep Guard's attack.
+Guard missed you.
+c
+What?
+385
+439/443:199>
+X:[-11]Y:[-37]
+
+385
+439/443:199>
+X:[-11]Y:[-37]
+l
+You find yourself before the servants' entrance to the Palace of the Caliph.
+The stone walls of the palace flank the portal on either side. The Avenue of
+Suvarov leads to the northwest and the Avenue of Sand to the southwest. 
+ Obvious directions are:
+  east, southwest, northwest.
+A palace guard.
+385
+439/443:199>
+X:[-11]Y:[-37]
+
+385
+439/443:199>
+X:[-11]Y:[-37]
+c
+What?
+385
+439/443:199>
+X:[-11]Y:[-37]
+x
+You scorched Guard's body.
+You deftly sidestep Guard's attack.
+Guard missed you.
+You form a ball of fire from yourself.
+HP: 418/418  SP: 199/202
+385
+418/418:199>
+X:[-11]Y:[-37]
+c
+You cannot throw that fast!
+385
+418/418:199>
+X:[-11]Y:[-37]
+
+385
+418/418:199>
+X:[-11]Y:[-37]
+
+385
+418/418:199>
+X:[-11]Y:[-37]
+
+385
+418/418:199>
+X:[-11]Y:[-37]
+
+385
+418/418:199>
+X:[-11]Y:[-37]
+You scorched Guard's body.
+HP: 401  SP: 198
+Guard slashed your leg.
+c
+You wield your fireball in your right hand.
+You hit Guard with an enormous smoldering fireball!
+The fireball explodes into tiny little cinders.
+387
+401/417:198>
+X:[-11]Y:[-37]
+
+387
+401/417:198>
+X:[-11]Y:[-37]
+l
+You find yourself before the servants' entrance to the Palace of the Caliph.
+The stone walls of the palace flank the portal on either side. The Avenue of
+Suvarov leads to the northwest and the Avenue of Sand to the southwest. 
+ Obvious directions are:
+  east, southwest, northwest.
+A palace guard.
+387
+401/417:198>
+X:[-11]Y:[-37]
+
+387
+401/417:198>
+X:[-11]Y:[-37]
+
+387
+401/417:198>
+X:[-11]Y:[-37]
+c
+You missed.
+HP: 389  SP: 198
+Guard slashed your body.
+What?
+387
+389/416:198>
+X:[-11]Y:[-37]
+
+387
+389/416:198>
+X:[-11]Y:[-37]
+]
+The guard is a burly desert orc, with deep green skin and thick pointed
+tusks. He watches closely to ensure no troublemakers penetrate the Caliph's
+palace.
+He is hurt.
+        Opponent is carrying:
+A curved scimitar (wielded in right hand).
+A shirt of fine mail (worn).
+A curved sheath (worn).
+A red turban (worn).
+387
+389/416:198>
+X:[-11]Y:[-37]
+
+387
+389/416:198>
+X:[-11]Y:[-37]
+
+387
+389/416:198>
+X:[-11]Y:[-37]
+
+387
+389/416:198>
+X:[-11]Y:[-37]
+cv
+What?
+387
+389/416:198>
+X:[-11]Y:[-37]
+You scorched Guard's body.
+HP: 387  SP: 198
+Guard grazed your leg.
+x
+You form a ball of fire from yourself.
+HP: 387/391  SP: 198/202
+387
+387/391:198>
+X:[-11]Y:[-37]
+
+387
+387/391:198>
+X:[-11]Y:[-37]
+You scorched Guard's body.
+HP: 379  SP: 198
+Guard cut your arm deep.
+
+387
+379/390:198>
+X:[-11]Y:[-37]
+
+387
+379/390:198>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Guard with an enormous smoldering fireball!
+The fireball explodes into tiny little cinders.
+388
+379/390:198>
+X:[-11]Y:[-37]
+
+388
+379/390:198>
+X:[-11]Y:[-37]
+l
+You find yourself before the servants' entrance to the Palace of the Caliph.
+The stone walls of the palace flank the portal on either side. The Avenue of
+Suvarov leads to the northwest and the Avenue of Sand to the southwest. 
+ Obvious directions are:
+  east, southwest, northwest.
+A palace guard.
+388
+379/390:198>
+X:[-11]Y:[-37]
+You flex.
+You fried Guard's body brutally.
+HP: 371  SP: 198
+Guard cut your body deep.
+
+389
+371/389:198>
+X:[-11]Y:[-37]
+
+389
+371/389:198>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 370/370  SP: 198/202
+389
+370/370:198>
+X:[-11]Y:[-37]
+
+389
+370/370:198>
+X:[-11]Y:[-37]
+
+389
+370/370:198>
+X:[-11]Y:[-37]
+
+389
+370/370:198>
+X:[-11]Y:[-37]
+Guard died.
+You killed Guard.
+
+479
+369/369:197>
+X:[-11]Y:[-37]
+
+479
+369/369:197>
+X:[-11]Y:[-37]
+c
+You don't see Opponent here.
+479
+369/369:197>
+X:[-11]Y:[-37]
+z
+You absorb the corpse of Guard, claimed by Lavalamp into yourself.
+HP: 385/385  SP: 197/202
+479
+385/385:197>
+X:[-11]Y:[-37]
+z
+You absorb a red turban into yourself.
+You absorb a curved sheath into yourself.
+You absorb a shirt of fine mail into yourself.
+You absorb a curved scimitar into yourself.
+HP: 471/471  SP: 197/202
+479
+471/471:197>
+X:[-11]Y:[-37]
+l
+You find yourself before the servants' entrance to the Palace of the Caliph.
+The stone walls of the palace flank the portal on either side. The Avenue of
+Suvarov leads to the northwest and the Avenue of Sand to the southwest. 
+ Obvious directions are:
+  east, southwest, northwest.
+7 gold coins.
+479
+471/471:197>
+X:[-11]Y:[-37]
+stand
+You are already standing.
+479
+471/471:197>
+X:[-11]Y:[-37]
+The fireball cools a little.
+east
+Drakhiya, Palace Kitchens (n,s,w,|d|)
+A desert orc cook.
+A cookfire (burning).
+478
+471/471:197>
+X:[-11]Y:[-37]
+down
+The trap door is closed.
+478
+471/471:202>
+X:[-11]Y:[-37]
+west
+The fireball cools a little.
+Drakhiya, Servants' Entrance (e,sw,nw)
+7 gold coins.
+478
+471/471:202>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Avenue of Suvarov (ne,se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+478
+471/471:202>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Street of Pigs (ne,se,sw,|d|)
+A cairn of stones with a bloody scythe banner.
+478
+471/471:202>
+X:[-11]Y:[-37]
+nw
+There is no such exit.
+478
+471/471:202>
+X:[-11]Y:[-37]
+nw
+What?
+478
+471/471:202>
+X:[-11]Y:[-37]
+xx
+You do not feel you can absorb anything else.
+478
+471/471:202>
+X:[-11]Y:[-37]
+The fireball cools a little.
+zz
+Absorb what?
+477
+471/471:202>
+X:[-11]Y:[-37]
+z
+You fail to absorb a cairn of stones with a bloody scythe banner.
+477
+471/471:202>
+X:[-11]Y:[-37]
+The fireball cools a little.
+ab ball
+You do not feel you can absorb anything else.
+477
+471/471:202>
+X:[-11]Y:[-37]
+The fireball cools a little.
+The fireball cools a little.
+ab fireball
+You do not feel you can absorb anything else.
+476
+471/471:201>
+X:[-11]Y:[-37]
+nw
+What?
+475
+471/471:200>
+X:[-11]Y:[-37]
+nw
+What?
+475
+471/471:200>
+X:[-11]Y:[-37]
+nw
+You do not think you can go there.
+475
+471/471:200>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Street of Pigs (ne,se,sw)
+A cairn of stones with a bloody scythe banner.
+475
+471/471:200>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Bazaar of Wonders (se,sw)
+A serpentari militiaman.
+A serpentari huckster.
+A serpentari huckster.
+An azhad merchant.
+A desert orc salesman.
+A cairn of stones with a bloody scythe banner.
+A shimmering blue door.
+475
+471/471:200>
+X:[-11]Y:[-37]
+ne
+Maybe you should look for another exit.
+475
+471/471:200>
+X:[-11]Y:[-37]
+ne
+Maybe you should look for another exit.
+475
+471/471:200>
+X:[-11]Y:[-37]
+ne
+Maybe you should look for another exit.
+475
+471/471:200>
+X:[-11]Y:[-37]
+A serpentari militiaman says: It's LavaLamp, the foul murderer!  Get him!
+HP: 465  SP: 202
+Militiaman pierced your leg keenly.
+The fireball cools a little.
+se
+You are now hunted by Militiaman.
+Drakhiya, Street of Gold (se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+475
+465/471:202>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Rich House Entrance (ne,sw)
+A cairn of stones with a bloody scythe banner.
+A house guard.
+475
+465/471:202>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Street of Gold (se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+475
+465/471:202>
+X:[-11]Y:[-37]
+se
+Drakhiya, Street of Gold (se,sw,nw,|d|)
+A cairn of stones with a bloody scythe banner.
+475
+465/470:202>
+X:[-11]Y:[-37]
+ne
+What?
+475
+465/470:202>
+X:[-11]Y:[-37]
+sw
+west
+Drakhiya, Avenue of Prosperity (ne,se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+475
+465/470:202>
+X:[-11]Y:[-37]
+What?
+475
+465/470:202>
+X:[-11]Y:[-37]
+The fireball cools a little.
+nw
+Drakhiya, Dalairi Embassy Entrance (w,se)
+An embassy guard.
+An embassy guard.
+475
+465/469:202>
+X:[-11]Y:[-37]
+west
+An embassy guard stops you from going west.
+An embassy guard says: Authorised personnel only.
+474
+465/469:201>
+X:[-11]Y:[-37]
+The fireball cools a little.
+qo
+Changed nickname target = orc
+474
+465/469:200>
+X:[-11]Y:[-37]
+a
+You fried Guard's body brutally.
+475
+465/469:200>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Guard with a small smoldering fireball!
+The fireball explodes into tiny little cinders.
+475
+465/469:200>
+X:[-11]Y:[-37]
+You fried Guard's body brutally.
+HP: 462  SP: 200
+Guard lacerated your leg.
+c
+What?
+475
+462/468:200>
+X:[-11]Y:[-37]
+c
+What?
+475
+462/468:200>
+X:[-11]Y:[-37]
+
+475
+462/468:200>
+X:[-11]Y:[-37]
+]
+The embassy guard is a burly orc with pale green skin and sharpened white
+tusks. He is wearing the trappings of the Dalairi Army.
+He is slightly hurt.
+        Opponent is carrying:
+An orcish sword (wielded in right hand).
+A goatskin jacket (worn).
+475
+462/468:200>
+X:[-11]Y:[-37]
+
+475
+462/468:200>
+X:[-11]Y:[-37]
+
+475
+462/468:200>
+X:[-11]Y:[-37]
+
+475
+462/468:200>
+X:[-11]Y:[-37]
+c
+What?
+475
+462/468:200>
+X:[-11]Y:[-37]
+You scorched Guard's body.
+Guard missed you.
+Guard missed you.
+
+475
+462/467:199>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 445/445  SP: 199/202
+475
+445/445:199>
+X:[-11]Y:[-37]
+
+475
+445/445:199>
+X:[-11]Y:[-37]
+l
+You are before the front door of the Dalairi Embassy, a foreboding-looking
+building of rather bizarre architecture constructed from black stone. Above
+the door the arms sable, a chaos symbol argent, are emblazoned. To the
+southeast is the Avenue of Prosperity, a stone-paved road running through the
+city's wealthy district. 
+ Obvious directions are:
+  west, southeast.
+An embassy guard.
+An embassy guard.
+475
+445/445:199>
+X:[-11]Y:[-37]
+You scorched Guard's head.
+HP: 441  SP: 199
+Guard slit your head.
+You take a quick step backwards, avoiding Guard's attack.
+Guard missed you.
+c
+You wield your fireball in your right hand.
+You hit Guard with an enormous smoldering fireball!
+The fireball explodes into tiny little cinders.
+476
+441/444:199>
+X:[-11]Y:[-37]
+
+476
+441/444:199>
+X:[-11]Y:[-37]
+
+476
+441/444:199>
+X:[-11]Y:[-37]
+c
+What?
+476
+441/444:199>
+X:[-11]Y:[-37]
+
+476
+441/444:199>
+X:[-11]Y:[-37]
+
+476
+441/444:199>
+X:[-11]Y:[-37]
+You fried Guard's body brutally.
+You deftly sidestep Guard's attack.
+Guard missed you.
+You take a quick step backwards, avoiding Guard's attack.
+Guard missed you.
+
+477
+441/443:199>
+X:[-11]Y:[-37]
+c
+What?
+477
+441/443:199>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 422/422  SP: 199/202
+477
+422/422:199>
+X:[-11]Y:[-37]
+
+477
+422/422:199>
+X:[-11]Y:[-37]
+
+477
+422/422:199>
+X:[-11]Y:[-37]
+]
+The embassy guard is a burly orc with pale green skin and sharpened white
+tusks. He is wearing the trappings of the Dalairi Army.
+He is seriously wounded.
+        Opponent is carrying:
+An orcish sword (wielded in right hand).
+A goatskin jacket (worn).
+477
+422/422:199>
+X:[-11]Y:[-37]
+
+477
+422/422:199>
+X:[-11]Y:[-37]
+You missed.
+You take a quick step backwards, avoiding Guard's attack.
+Guard missed you.
+You deftly sidestep Guard's attack.
+Guard missed you.
+
+476
+421/421:198>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Guard with a huge smoldering fireball!
+The fireball explodes into tiny little cinders.
+Guard died.
+You killed Guard.
+494
+421/421:198>
+X:[-11]Y:[-37]
+
+494
+421/421:198>
+X:[-11]Y:[-37]
+
+494
+421/421:198>
+X:[-11]Y:[-37]
+z
+You absorb the corpse of Guard, claimed by Lavalamp into yourself.
+HP: 433/433  SP: 198/202
+494
+433/433:198>
+X:[-11]Y:[-37]
+z
+You absorb a goatskin jacket into yourself.
+You absorb an orcish sword into yourself.
+You absorb 10 gold coins into yourself.
+HP: 467/467  SP: 198/202
+494
+467/467:198>
+X:[-11]Y:[-37]
+l
+You duck your head quickly as Guard's blow flies over you.
+Guard missed you.
+You are before the front door of the Dalairi Embassy, a foreboding-looking
+building of rather bizarre architecture constructed from black stone. Above
+the door the arms sable, a chaos symbol argent, are emblazoned. To the
+southeast is the Avenue of Prosperity, a stone-paved road running through the
+city's wealthy district. 
+ Obvious directions are:
+  west, southeast.
+An embassy guard.
+494
+467/467:197>
+X:[-11]Y:[-37]
+west
+An embassy guard stops you from going west.
+An embassy guard says: Authorised personnel only.
+494
+467/467:197>
+X:[-11]Y:[-37]
+You scorched Guard's body.
+Guard missed you.
+a
+Yes, yes.
+494
+466/466:202>
+X:[-11]Y:[-37]
+
+494
+466/466:202>
+X:[-11]Y:[-37]
+c
+What?
+494
+466/466:202>
+X:[-11]Y:[-37]
+
+494
+466/466:202>
+X:[-11]Y:[-37]
+
+494
+466/466:202>
+X:[-11]Y:[-37]
+l
+You are before the front door of the Dalairi Embassy, a foreboding-looking
+building of rather bizarre architecture constructed from black stone. Above
+the door the arms sable, a chaos symbol argent, are emblazoned. To the
+southeast is the Avenue of Prosperity, a stone-paved road running through the
+city's wealthy district. 
+ Obvious directions are:
+  west, southeast.
+An embassy guard.
+494
+466/466:202>
+X:[-11]Y:[-37]
+You burnt Guard's body painfully.
+You take a quick step backwards, avoiding Guard's attack.
+Guard missed you.
+
+493
+465/465:201>
+X:[-11]Y:[-37]
+c
+What?
+493
+465/465:201>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 450/450  SP: 201/202
+493
+450/450:201>
+X:[-11]Y:[-37]
+
+493
+450/450:201>
+X:[-11]Y:[-37]
+
+493
+450/450:201>
+X:[-11]Y:[-37]
+
+493
+450/450:201>
+X:[-11]Y:[-37]
+You scorched Guard's body.
+You duck your head quickly as Guard's blow flies over you.
+Guard missed you.
+
+493
+449/449:200>
+X:[-11]Y:[-37]
+
+493
+449/449:200>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Guard with a large smoldering fireball!
+The fireball explodes into tiny little cinders.
+494
+449/449:200>
+X:[-11]Y:[-37]
+
+494
+449/449:200>
+X:[-11]Y:[-37]
+c
+What?
+494
+449/449:200>
+X:[-11]Y:[-37]
+
+You fried Guard's body brutally.
+You deftly sidestep Guard's attack.
+Guard missed you.
+495
+448/448:200>
+X:[-11]Y:[-37]
+
+495
+448/448:200>
+X:[-11]Y:[-37]
+c
+What?
+495
+448/448:200>
+X:[-11]Y:[-37]
+
+495
+448/448:200>
+X:[-11]Y:[-37]
+
+495
+448/448:200>
+X:[-11]Y:[-37]
+You fried Guard's body brutally.
+You duck your head quickly as Guard's blow flies over you.
+Guard missed you.
+x
+You form a ball of fire from yourself.
+HP: 431/431  SP: 200/202
+495
+431/431:200>
+X:[-11]Y:[-37]
+
+495
+431/431:200>
+X:[-11]Y:[-37]
+
+495
+431/431:200>
+X:[-11]Y:[-37]
+You fried Guard's head brutally.
+You take a quick step backwards, avoiding Guard's attack.
+Guard missed you.
+c
+You wield your fireball in your right hand.
+You hit Guard with a large smoldering fireball!
+The fireball explodes into tiny little cinders.
+497
+430/430:200>
+X:[-11]Y:[-37]
+
+497
+430/430:200>
+X:[-11]Y:[-37]
+]
+The embassy guard is a burly orc with pale green skin and sharpened white
+tusks. He is wearing the trappings of the Dalairi Army.
+He is almost dead.
+        Opponent is carrying:
+An orcish sword (wielded in right hand).
+A goatskin jacket (worn).
+497
+430/430:200>
+X:[-11]Y:[-37]
+Guard died.
+You killed Guard.
+z
+You absorb the corpse of Guard, claimed by Lavalamp into yourself.
+HP: 441/441  SP: 200/202
+514
+441/441:200>
+X:[-11]Y:[-37]
+z
+You absorb a goatskin jacket into yourself.
+You absorb an orcish sword into yourself.
+HP: 471/471  SP: 200/202
+514
+471/471:200>
+X:[-11]Y:[-37]
+l
+You are before the front door of the Dalairi Embassy, a foreboding-looking
+building of rather bizarre architecture constructed from black stone. Above
+the door the arms sable, a chaos symbol argent, are emblazoned. To the
+southeast is the Avenue of Prosperity, a stone-paved road running through the
+city's wealthy district. 
+ Obvious directions are:
+  west, southeast.
+6 gold coins.
+514
+471/471:200>
+X:[-11]Y:[-37]
+a
+No orc here!
+514
+471/471:200>
+X:[-11]Y:[-37]
+west
+Drakhiya, Dalairi Embassy Lower Level (e,u)
+A Scythe captain.
+An embassy guard.
+514
+471/471:200>
+X:[-11]Y:[-37]
+a
+You fried Scythe captain's body brutally.
+514
+471/471:200>
+X:[-11]Y:[-37]
+c
+What?
+514
+471/471:200>
+X:[-11]Y:[-37]
+
+514
+471/471:200>
+X:[-11]Y:[-37]
+
+514
+471/471:200>
+X:[-11]Y:[-37]
+c
+What?
+514
+471/471:200>
+X:[-11]Y:[-37]
+You fried Scythe captain's body brutally.
+You take a quick step backwards, avoiding Scythe captain's attack.
+Scythe captain missed you.
+qoa
+What?
+514
+470/470:200>
+X:[-11]Y:[-37]
+
+514
+470/470:200>
+X:[-11]Y:[-37]
+c
+What?
+514
+470/470:200>
+X:[-11]Y:[-37]
+
+514
+470/470:200>
+X:[-11]Y:[-37]
+
+You scorched Scythe captain's body.
+You deftly sidestep Scythe captain's attack.
+Scythe captain missed you.
+Guard missed you.
+514
+469/469:200>
+X:[-11]Y:[-37]
+k
+Kill what?
+514
+469/469:200>
+X:[-11]Y:[-37]
+
+514
+469/469:200>
+X:[-11]Y:[-37]
+k
+You fried Scythe captain's body brutally.
+You duck your head quickly as Scythe captain's blow flies over you.
+Scythe captain missed you.
+You take a quick step backwards, avoiding Guard's attack.
+Guard missed you.
+An embassy guard says: Stay offa Dalairi soil, you.
+Kill what?
+514
+468/468:202>
+X:[-11]Y:[-37]
+l
+You find yourself on the first floor inside the Dalairi Embassy, an odd-
+shaped room with black stone walls outfitted as a rather dank reception area
+lit by flickering torchlight. A battered old wooden desk and some chairs rest
+in one corner, facing the eastern entrance; nearby is a flight of stairs
+leading up. A small oval rug lies in front of the desk. 
+ Obvious directions are:
+  east, up.
+A Scythe captain.
+An embassy guard.
+514
+468/468:202>
+X:[-11]Y:[-37]
+a
+Yes, yes.
+514
+468/468:202>
+X:[-11]Y:[-37]
+Your strike slides off Scythe captain's sabre!
+You fried Scythe captain's body brutally.
+HP: 456  SP: 201
+Scythe captain slashed your leg viciously.
+You take a quick step backwards, avoiding Guard's attack.
+Guard missed you.
+c
+What?
+514
+456/467:201>
+X:[-11]Y:[-37]
+c
+What?
+514
+456/467:201>
+X:[-11]Y:[-37]
+c
+What?
+514
+456/467:201>
+X:[-11]Y:[-37]
+
+514
+456/467:201>
+X:[-11]Y:[-37]
+c
+What?
+514
+456/467:201>
+X:[-11]Y:[-37]
+You missed.
+HP: 445  SP: 200
+Scythe captain slashed your arm viciously.
+You take a quick step backwards, avoiding Guard's attack.
+Guard missed you.
+x
+You form a ball of fire from yourself.
+HP: 445/453  SP: 200/202
+514
+445/453:200>
+X:[-11]Y:[-37]
+
+514
+445/453:200>
+X:[-11]Y:[-37]
+]
+The Scythe captain is a musclebound orc with pale green skin, polished white
+tusks and sharpened fangs. He seems to be in charge of the embassy guards.
+He is slightly hurt.
+        Opponent is carrying:
+The mark of the Scythe.
+An orcish sabre (wielded in right hand).
+A steel cap (worn).
+514
+445/453:200>
+X:[-11]Y:[-37]
+c
+You cannot throw that fast!
+514
+445/453:200>
+X:[-11]Y:[-37]
+You fried Scythe captain's body brutally.
+You deftly sidestep Scythe captain's attack.
+Scythe captain missed you.
+HP: 439  SP: 200
+Guard sliced your body deeply.
+An embassy guard says: Stay offa Dalairi soil, you.
+
+514
+439/452:200>
+X:[-11]Y:[-37]
+
+514
+439/452:200>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Scythe captain with a large smoldering fireball!
+The fireball explodes into tiny little cinders.
+514
+439/452:200>
+X:[-11]Y:[-37]
+
+514
+439/452:200>
+X:[-11]Y:[-37]
+
+514
+439/452:200>
+X:[-11]Y:[-37]
+c
+You missed.
+You take a quick step backwards, avoiding Scythe captain's attack.
+Scythe captain missed you.
+A Scythe captain charges at you!
+Guard missed you.
+What?
+514
+439/451:200>
+X:[-11]Y:[-37]
+
+514
+439/451:200>
+X:[-11]Y:[-37]
+
+514
+439/451:200>
+X:[-11]Y:[-37]
+c
+What?
+514
+439/451:200>
+X:[-11]Y:[-37]
+You missed.
+You take a quick step backwards, avoiding Scythe captain's attack.
+Scythe captain missed you.
+Guard missed you.
+
+514
+439/450:200>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 431/431  SP: 200/202
+514
+431/431:200>
+X:[-11]Y:[-37]
+
+514
+431/431:200>
+X:[-11]Y:[-37]
+
+514
+431/431:200>
+X:[-11]Y:[-37]
+You fried Scythe captain's body brutally.
+You deftly sidestep Scythe captain's attack.
+Scythe captain missed you.
+Guard missed you.
+c
+You wield your fireball in your right hand.
+You hit Scythe captain with a huge smoldering fireball!
+The fireball explodes into tiny little cinders.
+515
+430/430:200>
+X:[-11]Y:[-37]
+l
+You find yourself on the first floor inside the Dalairi Embassy, an odd-
+shaped room with black stone walls outfitted as a rather dank reception area
+lit by flickering torchlight. A battered old wooden desk and some chairs rest
+in one corner, facing the eastern entrance; nearby is a flight of stairs
+leading up. A small oval rug lies in front of the desk. 
+ Obvious directions are:
+  east, up.
+A Scythe captain.
+An embassy guard.
+515
+430/430:200>
+X:[-11]Y:[-37]
+
+515
+430/430:200>
+X:[-11]Y:[-37]
+]
+You missed.
+HP: 428  SP: 199
+Scythe captain hacked your arm.
+You deftly sidestep Guard's attack.
+Guard missed you.
+The Scythe captain is a musclebound orc with pale green skin, polished white
+tusks and sharpened fangs. He seems to be in charge of the embassy guards.
+He is hurt.
+        Opponent is carrying:
+The mark of the Scythe.
+An orcish sabre (wielded in right hand).
+A steel cap (worn).
+515
+428/429:199>
+X:[-11]Y:[-37]
+
+515
+428/429:199>
+X:[-11]Y:[-37]
+
+515
+428/429:199>
+X:[-11]Y:[-37]
+c
+What?
+515
+428/429:199>
+X:[-11]Y:[-37]
+l
+You find yourself on the first floor inside the Dalairi Embassy, an odd-
+shaped room with black stone walls outfitted as a rather dank reception area
+lit by flickering torchlight. A battered old wooden desk and some chairs rest
+in one corner, facing the eastern entrance; nearby is a flight of stairs
+leading up. A small oval rug lies in front of the desk. 
+ Obvious directions are:
+  east, up.
+A Scythe captain.
+An embassy guard.
+515
+428/429:199>
+X:[-11]Y:[-37]
+You scorched Scythe captain's body.
+You take a quick step backwards, avoiding Scythe captain's attack.
+Scythe captain missed you.
+You deftly sidestep Guard's attack.
+Guard missed you.
+
+515
+428/428:199>
+X:[-11]Y:[-37]
+c
+What?
+515
+428/428:199>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 404/404  SP: 199/202
+515
+404/404:199>
+X:[-11]Y:[-37]
+c
+You cannot throw that fast!
+515
+404/404:199>
+X:[-11]Y:[-37]
+
+515
+404/404:199>
+X:[-11]Y:[-37]
+
+515
+404/404:199>
+X:[-11]Y:[-37]
+
+515
+404/404:199>
+X:[-11]Y:[-37]
+You missed.
+HP: 392  SP: 199
+Scythe captain hewed your leg crudely.
+Guard missed you.
+An embassy guard says: Stay offa Dalairi soil, you.
+
+515
+392/403:199>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Scythe captain with an enormous smoldering fireball!
+The fireball explodes into tiny little cinders.
+516
+392/403:199>
+X:[-11]Y:[-37]
+
+516
+392/403:199>
+X:[-11]Y:[-37]
+
+516
+392/403:199>
+X:[-11]Y:[-37]
+
+516
+392/403:199>
+X:[-11]Y:[-37]
+
+516
+392/403:199>
+X:[-11]Y:[-37]
+
+You scorched Scythe captain's body.
+HP: 382  SP: 198
+Scythe captain slashed your leg viciously.
+You duck your head quickly as Guard's blow flies over you.
+Guard missed you.
+516
+382/402:198>
+X:[-11]Y:[-37]
+
+516
+382/402:198>
+X:[-11]Y:[-37]
+
+516
+382/402:198>
+X:[-11]Y:[-37]
+c
+What?
+516
+382/402:198>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 381/381  SP: 198/202
+516
+381/381:198>
+X:[-11]Y:[-37]
+You fried Scythe captain's body brutally.
+HP: 371  SP: 200
+Scythe captain sliced your leg deeply.
+HP: 368  SP: 200
+Guard lacerated your leg.
+
+516
+368/380:200>
+X:[-11]Y:[-37]
+
+516
+368/380:200>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Scythe captain with a huge smoldering fireball!
+The fireball explodes into tiny little cinders.
+Scythe captain died.
+You killed Scythe captain.
+714
+368/380:200>
+X:[-11]Y:[-37]
+z
+You absorb the corpse of Scythe captain, claimed by Lavalamp into yourself.
+HP: 385/397  SP: 200/202
+714
+385/397:200>
+X:[-11]Y:[-37]
+z
+You absorb a steel cap into yourself.
+You absorb an orcish sabre into yourself.
+HP: 459/471  SP: 200/202
+714
+459/471:200>
+X:[-11]Y:[-37]
+You take a quick step backwards, avoiding Guard's attack.
+Guard missed you.
+l
+You find yourself on the first floor inside the Dalairi Embassy, an odd-
+shaped room with black stone walls outfitted as a rather dank reception area
+lit by flickering torchlight. A battered old wooden desk and some chairs rest
+in one corner, facing the eastern entrance; nearby is a flight of stairs
+leading up. A small oval rug lies in front of the desk. 
+ Obvious directions are:
+  east, up.
+42 gold coins.
+An embassy guard.
+714
+459/471:199>
+X:[-11]Y:[-37]
+
+up
+714
+459/471:199>
+X:[-11]Y:[-37]
+An embassy guard stops you from going up.
+An embassy guard says: Authorised personnel only.
+714
+459/471:199>
+X:[-11]Y:[-37]
+up
+An embassy guard stops you from going up.
+An embassy guard says: Authorised personnel only.
+714
+459/471:199>
+X:[-11]Y:[-37]
+You missed.
+You take a quick step backwards, avoiding Guard's attack.
+Guard missed you.
+a
+Yes, yes.
+714
+459/470:199>
+X:[-11]Y:[-37]
+
+714
+459/470:199>
+X:[-11]Y:[-37]
+c
+What?
+714
+459/470:199>
+X:[-11]Y:[-37]
+
+714
+459/470:199>
+X:[-11]Y:[-37]
+c
+What?
+714
+459/470:199>
+X:[-11]Y:[-37]
+You scorched Guard's body.
+You take a quick step backwards, avoiding Guard's attack.
+Guard missed you.
+An embassy guard says: You're meat!
+
+713
+459/469:198>
+X:[-11]Y:[-37]
+]
+The embassy guard is a burly orc with pale green skin and sharpened white
+tusks. He is wearing the trappings of the Dalairi Army.
+He is in good shape.
+        Opponent is carrying:
+An orcish sword (wielded in right hand).
+A goatskin jacket (worn).
+713
+459/469:198>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 444/444  SP: 198/202
+713
+444/444:198>
+X:[-11]Y:[-37]
+
+713
+444/444:198>
+X:[-11]Y:[-37]
+l
+You find yourself on the first floor inside the Dalairi Embassy, an odd-
+shaped room with black stone walls outfitted as a rather dank reception area
+lit by flickering torchlight. A battered old wooden desk and some chairs rest
+in one corner, facing the eastern entrance; nearby is a flight of stairs
+leading up. A small oval rug lies in front of the desk. 
+ Obvious directions are:
+  east, up.
+42 gold coins.
+An embassy guard.
+713
+444/444:198>
+X:[-11]Y:[-37]
+
+713
+444/444:198>
+X:[-11]Y:[-37]
+You scorched Guard's body.
+You deftly sidestep Guard's attack.
+Guard missed you.
+c
+You wield your fireball in your right hand.
+You hit Guard with a gigantic smoldering fireball!
+The fireball explodes into tiny little cinders.
+713
+443/443:198>
+X:[-11]Y:[-37]
+
+713
+443/443:198>
+X:[-11]Y:[-37]
+
+713
+443/443:198>
+X:[-11]Y:[-37]
+
+713
+443/443:198>
+X:[-11]Y:[-37]
+
+713
+443/443:198>
+X:[-11]Y:[-37]
+You scorched Guard's body.
+You deftly sidestep Guard's attack.
+Guard missed you.
+
+713
+442/442:197>
+X:[-11]Y:[-37]
+
+713
+442/442:197>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 420/420  SP: 197/202
+713
+420/420:197>
+X:[-11]Y:[-37]
+
+713
+420/420:197>
+X:[-11]Y:[-37]
+l
+You find yourself on the first floor inside the Dalairi Embassy, an odd-
+shaped room with black stone walls outfitted as a rather dank reception area
+lit by flickering torchlight. A battered old wooden desk and some chairs rest
+in one corner, facing the eastern entrance; nearby is a flight of stairs
+leading up. A small oval rug lies in front of the desk. 
+ Obvious directions are:
+  east, up.
+42 gold coins.
+An embassy guard.
+713
+420/420:197>
+X:[-11]Y:[-37]
+
+713
+420/420:197>
+X:[-11]Y:[-37]
+
+713
+420/420:197>
+X:[-11]Y:[-37]
+You fried Guard's leg brutally.
+Guard missed you.
+c
+You wield your fireball in your right hand.
+You hit Guard with an enormous smoldering fireball!
+The fireball explodes into tiny little cinders.
+Guard died.
+You killed Guard.
+720
+419/419:196>
+X:[-11]Y:[-37]
+
+720
+419/419:196>
+X:[-11]Y:[-37]
+z
+You absorb the corpse of Guard, claimed by Lavalamp into yourself.
+You absorb 42 gold coins into yourself.
+HP: 431/431  SP: 196/202
+720
+431/431:196>
+X:[-11]Y:[-37]
+z
+You absorb a goatskin jacket into yourself.
+You absorb an orcish sword into yourself.
+You absorb 4 gold coins into yourself.
+HP: 467/467  SP: 196/202
+720
+467/467:196>
+X:[-11]Y:[-37]
+l
+You find yourself on the first floor inside the Dalairi Embassy, an odd-
+shaped room with black stone walls outfitted as a rather dank reception area
+lit by flickering torchlight. A battered old wooden desk and some chairs rest
+in one corner, facing the eastern entrance; nearby is a flight of stairs
+leading up. A small oval rug lies in front of the desk. 
+ Obvious directions are:
+  east, up.
+720
+467/467:196>
+X:[-11]Y:[-37]
+up
+Drakhiya, Dalairi Embassy Upper Level (d)
+Mettertrop, the Dalairi Ambassador to Drakhiya.
+Petra the Chaos Advisor to the Ambassador [Chaos NPC].
+720
+467/467:196>
+X:[-11]Y:[-37]
+a
+You scorched Mettertrop's body.
+720
+467/467:196>
+X:[-11]Y:[-37]
+
+720
+467/467:196>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 452/452  SP: 196/202
+720
+452/452:196>
+X:[-11]Y:[-37]
+You scorched Mettertrop's body.
+Mettertrop missed you.
+
+720
+451/451:196>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Mettertrop with a large smoldering fireball!
+The fireball explodes into tiny little cinders.
+721
+451/451:196>
+X:[-11]Y:[-37]
+
+721
+451/451:196>
+X:[-11]Y:[-37]
+l
+You are on the upper floor inside the Dalairi Embassy, which is a peculiar
+polygonal-shaped chamber carved from black stone and lit by flickering lamps.
+A distinguished-looking teak desk dominates the room, with a high backed
+leather chair behind it. A tiny shrine rests in one of the many corners.
+Along the west wall is a flight of stairs leading down, next to a tall,
+narrow window. 
+ The only obvious exit is down.
+Mettertrop, the Dalairi Ambassador to Drakhiya.
+Petra the Chaos Advisor to the Ambassador [Chaos NPC].
+721
+451/451:196>
+X:[-11]Y:[-37]
+You feint a jab.
+You burnt Mettertrop's body painfully.
+HP: 430  SP: 195
+Mettertrop sheared your arm ruthlessly.
+c
+What?
+720
+430/450:195>
+X:[-11]Y:[-37]
+
+720
+430/450:195>
+X:[-11]Y:[-37]
+c
+What?
+720
+430/450:195>
+X:[-11]Y:[-37]
+l
+You are on the upper floor inside the Dalairi Embassy, which is a peculiar
+polygonal-shaped chamber carved from black stone and lit by flickering lamps.
+A distinguished-looking teak desk dominates the room, with a high backed
+leather chair behind it. A tiny shrine rests in one of the many corners.
+Along the west wall is a flight of stairs leading down, next to a tall,
+narrow window. 
+ The only obvious exit is down.
+Mettertrop, the Dalairi Ambassador to Drakhiya.
+Petra the Chaos Advisor to the Ambassador [Chaos NPC].
+720
+430/450:195>
+X:[-11]Y:[-37]
+
+720
+430/450:195>
+X:[-11]Y:[-37]
+You scorched Mettertrop's body.
+HP: 415  SP: 195
+Mettertrop slashed your leg viciously.
+c
+What?
+720
+415/449:195>
+X:[-11]Y:[-37]
+
+720
+415/449:195>
+X:[-11]Y:[-37]
+c
+What?
+720
+415/449:195>
+X:[-11]Y:[-37]
+
+720
+415/449:195>
+X:[-11]Y:[-37]
+
+720
+415/449:195>
+X:[-11]Y:[-37]
+
+You missed.
+You take a quick step backwards, avoiding Mettertrop's attack.
+Mettertrop missed you.
+720
+418/448:201>
+X:[-11]Y:[-37]
+c
+What?
+720
+418/448:201>
+X:[-11]Y:[-37]
+
+720
+418/448:201>
+X:[-11]Y:[-37]
+
+720
+418/448:201>
+X:[-11]Y:[-37]
+
+720
+418/448:201>
+X:[-11]Y:[-37]
+
+720
+418/448:201>
+X:[-11]Y:[-37]
+You warmed Mettertrop's arm.
+HP: 399  SP: 201
+Mettertrop hewed your body crudely.
+c
+What?
+719
+399/447:201>
+X:[-11]Y:[-37]
+
+719
+399/447:201>
+X:[-11]Y:[-37]
+
+719
+399/447:201>
+X:[-11]Y:[-37]
+c
+What?
+719
+399/447:201>
+X:[-11]Y:[-37]
+You scorched Mettertrop's body.
+HP: 394  SP: 201
+Mettertrop chopped your body bluntly.
+
+719
+394/446:201>
+X:[-11]Y:[-37]
+c
+What?
+719
+394/446:201>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 394/421  SP: 201/202
+719
+394/421:201>
+X:[-11]Y:[-37]
+
+719
+394/421:201>
+X:[-11]Y:[-37]
+You missed.
+HP: 387  SP: 200
+Mettertrop sliced your arm deeply.
+
+719
+387/420:200>
+X:[-11]Y:[-37]
+
+719
+387/420:200>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Mettertrop with a gigantic smoldering fireball!
+The fireball explodes into tiny little cinders.
+721
+387/420:200>
+X:[-11]Y:[-37]
+
+721
+387/420:200>
+X:[-11]Y:[-37]
+]
+Mettertrop is an old but burly orc with pale green, heavily wrinkled skin and
+blunt white tusks. He is the ambassador plenipotentiary of Dalair to
+Drakhiya.
+He is in bad shape.
+        Opponent is carrying:
+Some diplomatic papers.
+An orcish sabre (wielded in right hand).
+An orcish splintmail (worn).
+721
+387/420:200>
+X:[-11]Y:[-37]
+You scorched Mettertrop's head.
+Mettertrop missed you.
+
+721
+387/419:200>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 387/395  SP: 200/202
+721
+387/395:200>
+X:[-11]Y:[-37]
+
+721
+387/395:200>
+X:[-11]Y:[-37]
+You burnt Mettertrop's body painfully.
+HP: 371  SP: 200
+Mettertrop slashed your head viciously.
+scor
+Lavalamp the heroic avalanche (nice)
+
+Str: 16 (16)    Race : Fluon (male)          Exp    : 233,105,996
+Dex: 17 (16)    Class: Shapeshifter (33)     Wounds : none
+Int: 13 (13)    Guild: The Snowfolk          Money  : 185,736 coins
+Con: 17 (17)    Age  : 95d  16h  43m  10s    Banks  : 4,335,342 coins
+Wis: 13 (13)    Language: Common language    Traits : 82 points
+
+Hits : 371 (394)   Defend   : Dodge          You are: Sober
+Sps  : 200 (202)   Aiming at: Body           You are: Thirsty
+Wimpy: None        Attack   : Crush          You are: Hungry
+Dir  : Random      Hunted by: Militiaman     You are: Unpoisoned
+                                             You are: Unencumbered
+
+Session summary:
+        Time: 1 hour and 25 seconds.
+        Monsters killed: 8
+        Experience gained: 43,524 (720 exp/minute, 5,440 exp/kill)
+        No gold was gained or lost.
+        Sequential play days: 6.
+        Sequential play record: 18.
+
+Lifetime summary:
+        Age: 13 weeks, 4 days, 16 hours, 43 minutes and 10 seconds.
+        Monsters killed: 84,800
+        Experience gained: 233,105,996 (1,691 exp/minute, 2,748 exp/kill)
+        Gold gained: 4,521,078 coins.
+720
+371/394:200>
+X:[-11]Y:[-37]
+
+720
+371/394:200>
+X:[-11]Y:[-37]
+You fried Mettertrop's body brutally.
+HP: 358  SP: 200
+Mettertrop slashed your arm viciously.
+x
+You form a ball of fire from yourself.
+HP: 358/363  SP: 200/202
+720
+358/363:200>
+X:[-11]Y:[-37]
+
+720
+358/363:200>
+X:[-11]Y:[-37]
+
+720
+358/363:200>
+X:[-11]Y:[-37]
+c
+You cannot throw that fast!
+720
+358/363:200>
+X:[-11]Y:[-37]
+
+720
+358/363:200>
+X:[-11]Y:[-37]
+l
+You are on the upper floor inside the Dalairi Embassy, which is a peculiar
+polygonal-shaped chamber carved from black stone and lit by flickering lamps.
+A distinguished-looking teak desk dominates the room, with a high backed
+leather chair behind it. A tiny shrine rests in one of the many corners.
+Along the west wall is a flight of stairs leading down, next to a tall,
+narrow window. 
+ The only obvious exit is down.
+Mettertrop, the Dalairi Ambassador to Drakhiya.
+Petra the Chaos Advisor to the Ambassador [Chaos NPC].
+720
+358/363:200>
+X:[-11]Y:[-37]
+c
+You scorched Mettertrop's body.
+You duck your head quickly as Mettertrop's blow flies over you.
+Mettertrop missed you.
+The fireball cools a little.
+You wield your fireball in your right hand.
+You hit Mettertrop with a gigantic smoldering fireball!
+The fireball explodes into tiny little cinders.
+721
+358/362:200>
+X:[-11]Y:[-37]
+
+721
+358/362:200>
+X:[-11]Y:[-37]
+
+721
+358/362:200>
+X:[-11]Y:[-37]
+l
+You are on the upper floor inside the Dalairi Embassy, which is a peculiar
+polygonal-shaped chamber carved from black stone and lit by flickering lamps.
+A distinguished-looking teak desk dominates the room, with a high backed
+leather chair behind it. A tiny shrine rests in one of the many corners.
+Along the west wall is a flight of stairs leading down, next to a tall,
+narrow window. 
+ The only obvious exit is down.
+Mettertrop, the Dalairi Ambassador to Drakhiya.
+Petra the Chaos Advisor to the Ambassador [Chaos NPC].
+721
+358/362:200>
+X:[-11]Y:[-37]
+c
+You cannot throw that fast!
+721
+358/362:200>
+X:[-11]Y:[-37]
+
+You scorched Mettertrop's body.
+HP: 346  SP: 200
+Mettertrop slashed your arm viciously.
+721
+346/361:200>
+X:[-11]Y:[-37]
+l
+You are on the upper floor inside the Dalairi Embassy, which is a peculiar
+polygonal-shaped chamber carved from black stone and lit by flickering lamps.
+A distinguished-looking teak desk dominates the room, with a high backed
+leather chair behind it. A tiny shrine rests in one of the many corners.
+Along the west wall is a flight of stairs leading down, next to a tall,
+narrow window. 
+ The only obvious exit is down.
+Mettertrop, the Dalairi Ambassador to Drakhiya.
+Petra the Chaos Advisor to the Ambassador [Chaos NPC].
+721
+346/361:200>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Mettertrop with an enormous smoldering fireball!
+The fireball explodes into tiny little cinders.
+723
+346/361:200>
+X:[-11]Y:[-37]
+
+723
+346/361:200>
+X:[-11]Y:[-37]
+c
+What?
+723
+346/361:200>
+X:[-11]Y:[-37]
+You flex.
+You scorched Mettertrop's body.
+You take a quick step backwards, avoiding Mettertrop's attack.
+Mettertrop missed you.
+
+723
+346/360:200>
+X:[-11]Y:[-37]
+
+723
+346/360:200>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 332/332  SP: 200/202
+723
+332/332:200>
+X:[-11]Y:[-37]
+
+723
+332/332:200>
+X:[-11]Y:[-37]
+
+723
+332/332:200>
+X:[-11]Y:[-37]
+
+You missed.
+HP: 318  SP: 199
+Mettertrop hewed your head crudely.
+723
+318/331:199>
+X:[-11]Y:[-37]
+
+723
+318/331:199>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Mettertrop with a gigantic smoldering fireball!
+The fireball explodes into tiny little cinders.
+724
+318/331:199>
+X:[-11]Y:[-37]
+
+724
+318/331:199>
+X:[-11]Y:[-37]
+
+724
+318/331:199>
+X:[-11]Y:[-37]
+c
+What?
+724
+318/331:199>
+X:[-11]Y:[-37]
+
+724
+318/331:199>
+X:[-11]Y:[-37]
+You fried Mettertrop's body brutally.
+You take a quick step backwards, avoiding Mettertrop's attack.
+Mettertrop missed you.
+]
+Mettertrop is an old but burly orc with pale green, heavily wrinkled skin and
+blunt white tusks. He is the ambassador plenipotentiary of Dalair to
+Drakhiya.
+He is almost dead.
+        Opponent is carrying:
+Some diplomatic papers.
+An orcish sabre (wielded in right hand).
+An orcish splintmail (worn).
+724
+321/330:202>
+X:[-11]Y:[-37]
+
+724
+321/330:202>
+X:[-11]Y:[-37]
+
+724
+321/330:202>
+X:[-11]Y:[-37]
+
+724
+321/330:202>
+X:[-11]Y:[-37]
+
+724
+321/330:202>
+X:[-11]Y:[-37]
+
+724
+321/330:202>
+X:[-11]Y:[-37]
+
+724
+321/330:202>
+X:[-11]Y:[-37]
+You burnt Mettertrop's body painfully.
+HP: 312  SP: 202
+Mettertrop sliced your head deeply.
+
+724
+312/329:202>
+X:[-11]Y:[-37]
+
+724
+312/329:202>
+X:[-11]Y:[-37]
+
+724
+312/329:202>
+X:[-11]Y:[-37]
+l
+You are on the upper floor inside the Dalairi Embassy, which is a peculiar
+polygonal-shaped chamber carved from black stone and lit by flickering lamps.
+A distinguished-looking teak desk dominates the room, with a high backed
+leather chair behind it. A tiny shrine rests in one of the many corners.
+Along the west wall is a flight of stairs leading down, next to a tall,
+narrow window. 
+ The only obvious exit is down.
+Mettertrop, the Dalairi Ambassador to Drakhiya.
+Petra the Chaos Advisor to the Ambassador [Chaos NPC].
+724
+312/329:202>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 311/311  SP: 202/202
+724
+311/311:202>
+X:[-11]Y:[-37]
+
+724
+311/311:202>
+X:[-11]Y:[-37]
+You missed.
+You take a quick step backwards, avoiding Mettertrop's attack.
+Mettertrop missed you.
+
+723
+310/310:201>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Mettertrop with a large smoldering fireball!
+The fireball explodes into tiny little cinders.
+Mettertrop died.
+You killed Mettertrop.
+881
+310/310:201>
+X:[-11]Y:[-37]
+z
+You absorb the corpse of Mettertrop, claimed by Lavalamp into yourself.
+HP: 328/328  SP: 201/202
+881
+328/328:201>
+X:[-11]Y:[-37]
+z
+You absorb an orcish splintmail into yourself.
+You absorb an orcish sabre into yourself.
+You absorb some diplomatic papers into yourself.
+You absorb 144 gold coins into yourself.
+HP: 466/466  SP: 201/202
+881
+466/466:201>
+X:[-11]Y:[-37]
+l
+You are on the upper floor inside the Dalairi Embassy, which is a peculiar
+polygonal-shaped chamber carved from black stone and lit by flickering lamps.
+A distinguished-looking teak desk dominates the room, with a high backed
+leather chair behind it. A tiny shrine rests in one of the many corners.
+Along the west wall is a flight of stairs leading down, next to a tall,
+narrow window. 
+ The only obvious exit is down.
+Petra the Chaos Advisor to the Ambassador [Chaos NPC].
+881
+466/466:201>
+X:[-11]Y:[-37]
+down
+Drakhiya, Dalairi Embassy Lower Level (e,u)
+881
+466/466:200>
+X:[-11]Y:[-37]
+east
+Drakhiya, Dalairi Embassy Entrance (w,se)
+6 gold coins.
+881
+466/466:200>
+X:[-11]Y:[-37]
+west
+Drakhiya, Dalairi Embassy Lower Level (e,u)
+881
+466/466:200>
+X:[-11]Y:[-37]
+up
+Drakhiya, Dalairi Embassy Upper Level (d)
+Petra the Chaos Advisor to the Ambassador [Chaos NPC].
+880
+466/466:200>
+X:[-11]Y:[-37]
+down
+Drakhiya, Dalairi Embassy Lower Level (e,u)
+880
+466/466:200>
+X:[-11]Y:[-37]
+east
+Drakhiya, Dalairi Embassy Entrance (w,se)
+6 gold coins.
+880
+466/466:200>
+X:[-11]Y:[-37]
+se
+Drakhiya, Avenue of Prosperity (ne,se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+880
+466/466:200>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Palace Gates (e,w,ne,se)
+10 gold coins.
+A cairn of stones with a bloody scythe banner.
+880
+466/466:200>
+X:[-11]Y:[-37]
+nw
+Maybe you should look for another exit.
+880
+466/466:200>
+X:[-11]Y:[-37]
+sw
+You do not think you can go there.
+879
+466/466:200>
+X:[-11]Y:[-37]
+nw
+What?
+879
+466/466:200>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Avenue of Prosperity (ne,se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+879
+466/466:200>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Palace Gates (e,w,ne,se)
+10 gold coins.
+A cairn of stones with a bloody scythe banner.
+879
+466/466:200>
+X:[-11]Y:[-37]
+sw
+Maybe you should look for another exit.
+879
+466/466:200>
+X:[-11]Y:[-37]
+sw
+Maybe you should look for another exit.
+879
+466/466:200>
+X:[-11]Y:[-37]
+sw
+Maybe you should look for another exit.
+878
+466/466:200>
+X:[-11]Y:[-37]
+east
+Drakhiya, Avenue of Dawn (e,w)
+A cairn of stones with a bloody scythe banner.
+878
+466/466:200>
+X:[-11]Y:[-37]
+west
+Drakhiya, Palace Gates (e,w,ne,se)
+10 gold coins.
+A cairn of stones with a bloody scythe banner.
+878
+466/466:200>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Avenue of Prosperity (ne,se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+878
+466/466:200>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Street of Gold (se,sw,nw,|d|)
+A rich orc mistress.
+A cairn of stones with a bloody scythe banner.
+878
+466/466:200>
+X:[-11]Y:[-37]
+ne
+What?
+878
+466/466:200>
+X:[-11]Y:[-37]
+ne
+What?
+878
+466/466:199>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Avenue of Prosperity (ne,se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+878
+466/466:199>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Dalairi Embassy Entrance (w,se)
+6 gold coins.
+878
+466/466:199>
+X:[-11]Y:[-37]
+se
+Drakhiya, Avenue of Prosperity (ne,se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+877
+466/466:198>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Palace Gates (e,w,ne,se)
+10 gold coins.
+A cairn of stones with a bloody scythe banner.
+877
+466/466:198>
+X:[-11]Y:[-37]
+sw
+You do not think you can go there.
+877
+466/466:198>
+X:[-11]Y:[-37]
+sw
+Maybe you should look for another exit.
+877
+466/466:198>
+X:[-11]Y:[-37]
+se
+Drakhiya, Avenue of Drakh (ne,se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+877
+466/466:202>
+X:[-11]Y:[-37]
+l
+You are on the Avenue of Drakh, a narrow cobblestone-paved road cutting
+straight as an arrow through the city's temple district. The avenue
+intersects with the Street of Faith to the southeast, and terminates before
+the palace gates to the northwest. To the northeast rise the ostentatious
+minarets of the Great Mosque. A square sandstone building to the southwest
+advertises itself as the Inn of Faithful Pilgrims. 
+ Obvious directions are:
+  northeast, southeast, southwest, northwest.
+A cairn of stones with a bloody scythe banner.
+877
+466/466:202>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Palace Gates (e,w,ne,se)
+10 gold coins.
+A cairn of stones with a bloody scythe banner.
+876
+466/466:202>
+X:[-11]Y:[-37]
+
+875
+466/466:201>
+X:[-11]Y:[-37]
+l
+Three broad avenues converge here before the front gate of the Palace of the
+Caliph, a magnificent edifice housing the ruler of the desert. The widest of
+the roads, the Avenue of Dawn, leads due east towards the city gates; the
+Avenue of Prosperity heads northeast into a wealthy neighbourhood, and the
+Avenue of Drakh goes southeast into the temple district. The palace gates
+stand just west of you. 
+ Obvious directions are:
+  east, west, northeast, southeast.
+10 gold coins.
+A cairn of stones with a bloody scythe banner.
+875
+466/466:201>
+X:[-11]Y:[-37]
+Horseorc rides in on a bay mare.
+west
+A horseorc stops you from going west.
+A horseorc says: No admittance.
+874
+466/466:200>
+X:[-11]Y:[-37]
+qo
+Changed nickname target = orc
+874
+466/466:200>
+X:[-11]Y:[-37]
+a
+You fried Horseorc's body brutally.
+874
+466/466:200>
+X:[-11]Y:[-37]
+
+874
+466/466:200>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 451/451  SP: 200/202
+874
+451/451:200>
+X:[-11]Y:[-37]
+c
+You cannot throw that fast!
+874
+451/451:200>
+X:[-11]Y:[-37]
+
+874
+451/451:200>
+X:[-11]Y:[-37]
+You fried Horseorc's body brutally.
+You take a quick step backwards, avoiding Horseorc's attack.
+Horseorc missed you.
+A horseorc says: No one breaks the law in the Caliph's city!
+
+874
+450/450:199>
+X:[-11]Y:[-37]
+
+874
+450/450:199>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Horseorc with a large smoldering fireball!
+The fireball explodes into tiny little cinders.
+876
+450/450:199>
+X:[-11]Y:[-37]
+
+876
+450/450:199>
+X:[-11]Y:[-37]
+
+876
+450/450:199>
+X:[-11]Y:[-37]
+c
+What?
+876
+450/450:199>
+X:[-11]Y:[-37]
+c
+What?
+876
+450/450:199>
+X:[-11]Y:[-37]
+You scorched Horseorc's body.
+HP: 449  SP: 199
+Horseorc nicked your leg.
+You take a quick step backwards, avoiding Mare's attack.
+Mare missed you.
+
+876
+449/449:199>
+X:[-11]Y:[-37]
+c
+What?
+876
+449/449:199>
+X:[-11]Y:[-37]
+
+876
+449/449:199>
+X:[-11]Y:[-37]
+
+876
+449/449:199>
+X:[-11]Y:[-37]
+]
+The horseorc is a lean, handsome orc whose skin has been darkened to a deep,
+olive drab from exposure to the desert sun. He makes mounted patrols about
+the city to keep the peace.
+He is slightly hurt.
+        Opponent is carrying:
+A falchion (wielded in right hand).
+A curved sheath (worn).
+A desert robe (worn).
+A kaffiyeh (worn).
+876
+449/449:199>
+X:[-11]Y:[-37]
+
+876
+449/449:199>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 430/430  SP: 199/202
+876
+430/430:199>
+X:[-11]Y:[-37]
+Your strike slides off Horseorc's falchion!
+You burnt Horseorc's head painfully.
+HP: 424  SP: 199
+Horseorc sliced your arm deeply.
+You take a quick step backwards, avoiding Mare's attack.
+Mare missed you.
+
+875
+424/429:199>
+X:[-11]Y:[-37]
+l
+Three broad avenues converge here before the front gate of the Palace of the
+Caliph, a magnificent edifice housing the ruler of the desert. The widest of
+the roads, the Avenue of Dawn, leads due east towards the city gates; the
+Avenue of Prosperity heads northeast into a wealthy neighbourhood, and the
+Avenue of Drakh goes southeast into the temple district. The palace gates
+stand just west of you. 
+ Obvious directions are:
+  east, west, northeast, southeast.
+A bay mare.
+A horseorc.
+10 gold coins.
+A cairn of stones with a bloody scythe banner.
+875
+424/429:199>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Horseorc with a huge smoldering fireball!
+The fireball explodes into tiny little cinders.
+877
+424/429:199>
+X:[-11]Y:[-37]
+
+877
+424/429:199>
+X:[-11]Y:[-37]
+c
+What?
+877
+424/429:199>
+X:[-11]Y:[-37]
+
+877
+424/429:199>
+X:[-11]Y:[-37]
+l
+Three broad avenues converge here before the front gate of the Palace of the
+Caliph, a magnificent edifice housing the ruler of the desert. The widest of
+the roads, the Avenue of Dawn, leads due east towards the city gates; the
+Avenue of Prosperity heads northeast into a wealthy neighbourhood, and the
+Avenue of Drakh goes southeast into the temple district. The palace gates
+stand just west of you. 
+ Obvious directions are:
+  east, west, northeast, southeast.
+A bay mare.
+A horseorc.
+10 gold coins.
+A cairn of stones with a bloody scythe banner.
+877
+424/429:199>
+X:[-11]Y:[-37]
+You missed.
+Horseorc missed you.
+You take a quick step backwards, avoiding Mare's attack.
+Mare missed you.
+Orc master arrives.
+
+876
+424/428:198>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 406/406  SP: 198/202
+876
+406/406:198>
+X:[-11]Y:[-37]
+
+876
+406/406:198>
+X:[-11]Y:[-37]
+
+876
+406/406:198>
+X:[-11]Y:[-37]
+c
+You cannot throw that fast!
+876
+406/406:198>
+X:[-11]Y:[-37]
+You fried Horseorc's body brutally.
+HP: 400  SP: 202
+Horseorc sliced your arm deeply.
+Mare missed you.
+c
+You wield your fireball in your right hand.
+You hit Horseorc with an enormous smoldering fireball!
+The fireball explodes into tiny little cinders.
+878
+400/405:202>
+X:[-11]Y:[-37]
+c
+What?
+878
+400/405:202>
+X:[-11]Y:[-37]
+c
+What?
+878
+400/405:202>
+X:[-11]Y:[-37]
+l
+Three broad avenues converge here before the front gate of the Palace of the
+Caliph, a magnificent edifice housing the ruler of the desert. The widest of
+the roads, the Avenue of Dawn, leads due east towards the city gates; the
+Avenue of Prosperity heads northeast into a wealthy neighbourhood, and the
+Avenue of Drakh goes southeast into the temple district. The palace gates
+stand just west of you. 
+ Obvious directions are:
+  east, west, northeast, southeast.
+A rich orc master.
+A bay mare.
+A horseorc.
+10 gold coins.
+A cairn of stones with a bloody scythe banner.
+878
+400/405:202>
+X:[-11]Y:[-37]
+
+878
+400/405:202>
+X:[-11]Y:[-37]
+You fried Horseorc's body brutally.
+You take a quick step backwards, avoiding Horseorc's attack.
+Horseorc missed you.
+You take a quick step backwards, avoiding Mare's attack.
+Mare missed you.
+
+878
+400/404:202>
+X:[-11]Y:[-37]
+
+878
+400/404:202>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 385/385  SP: 202/202
+878
+385/385:202>
+X:[-11]Y:[-37]
+
+878
+385/385:202>
+X:[-11]Y:[-37]
+]
+The horseorc is a lean, handsome orc whose skin has been darkened to a deep,
+olive drab from exposure to the desert sun. He makes mounted patrols about
+the city to keep the peace.
+He is almost dead.
+        Opponent is carrying:
+A falchion (wielded in right hand).
+A curved sheath (worn).
+A desert robe (worn).
+A kaffiyeh (worn).
+878
+385/385:202>
+X:[-11]Y:[-37]
+
+878
+385/385:202>
+X:[-11]Y:[-37]
+
+You fried Horseorc's body brutally.
+HP: 373  SP: 201
+Horseorc hewed your head crudely.
+You take a quick step backwards, avoiding Mare's attack.
+Mare missed you.
+878
+373/384:201>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Horseorc with a huge smoldering fireball!
+The fireball explodes into tiny little cinders.
+Horseorc died.
+You killed Horseorc.
+1,018
+373/384:201>
+X:[-11]Y:[-37]
+
+1,018
+373/384:201>
+X:[-11]Y:[-37]
+
+1,018
+373/384:201>
+X:[-11]Y:[-37]
+z
+You absorb the corpse of Horseorc, claimed by Lavalamp into yourself.
+You absorb 10 gold coins into yourself.
+HP: 389/400  SP: 201/202
+1,018
+389/400:201>
+X:[-11]Y:[-37]
+z
+You absorb a kaffiyeh into yourself.
+You absorb a desert robe into yourself.
+You absorb a curved sheath into yourself.
+You absorb a falchion into yourself.
+HP: 460/471  SP: 201/202
+1,018
+460/471:201>
+X:[-11]Y:[-37]
+l
+Three broad avenues converge here before the front gate of the Palace of the
+Caliph, a magnificent edifice housing the ruler of the desert. The widest of
+the roads, the Avenue of Dawn, leads due east towards the city gates; the
+Avenue of Prosperity heads northeast into a wealthy neighbourhood, and the
+Avenue of Drakh goes southeast into the temple district. The palace gates
+stand just west of you. 
+ Obvious directions are:
+  east, west, northeast, southeast.
+19 gold coins.
+A rich orc master.
+A bay mare.
+A cairn of stones with a bloody scythe banner.
+1,018
+460/471:201>
+X:[-11]Y:[-37]
+HP: 457  SP: 201
+Mare kicks your leg hard.
+A rich orc master says: I have come to pay homage to the Caliph.
+q hohrse
+Changed nickname target = hohrse
+1,018
+457/471:201>
+X:[-11]Y:[-37]
+You missed.
+HP: 454  SP: 201
+Mare kicks your head hard.
+
+1,017
+454/470:201>
+X:[-11]Y:[-37]
+a
+No hohrse here!
+1,017
+454/470:201>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 442/442  SP: 201/202
+1,017
+442/442:201>
+X:[-11]Y:[-37]
+
+1,017
+442/442:201>
+X:[-11]Y:[-37]
+x
+You are too busy rolling a fireball to roll another!
+1,017
+442/442:201>
+X:[-11]Y:[-37]
+c
+You cannot throw that fast!
+1,017
+442/442:201>
+X:[-11]Y:[-37]
+You fried Mare's side brutally.
+You duck your head quickly as Mare's blow flies over you.
+Mare missed you.
+
+1,017
+441/441:200>
+X:[-11]Y:[-37]
+qo
+Changed nickname target = orc
+1,017
+441/441:200>
+X:[-11]Y:[-37]
+
+1,017
+441/441:200>
+X:[-11]Y:[-37]
+You scorched Mare's side.
+HP: 438  SP: 199
+Mare kicks your arm hard.
+c
+You wield your fireball in your right hand.
+You hit Mare with a gigantic smoldering fireball!
+The fireball explodes into tiny little cinders.
+1,018
+438/440:199>
+X:[-11]Y:[-37]
+x
+You are too busy throwing a fireball to roll a fireball!
+1,018
+438/440:199>
+X:[-11]Y:[-37]
+
+1,018
+438/440:199>
+X:[-11]Y:[-37]
+l
+Three broad avenues converge here before the front gate of the Palace of the
+Caliph, a magnificent edifice housing the ruler of the desert. The widest of
+the roads, the Avenue of Dawn, leads due east towards the city gates; the
+Avenue of Prosperity heads northeast into a wealthy neighbourhood, and the
+Avenue of Drakh goes southeast into the temple district. The palace gates
+stand just west of you. 
+ Obvious directions are:
+  east, west, northeast, southeast.
+19 gold coins.
+A rich orc master.
+A bay mare.
+A cairn of stones with a bloody scythe banner.
+1,018
+438/440:199>
+X:[-11]Y:[-37]
+
+1,018
+438/440:199>
+X:[-11]Y:[-37]
+You fried Mare's side brutally.
+HP: 437  SP: 198
+Mare nipped at your arm.
+
+1,017
+437/439:198>
+X:[-11]Y:[-37]
+
+1,017
+437/439:198>
+X:[-11]Y:[-37]
+c
+What?
+1,017
+437/439:198>
+X:[-11]Y:[-37]
+
+1,017
+437/439:198>
+X:[-11]Y:[-37]
+c
+What?
+1,017
+437/439:198>
+X:[-11]Y:[-37]
+You scorched Mare's side.
+You take a quick step backwards, avoiding Mare's attack.
+Mare missed you.
+
+1,017
+437/438:198>
+X:[-11]Y:[-37]
+
+1,017
+437/438:198>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 408/408  SP: 198/202
+1,017
+408/408:198>
+X:[-11]Y:[-37]
+
+1,017
+408/408:198>
+X:[-11]Y:[-37]
+]
+This horse's eyes gleam with an unnatural intelligence.  Surely this is no
+ordinary mount.
+She is seriously wounded.
+1,017
+408/408:198>
+X:[-11]Y:[-37]
+
+1,017
+408/408:198>
+X:[-11]Y:[-37]
+
+1,017
+408/408:198>
+X:[-11]Y:[-37]
+You scorched Mare's side.
+You take a quick step backwards, avoiding Mare's attack.
+Mare missed you.
+Kutusov arrives.
+
+1,017
+407/407:198>
+X:[-11]Y:[-37]
+
+1,017
+407/407:198>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Mare with a gigantic smoldering fireball!
+The fireball explodes into tiny little cinders.
+Mare died.
+You killed Mare.
+1,019
+407/407:198>
+X:[-11]Y:[-37]
+z
+You absorb the corpse of Mare, claimed by Lavalamp into yourself.
+You absorb 19 gold coins into yourself.
+HP: 419/419  SP: 198/202
+1,019
+419/419:198>
+X:[-11]Y:[-37]
+
+1,019
+419/419:198>
+X:[-11]Y:[-37]
+
+1,019
+419/419:198>
+X:[-11]Y:[-37]
+z
+You fail to absorb a cairn of stones with a bloody scythe banner.
+1,019
+419/419:198>
+X:[-11]Y:[-37]
+l
+Three broad avenues converge here before the front gate of the Palace of the
+Caliph, a magnificent edifice housing the ruler of the desert. The widest of
+the roads, the Avenue of Dawn, leads due east towards the city gates; the
+Avenue of Prosperity heads northeast into a wealthy neighbourhood, and the
+Avenue of Drakh goes southeast into the temple district. The palace gates
+stand just west of you. 
+ Obvious directions are:
+  east, west, northeast, southeast.
+Kutusov, the Commander of the Faithful, Caliph of Drakhiya.
+A rich orc master.
+A cairn of stones with a bloody scythe banner.
+1,018
+419/419:198>
+X:[-11]Y:[-37]
+west
+Drakhiya, Palace Courtyard (n,e,s,w)
+1,018
+419/419:198>
+X:[-11]Y:[-37]
+Kutusov arrives.
+l
+You are in an open courtyard within the walls of the Palace of the Caliph.
+Red tiles pave the courtyard, from which echoes the clattering footsteps of
+countless servants and soldiers. To the east are the palace gates, to the
+south a small stable. You can see a colourful garden to the north, and a tall
+arch to the west leads into the palace proper. 
+ Obvious directions are:
+  north, east, south, west.
+Kutusov, the Commander of the Faithful, Caliph of Drakhiya.
+1,017
+419/419:202>
+X:[-11]Y:[-37]
+west
+Drakhiya, Presence Chamber of the Caliph (n,e,s)
+Yassar, the Grand Wazir.
+1,016
+419/419:202>
+X:[-11]Y:[-37]
+east
+Drakhiya, Palace Courtyard (n,e,s,w)
+A rich orc master.
+Kutusov, the Commander of the Faithful, Caliph of Drakhiya.
+1,015
+419/419:202>
+X:[-11]Y:[-37]
+west
+Drakhiya, Presence Chamber of the Caliph (n,e,s)
+Yassar, the Grand Wazir.
+1,015
+419/419:202>
+X:[-11]Y:[-37]
+north
+Drakhiya, Palace Guard Post (s,w)
+A palace guard.
+1,015
+419/419:202>
+X:[-11]Y:[-37]
+west
+A palace guard stops you from going west.
+A palace guard says: You may not enter the Sultan's chambers.
+1,015
+419/419:201>
+X:[-11]Y:[-37]
+qo
+Changed nickname target = orc
+1,014
+419/419:200>
+X:[-11]Y:[-37]
+a
+You fried Guard's body brutally.
+1,015
+419/419:200>
+X:[-11]Y:[-37]
+
+1,015
+419/419:200>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 403/403  SP: 200/202
+1,015
+403/403:200>
+X:[-11]Y:[-37]
+c
+You cannot throw that fast!
+1,015
+403/403:200>
+X:[-11]Y:[-37]
+
+1,015
+403/403:200>
+X:[-11]Y:[-37]
+
+You burnt Guard's body painfully.
+HP: 402  SP: 200
+Guard battered your arm.
+1,014
+402/402:200>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Guard with a large smoldering fireball!
+The fireball explodes into tiny little cinders.
+1,016
+402/402:200>
+X:[-11]Y:[-37]
+c
+What?
+1,016
+402/402:200>
+X:[-11]Y:[-37]
+
+1,016
+402/402:200>
+X:[-11]Y:[-37]
+
+1,016
+402/402:200>
+X:[-11]Y:[-37]
+c
+What?
+1,016
+402/402:200>
+X:[-11]Y:[-37]
+You scorched Guard's leg.
+HP: 393  SP: 200
+Guard pounded your leg heartlessly.
+Guard draws a curved scimitar from his sheath.
+Guard wields his scimitar in his right hand.
+
+1,016
+393/401:200>
+X:[-11]Y:[-37]
+
+1,016
+393/401:200>
+X:[-11]Y:[-37]
+c
+What?
+1,016
+393/401:200>
+X:[-11]Y:[-37]
+
+1,016
+393/401:200>
+X:[-11]Y:[-37]
+l
+You are in a small guard room somewhere inside the Palace of the Caliph. The
+walls of the room are built from smoothly fitted blocks of sandstone. A
+single torch is mounted high on the wall in the northeast corner of the room.
+An ornately carved stone arch leads west, and a sandstone passage leads
+south. 
+ Obvious directions are:
+  south, west.
+A palace guard.
+1,016
+393/401:200>
+X:[-11]Y:[-37]
+c
+What?
+1,016
+393/401:200>
+X:[-11]Y:[-37]
+You scorched Guard's body.
+HP: 392  SP: 200
+Guard barely scratched your body.
+
+1,015
+392/400:200>
+X:[-11]Y:[-37]
+
+1,015
+392/400:200>
+X:[-11]Y:[-37]
+]
+The guard is a burly desert orc, with deep green skin and thick pointed
+tusks. He watches closely to ensure no troublemakers penetrate the Caliph's
+palace.
+He is in bad shape.
+        Opponent is carrying:
+A curved scimitar (wielded in right hand).
+A shirt of fine mail (worn).
+A curved sheath (worn).
+A red turban (worn).
+1,015
+392/400:200>
+X:[-11]Y:[-37]
+c
+What?
+1,015
+392/400:200>
+X:[-11]Y:[-37]
+You fried Guard's body brutally.
+You deftly sidestep Guard's attack.
+Guard missed you.
+c
+What?
+1,015
+392/399:200>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 381/381  SP: 200/202
+1,015
+381/381:200>
+X:[-11]Y:[-37]
+
+1,015
+381/381:200>
+X:[-11]Y:[-37]
+
+You scorched Guard's body.
+HP: 372  SP: 202
+Guard cut your body deep.
+1,015
+372/380:202>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Guard with a large smoldering fireball!
+The fireball explodes into tiny little cinders.
+1,016
+372/380:202>
+X:[-11]Y:[-37]
+
+1,016
+372/380:202>
+X:[-11]Y:[-37]
+
+1,016
+372/380:202>
+X:[-11]Y:[-37]
+
+1,016
+372/380:202>
+X:[-11]Y:[-37]
+
+1,016
+372/380:202>
+X:[-11]Y:[-37]
+]
+You scorched Guard's body.
+You deftly sidestep Guard's attack.
+Guard missed you.
+The guard is a burly desert orc, with deep green skin and thick pointed
+tusks. He watches closely to ensure no troublemakers penetrate the Caliph's
+palace.
+He is hurt.
+        Opponent is carrying:
+A curved scimitar (wielded in right hand).
+A shirt of fine mail (worn).
+A curved sheath (worn).
+A red turban (worn).
+1,016
+372/379:202>
+X:[-11]Y:[-37]
+
+1,016
+372/379:202>
+X:[-11]Y:[-37]
+c
+What?
+1,016
+372/379:202>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 355/355  SP: 202/202
+1,016
+355/355:202>
+X:[-11]Y:[-37]
+
+1,016
+355/355:202>
+X:[-11]Y:[-37]
+
+1,016
+355/355:202>
+X:[-11]Y:[-37]
+
+1,016
+355/355:202>
+X:[-11]Y:[-37]
+You missed.
+HP: 342  SP: 201
+Guard slashed your leg.
+
+1,015
+342/354:201>
+X:[-11]Y:[-37]
+
+1,015
+342/354:201>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Guard with an enormous smoldering fireball!
+The fireball explodes into tiny little cinders.
+1,016
+342/354:201>
+X:[-11]Y:[-37]
+
+1,016
+342/354:201>
+X:[-11]Y:[-37]
+
+1,016
+342/354:201>
+X:[-11]Y:[-37]
+
+1,016
+342/354:201>
+X:[-11]Y:[-37]
+
+1,016
+342/354:201>
+X:[-11]Y:[-37]
+
+You fried Guard's body brutally.
+HP: 333  SP: 201
+Guard cut your head deep.
+1,016
+333/353:201>
+X:[-11]Y:[-37]
+
+1,016
+333/353:201>
+X:[-11]Y:[-37]
+
+1,016
+333/353:201>
+X:[-11]Y:[-37]
+c
+What?
+1,016
+333/353:201>
+X:[-11]Y:[-37]
+]
+The guard is a burly desert orc, with deep green skin and thick pointed
+tusks. He watches closely to ensure no troublemakers penetrate the Caliph's
+palace.
+He is almost dead.
+        Opponent is carrying:
+A curved scimitar (wielded in right hand).
+A shirt of fine mail (worn).
+A curved sheath (worn).
+A red turban (worn).
+1,016
+333/353:201>
+X:[-11]Y:[-37]
+
+1,016
+333/353:201>
+X:[-11]Y:[-37]
+
+1,016
+333/353:201>
+X:[-11]Y:[-37]
+You barbequed Guard's body.
+Guard missed you.
+
+1,016
+333/352:201>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 328/328  SP: 201/202
+1,016
+328/328:201>
+X:[-11]Y:[-37]
+
+1,016
+328/328:201>
+X:[-11]Y:[-37]
+
+1,016
+328/328:201>
+X:[-11]Y:[-37]
+
+You sizzled Guard's body lightly.
+You duck your head quickly as Guard's blow flies over you.
+Guard missed you.
+1,016
+327/327:201>
+X:[-11]Y:[-37]
+
+1,016
+327/327:201>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Guard with an enormous smoldering fireball!
+The fireball explodes into tiny little cinders.
+Guard died.
+You killed Guard.
+1,173
+327/327:201>
+X:[-11]Y:[-37]
+
+1,173
+327/327:201>
+X:[-11]Y:[-37]
+
+1,173
+327/327:201>
+X:[-11]Y:[-37]
+z
+You absorb the corpse of Guard, claimed by Lavalamp into yourself.
+HP: 343/343  SP: 201/202
+1,173
+343/343:201>
+X:[-11]Y:[-37]
+z
+You absorb a red turban into yourself.
+You absorb a curved sheath into yourself.
+You absorb a shirt of fine mail into yourself.
+You absorb a curved scimitar into yourself.
+You absorb 4 gold coins into yourself.
+HP: 451/451  SP: 201/202
+1,173
+451/451:201>
+X:[-11]Y:[-37]
+l
+You are in a small guard room somewhere inside the Palace of the Caliph. The
+walls of the room are built from smoothly fitted blocks of sandstone. A
+single torch is mounted high on the wall in the northeast corner of the room.
+An ornately carved stone arch leads west, and a sandstone passage leads
+south. 
+ Obvious directions are:
+  south, west.
+1,173
+451/451:201>
+X:[-11]Y:[-37]
+west
+Drakhiya Palace, Caliph's Chambers (e,w)
+1,172
+451/451:200>
+X:[-11]Y:[-37]
+west
+Drakhiya Palace, Royal Seraglio (e,w)
+A harem girl.
+1,172
+451/451:200>
+X:[-11]Y:[-37]
+A harem girl sees you.
+A harem girl says: What are you doing here? You can't come in here!
+west
+Drakhiya, Palace Guard Post (e,s)
+A palace guard.
+1,172
+451/451:199>
+X:[-11]Y:[-37]
+qo
+Changed nickname target = orc
+1,170
+451/451:199>
+X:[-11]Y:[-37]
+a
+You scorched Guard's head.
+1,171
+451/451:199>
+X:[-11]Y:[-37]
+
+1,171
+451/451:199>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 435/435  SP: 199/202
+1,171
+435/435:199>
+X:[-11]Y:[-37]
+c
+You cannot throw that fast!
+1,171
+435/435:199>
+X:[-11]Y:[-37]
+
+1,171
+435/435:199>
+X:[-11]Y:[-37]
+
+1,171
+435/435:199>
+X:[-11]Y:[-37]
+
+1,171
+435/435:199>
+X:[-11]Y:[-37]
+You scorched Guard's arm.
+HP: 425  SP: 198
+Guard bludgeoned your head heavily.
+
+1,170
+425/434:198>
+X:[-11]Y:[-37]
+
+1,170
+425/434:198>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Guard with a large smoldering fireball!
+The fireball explodes into tiny little cinders.
+1,171
+425/434:198>
+X:[-11]Y:[-37]
+
+1,171
+425/434:198>
+X:[-11]Y:[-37]
+
+1,171
+425/434:198>
+X:[-11]Y:[-37]
+l
+You are in a small guard room somewhere inside the Palace of the Caliph. A
+lone torch lights the room from the northwest corner, where it is mounted
+high on the wall of smoothly fitted sandstone blocks. To the east is an
+ornately carved stone arch, and a sandstone passage leads south. 
+ Obvious directions are:
+  east, south.
+A palace guard.
+1,171
+425/434:198>
+X:[-11]Y:[-37]
+You fried Guard's body brutally.
+You take a quick step backwards, avoiding Guard's attack.
+Guard missed you.
+Guard draws a curved scimitar from his sheath.
+Guard wields his scimitar in his right hand.
+
+1,171
+428/433:202>
+X:[-11]Y:[-37]
+
+1,171
+428/433:202>
+X:[-11]Y:[-37]
+]
+The guard is a burly desert orc, with deep green skin and thick pointed
+tusks. He watches closely to ensure no troublemakers penetrate the Caliph's
+palace.
+He is slightly hurt.
+        Opponent is carrying:
+A curved scimitar (wielded in right hand).
+A shirt of fine mail (worn).
+A curved sheath (worn).
+A red turban (worn).
+1,171
+428/433:202>
+X:[-11]Y:[-37]
+
+1,171
+428/433:202>
+X:[-11]Y:[-37]
+c
+What?
+1,171
+428/433:202>
+X:[-11]Y:[-37]
+
+1,171
+428/433:202>
+X:[-11]Y:[-37]
+
+1,171
+428/433:202>
+X:[-11]Y:[-37]
+You missed.
+You take a quick step backwards, avoiding Guard's attack.
+Guard missed you.
+c
+What?
+1,170
+428/432:202>
+X:[-11]Y:[-37]
+
+1,170
+428/432:202>
+X:[-11]Y:[-37]
+l
+You are in a small guard room somewhere inside the Palace of the Caliph. A
+lone torch lights the room from the northwest corner, where it is mounted
+high on the wall of smoothly fitted sandstone blocks. To the east is an
+ornately carved stone arch, and a sandstone passage leads south. 
+ Obvious directions are:
+  east, south.
+A palace guard.
+1,170
+428/432:202>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 404/404  SP: 202/202
+1,170
+404/404:202>
+X:[-11]Y:[-37]
+You scorched Guard's body.
+HP: 402  SP: 201
+Guard grazed your head.
+
+1,170
+402/403:201>
+X:[-11]Y:[-37]
+
+1,170
+402/403:201>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Guard with a gigantic smoldering fireball!
+The fireball explodes into tiny little cinders.
+1,171
+402/403:201>
+X:[-11]Y:[-37]
+]
+The guard is a burly desert orc, with deep green skin and thick pointed
+tusks. He watches closely to ensure no troublemakers penetrate the Caliph's
+palace.
+He is hurt.
+        Opponent is carrying:
+A curved scimitar (wielded in right hand).
+A shirt of fine mail (worn).
+A curved sheath (worn).
+A red turban (worn).
+1,171
+402/403:201>
+X:[-11]Y:[-37]
+You fried Guard's body brutally.
+You take a quick step backwards, avoiding Guard's attack.
+Guard missed you.
+
+1,171
+402/402:200>
+X:[-11]Y:[-37]
+
+1,171
+402/402:200>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 386/386  SP: 200/202
+1,171
+386/386:200>
+X:[-11]Y:[-37]
+
+1,171
+386/386:200>
+X:[-11]Y:[-37]
+
+1,171
+386/386:200>
+X:[-11]Y:[-37]
+You fried Guard's leg brutally.
+You duck your head quickly as Guard's blow flies over you.
+Guard missed you.
+
+1,171
+385/385:199>
+X:[-11]Y:[-37]
+
+1,171
+385/385:199>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Guard with a large smoldering fireball!
+The fireball explodes into tiny little cinders.
+1,172
+385/385:199>
+X:[-11]Y:[-37]
+
+1,172
+385/385:199>
+X:[-11]Y:[-37]
+
+1,172
+385/385:199>
+X:[-11]Y:[-37]
+]
+The guard is a burly desert orc, with deep green skin and thick pointed
+tusks. He watches closely to ensure no troublemakers penetrate the Caliph's
+palace.
+He is almost dead.
+        Opponent is carrying:
+A curved scimitar (wielded in right hand).
+A shirt of fine mail (worn).
+A curved sheath (worn).
+A red turban (worn).
+1,172
+385/385:199>
+X:[-11]Y:[-37]
+You scorched Guard's body.
+You duck your head quickly as Guard's blow flies over you.
+Guard missed you.
+
+1,172
+384/384:199>
+X:[-11]Y:[-37]
+
+1,172
+384/384:199>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 369/369  SP: 199/202
+1,172
+369/369:199>
+X:[-11]Y:[-37]
+
+1,172
+369/369:199>
+X:[-11]Y:[-37]
+
+1,172
+369/369:199>
+X:[-11]Y:[-37]
+
+1,172
+369/369:199>
+X:[-11]Y:[-37]
+
+1,172
+369/369:199>
+X:[-11]Y:[-37]
+
+You scorched Guard's body.
+You take a quick step backwards, avoiding Guard's attack.
+Guard missed you.
+A palace guard says: You shall regret invading the Palace of the Caliph!
+1,171
+368/368:198>
+X:[-11]Y:[-37]
+
+1,171
+368/368:198>
+X:[-11]Y:[-37]
+c
+
+You wield your fireball in your right hand.
+You hit Guard with a large smoldering fireball!
+The fireball explodes into tiny little cinders.
+Guard died.
+You killed Guard.
+1,214
+368/368:198>
+X:[-11]Y:[-37]
+1,214
+368/368:198>
+X:[-11]Y:[-37]
+
+1,214
+368/368:198>
+X:[-11]Y:[-37]
+
+1,214
+368/368:198>
+X:[-11]Y:[-37]
+z
+You absorb the corpse of Guard, claimed by Lavalamp into yourself.
+HP: 384/384  SP: 198/202
+1,214
+384/384:198>
+X:[-11]Y:[-37]
+z
+You absorb a red turban into yourself.
+You absorb a curved sheath into yourself.
+You absorb a shirt of fine mail into yourself.
+You absorb a curved scimitar into yourself.
+HP: 471/471  SP: 198/202
+1,214
+471/471:198>
+X:[-11]Y:[-37]
+l
+You are in a small guard room somewhere inside the Palace of the Caliph. A
+lone torch lights the room from the northwest corner, where it is mounted
+high on the wall of smoothly fitted sandstone blocks. To the east is an
+ornately carved stone arch, and a sandstone passage leads south. 
+ Obvious directions are:
+  east, south.
+4 gold coins.
+1,214
+471/471:198>
+X:[-11]Y:[-37]
+west
+What?
+1,214
+471/471:198>
+X:[-11]Y:[-37]
+south
+Drakhiya, Palace Kitchens (n,s,w,|d|)
+A desert orc cook.
+A cookfire (burning).
+1,214
+471/471:198>
+X:[-11]Y:[-37]
+west
+Drakhiya, Servants' Entrance (e,sw,nw)
+7 gold coins.
+1,213
+471/471:198>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Avenue of Suvarov (ne,se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+1,212
+471/471:197>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Orcish Hovel (ne)
+A desert orc worker.
+A desert orc wife.
+A cairn of stones with a bloody scythe banner.
+1,212
+471/471:196>
+X:[-11]Y:[-37]
+sw
+What?
+1,212
+471/471:196>
+X:[-11]Y:[-37]
+sw
+You do not think you can go there.
+1,212
+471/471:196>
+X:[-11]Y:[-37]
+west
+You do not think you can go there.
+1,211
+471/471:198>
+X:[-11]Y:[-37]
+west
+You do not think you can go there.
+1,211
+471/471:198>
+X:[-11]Y:[-37]
+nw
+Maybe you should look for another exit.
+1,211
+471/471:198>
+X:[-11]Y:[-37]
+sw
+You do not think you can go there.
+1,210
+471/471:198>
+X:[-11]Y:[-37]
+south
+There is no such exit.
+1,210
+471/471:198>
+X:[-11]Y:[-37]
+east
+What?
+1,210
+471/471:198>
+X:[-11]Y:[-37]
+l
+You are within the small dwelling of an orcish family, a low one-room
+building built from hewn blocks of sandstone. In the centre of the room is a
+square table and two chairs. A tiny window is set in the front wall looking
+out into the street, and a large bed is pushed up against the far wall. 
+ The only obvious exit is northeast.
+A desert orc worker.
+A desert orc wife.
+A cairn of stones with a bloody scythe banner.
+1,210
+471/471:197>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Avenue of Suvarov (ne,se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+1,209
+471/471:197>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Street of Pigs (ne,se,sw,|d|)
+A cairn of stones with a bloody scythe banner.
+1,209
+471/471:197>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Street of Pigs (ne,se,sw)
+A cairn of stones with a bloody scythe banner.
+1,209
+471/471:197>
+X:[-11]Y:[-37]
+sw
+Guard missed you.
+Drakhiya, Gates of Dusk (w,ne,se,u)
+A cairn of stones with a bloody scythe banner.
+An orcish gate guard.
+1,208
+471/471:196>
+X:[-11]Y:[-37]
+You fried Guard's body brutally.
+You duck your head quickly as Guard's blow flies over you.
+Guard missed you.
+ne
+You are now hunted by Guard.
+Drakhiya, Street of Pigs (ne,se,sw)
+A cairn of stones with a bloody scythe banner.
+1,208
+470/470:196>
+X:[-11]Y:[-37]
+south
+What?
+1,208
+470/470:196>
+X:[-11]Y:[-37]
+sw
+HP: 459  SP: 196
+Guard slashed your body.
+Drakhiya, Gates of Dusk (w,ne,se,u)
+A cairn of stones with a bloody scythe banner.
+An orcish gate guard.
+1,208
+459/469:196>
+X:[-11]Y:[-37]
+se
+You are now hunted by Guard.
+Drakhiya, Street of Snakes (ne,se,nw)
+A cairn of stones with a bloody scythe banner.
+1,208
+459/469:196>
+X:[-11]Y:[-37]
+se
+Drakhiya, Street of Snakes (ne,se,nw,|d|)
+1,207
+459/468:195>
+X:[-11]Y:[-37]
+se
+Drakhiya, Street of Snakes (ne,se,nw)
+A serpentari militiaman.
+A cairn of stones with a bloody scythe banner.
+1,207
+459/468:195>
+X:[-11]Y:[-37]
+se
+Drakhiya, Grand Hammam Entrance (s,ne,nw)
+A cairn of stones with a bloody scythe banner.
+1,207
+459/468:195>
+X:[-11]Y:[-37]
+Militiaman arrives.
+ne
+Drakhiya, Street of Faith (s,ne,sw,nw)
+A cairn of stones with a bloody scythe banner.
+1,206
+459/467:194>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Street of Faith (ne,sw,nw,|d|)
+1,206
+459/467:194>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Street of Faith (ne,sw,nw)
+A cairn of stones with a bloody scythe banner.
+1,206
+459/467:194>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Gates of Dawn (e,w,sw,nw,u)
+An orcish gate guard.
+A cairn of stones with a bloody scythe banner.
+1,206
+459/467:194>
+X:[-11]Y:[-37]
+ne
+There is no such exit.
+1,206
+459/467:194>
+X:[-11]Y:[-37]
+An orcish gate guard says: It's LavaLamp, the foul murderer!  Get him!
+HP: 443  SP: 194
+Guard slashed your body.
+sw
+You are now hunted by Guard.
+Drakhiya, Street of Faith (ne,sw,nw)
+A cairn of stones with a bloody scythe banner.
+1,206
+443/466:194>
+X:[-11]Y:[-37]
+ne
+HP: 433  SP: 194
+Guard slashed your arm.
+Drakhiya, Gates of Dawn (e,w,sw,nw,u)
+An orcish gate guard.
+A cairn of stones with a bloody scythe banner.
+1,205
+433/465:194>
+X:[-11]Y:[-37]
+You fried Guard's body brutally.
+Guard missed you.
+
+1,205
+436/464:200>
+X:[-11]Y:[-37]
+
+1,205
+436/464:200>
+X:[-11]Y:[-37]
+You scorched Guard's head.
+You duck your head quickly as Guard's blow flies over you.
+Guard missed you.
+x
+You form a ball of fire from yourself.
+HP: 433/433  SP: 199/202
+1,204
+433/433:199>
+X:[-11]Y:[-37]
+
+1,204
+433/433:199>
+X:[-11]Y:[-37]
+
+1,204
+433/433:199>
+X:[-11]Y:[-37]
+c
+You cannot throw that fast!
+1,204
+433/433:199>
+X:[-11]Y:[-37]
+
+1,204
+433/433:199>
+X:[-11]Y:[-37]
+
+1,204
+433/433:199>
+X:[-11]Y:[-37]
+
+1,204
+433/433:199>
+X:[-11]Y:[-37]
+
+1,204
+433/433:199>
+X:[-11]Y:[-37]
+You fried Guard's body brutally.
+HP: 425  SP: 199
+Guard cut your leg deep.
+
+1,204
+425/432:199>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Guard with a gigantic smoldering fireball!
+The fireball explodes into tiny little cinders.
+1,206
+425/432:199>
+X:[-11]Y:[-37]
+
+1,206
+425/432:199>
+X:[-11]Y:[-37]
+
+1,206
+425/432:199>
+X:[-11]Y:[-37]
+
+1,206
+425/432:199>
+X:[-11]Y:[-37]
+You fried Guard's body brutally.
+You deftly sidestep Guard's attack.
+Guard missed you.
+
+1,206
+425/431:199>
+X:[-11]Y:[-37]
+
+1,206
+425/431:199>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 403/403  SP: 199/202
+1,206
+403/403:199>
+X:[-11]Y:[-37]
+
+1,206
+403/403:199>
+X:[-11]Y:[-37]
+
+1,206
+403/403:199>
+X:[-11]Y:[-37]
+
+1,206
+403/403:199>
+X:[-11]Y:[-37]
+
+1,206
+403/403:199>
+X:[-11]Y:[-37]
+
+1,206
+403/403:199>
+X:[-11]Y:[-37]
+You burnt Guard's body painfully.
+You deftly sidestep Guard's attack.
+Guard missed you.
+
+1,205
+402/402:199>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Guard with a gigantic smoldering fireball!
+The fireball explodes into tiny little cinders.
+1,205
+402/402:199>
+X:[-11]Y:[-37]
+
+1,205
+402/402:199>
+X:[-11]Y:[-37]
+]
+The guard is a wiry orc tanned a deep olive drab from exposure to the desert
+sun. He keeps a close eye on travellers passing through the city gates.
+He is almost dead.
+        Opponent is carrying:
+A curved scimitar (wielded in right hand).
+A conical helmet (worn).
+A curved sheath (worn).
+A desert robe (worn).
+1,205
+402/402:199>
+X:[-11]Y:[-37]
+
+1,205
+402/402:199>
+X:[-11]Y:[-37]
+
+1,205
+402/402:199>
+X:[-11]Y:[-37]
+You missed.
+HP: 400  SP: 199
+Guard grazed your leg.
+
+1,205
+400/401:199>
+X:[-11]Y:[-37]
+
+1,205
+400/401:199>
+X:[-11]Y:[-37]
+x
+You form a ball of fire from yourself.
+HP: 385/385  SP: 199/202
+1,205
+385/385:199>
+X:[-11]Y:[-37]
+
+1,205
+385/385:199>
+X:[-11]Y:[-37]
+
+1,205
+385/385:199>
+X:[-11]Y:[-37]
+
+1,205
+385/385:199>
+X:[-11]Y:[-37]
+
+1,205
+385/385:199>
+X:[-11]Y:[-37]
+
+You missed.
+HP: 383  SP: 198
+Guard grazed your body.
+1,204
+383/384:198>
+X:[-11]Y:[-37]
+
+1,204
+383/384:198>
+X:[-11]Y:[-37]
+
+1,204
+383/384:198>
+X:[-11]Y:[-37]
+c
+You wield your fireball in your right hand.
+You hit Guard with a large smoldering fireball!
+The fireball explodes into tiny little cinders.
+Guard died.
+You killed Guard.
+1,236
+383/384:198>
+X:[-11]Y:[-37]
+z
+You absorb the corpse of Guard, claimed by Lavalamp into yourself.
+HP: 398/399  SP: 198/202
+1,235
+398/399:198>
+X:[-11]Y:[-37]
+z
+You absorb a desert robe into yourself.
+You absorb a curved sheath into yourself.
+You absorb a conical helmet into yourself.
+You absorb a curved scimitar into yourself.
+HP: 470/471  SP: 198/202
+1,235
+470/471:198>
+X:[-11]Y:[-37]
+l
+You find yourself at the Gates of Dawn, an immense portal through the
+sandstone walls of the city of Drakhiya. A broad avenue runs west from here
+towards a splendid palace. Wide roads lead northwest and southwest into
+prosperous-looking districts of the city. A series of stone stairs next to
+the gates leads up to the top of the city wall; on the wall next to the
+stairs, a royal decree is posted. 
+ Obvious directions are:
+  east, west, southwest, northwest, up.
+5 gold coins.
+A cairn of stones with a bloody scythe banner.
+1,235
+470/471:198>
+X:[-11]Y:[-37]

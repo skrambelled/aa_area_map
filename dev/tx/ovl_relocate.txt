@@ -1,0 +1,4 @@
+X:[-7]Y:[26]
+west
+Dark but inviting forest (n,e,s,w)
+X:[-8]Y:[26]

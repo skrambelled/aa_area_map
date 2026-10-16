@@ -1,0 +1,5 @@
+X:[-4]Y:[22]
+look
+Northeastern corner of Burnham Wood (n,s,w)
+A guard.
+X:[-4]Y:[22]

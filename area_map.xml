@@ -1,0 +1,3161 @@
+<muclient>
+<plugin
+   name="area_map"
+   author="Mark"
+   id="c9d806ed72f2af96356ae81d"
+   language="Lua"
+   purpose="Maps the rooms you walk through inside each Oerthe map square"
+   date_written="2026-10-15"
+   requires="4.90"
+   version="1.0"
+   save_state="y"
+>
+</plugin>
+
+<!--
+  area_map: an automapper for the rooms inside one overland coordinate
+  square (a town, a dungeon, a stretch of forest). Ancient Anguish sends no
+  room ids, so rooms are told apart by where you came from, with the room's
+  text as confirmation.
+
+  Requires only the 'mush_windows' plugin: it provides the window chrome
+  AND reads your prompt. After every prompt it broadcasts your coordinates,
+  which this plugin uses both as "the room's output is finished" and as the
+  square the room belongs to. Run wf_prompt_setup (in mush_windows) once.
+
+  How a move is followed:
+    1. OnPluginSent queues every command you send.
+    2. OnPluginLineReceived collects everything the game prints.
+    3. On the mush_windows prompt broadcast, the collected block (minus the
+       prompt lines themselves) is parsed against the oldest queued command:
+         - brief mode:   "Room Name (n,e,|w|,se)"  (|w| = closed door)
+         - verbose mode: description, then " Obvious directions are:" /
+                         " The only obvious exit is east." /
+                         " There are no obvious exits", then items.
+                         A closed door's exit is left out of that list, so
+                         the "There is a closed gate leading west."
+                         sentence is read for it (and removed from the
+                         description, so the room still matches when the
+                         gate is open).
+         - neither:      a failed move ("What?", "The gate is closed.", ...)
+                         or unrelated output.
+    4. The room is matched: by the exit you took if it's already known,
+       then by the room already sitting at that grid spot (closes loops),
+       otherwise a new room is created. With no move to go by (teleport,
+       flee, being followed), it searches the current square for a room
+       whose name or description and exits match; more than one match
+       means "lost" until a room is recognised.
+  A command that isn't a direction (e.g. "jump down") becomes an exit if a
+  different room appears after it.
+  The game's own aliases and nicknames are learned from its 'alias' and
+  'nick' listings, and every command is read through them first ("ep" ->
+  "enter portal").
+
+  Commands:
+    amap                 status
+    amap debug           what was read from the last block, and why
+    amap trace           toggle a line per move: command, room #from -> #to,
+                         square, what was seen, and the decision (every move
+                         is also saved in area_map.db, table 'trace')
+    amap ids             toggle room numbers on the map
+    amap boundary <exit> toggle an exit from your room as a sub-area boundary
+                         (both ways): each side is drawn on its own, e.g. a
+                         palace inside a city ('amap boundary' lists them)
+    amap subarea <name>  name the sub-area you're in ('none' clears it)
+    amap spread <1-4>    how many cells a step takes when drawing irregular
+                         areas (default 2: room for uneven parts to fit)
+    amap irregular       toggle the square you're in as irregular: its rooms
+                         don't fit a grid (a long hall beside small rooms, a
+                         way around that's longer on one side), so they're
+                         matched by the paths between them, not grid spots
+    amap show / hide     show or hide the window (also Ctrl+Shift+W)
+    amap forget room     delete the room you're in
+    amap forget area     delete the area you're in (every room connected to
+                         yours, across squares, not overland tiles)
+    amap forget near [n] delete area rooms in squares within n of yours (default 1)
+    amap forget square   delete every room in the current square
+  Right-click a room on the map for notes and delete; left-click prints
+  its details. Rooms are stored in area_map.db next to this file.
+-->
+
+<aliases>
+  <alias name="amap_cmd" match="^amap(?:\s+(.*?))?\s*$" enabled="y" regexp="y" sequence="100" script="AmapCommand"></alias>
+</aliases>
+
+<script>
+<![CDATA[
+
+-- Bump whenever the mapping logic changes: shown at load and in 'amap', and
+-- saved with every trace row, so a trace shows which version decided what.
+local BUILD = "2026-10-16x"
+
+-- Every room and exit is stamped with the build that last confirmed it
+-- (created it, or saw it again while walking). When a build fixes a mapping
+-- bug that could have saved bad rooms or exits, raise MIN_TRUSTED_BUILD to
+-- it: on load, area rooms not confirmed since then are dropped (after a
+-- backup) and get remapped as you walk. Overland tiles and rooms with notes
+-- are always kept. Builds compare as strings, so keep the "YYYY-MM-DDx" form.
+local MIN_TRUSTED_BUILD = "2026-10-16f"
+
+local WINDOWS_PLUGIN_ID = "26a4ca2758d503d86efe902e"   -- mush_windows
+local MW_BROADCAST_PROMPT = 1
+local MW_BROADCAST_PROMPT_CHANGED = 2
+
+local FONT_ID = "amap_font"
+local FONT_NAME = "Courier New"
+local FONT_SIZE = 9
+local CELL = 36          -- grid spacing in pixels
+local BOX = 18           -- room box size
+local EDGE_INSET = 6     -- keep hotspots clear of winframe's resize strips
+
+-- BGR colours
+local BG_COLOUR = 0x000000
+local TEXT_COLOUR = 0xC0C0C0
+local LOST_COLOUR = 0x4080FF
+local ROOM_FILL = 0x707070
+local DARK_FILL = 0x2A2A2A
+local CURRENT_FILL = 0x00A5FF
+local ROOM_BORDER = 0xD0D0D0
+local LINK_COLOUR = 0xB0B0B0
+local UNEXPLORED_COLOUR = 0x505050
+local HIDDEN_COLOUR = 0x80E080
+local DOOR_COLOUR = 0x3030FF
+local WALL_COLOUR = 0x2020B0
+local UPDOWN_COLOUR = 0xFFFFFF
+local NOTE_COLOUR = 0x00FFFF
+local BOUNDARY_COLOUR = 0xFF80E0   -- an exit into another sub-area
+local ID_FONT_ID = "amap_id_font"
+local ID_COLOUR = 0x00D7FF
+local BUTTON_BG = 0x333333
+local BUTTON_BORDER = 0x888888
+local BUTTON_TEXT = 0xFFFFFF
+
+local PEN_SOLID, PEN_DOT = 0, 2
+
+-- Directions ----------------------------------------------------------------
+
+local DIRS = {
+  n  = { dx =  0, dy = -1, long = "north",     rev = "s"  },
+  ne = { dx =  1, dy = -1, long = "northeast", rev = "sw" },
+  e  = { dx =  1, dy =  0, long = "east",      rev = "w"  },
+  se = { dx =  1, dy =  1, long = "southeast", rev = "nw" },
+  s  = { dx =  0, dy =  1, long = "south",     rev = "n"  },
+  sw = { dx = -1, dy =  1, long = "southwest", rev = "ne" },
+  w  = { dx = -1, dy =  0, long = "west",      rev = "e"  },
+  nw = { dx = -1, dy = -1, long = "northwest", rev = "se" },
+  u  = { long = "up",   rev = "d" },
+  d  = { long = "down", rev = "u" },
+}
+local PLANAR = { "n", "ne", "e", "se", "s", "sw", "w", "nw" }
+
+-- Any spelling of a direction -> its short form.
+local DIR_WORDS = {}
+for short, info in pairs(DIRS) do
+  DIR_WORDS[short] = short
+  DIR_WORDS[info.long] = short
+end
+for _, pair in ipairs{ { "north-east", "ne" }, { "north-west", "nw" }, { "south-east", "se" }, { "south-west", "sw" } } do
+  DIR_WORDS[pair[1]] = pair[2]
+end
+
+local LOOK_WORDS = { l = true, look = true }
+
+-- Looking into a neighbouring room shows that room, which is not where you are.
+local PEER_WORDS = { peer = true }
+
+-- First words of commands that never move you. Anything else that isn't a
+-- direction is treated as a possible (maybe hidden) exit, e.g. "jump down".
+local NON_MOVE_VERBS = {}
+for word in ([[
+  say tell reply shout whisper emote yell ask o open close lock unlock get take
+  drop put give i inv inventory eq equipment sc score exa examine x read wield
+  unwield wear remove kill k cast brief verbose prompt who help hp quit save
+  glance search buy sell list value consider con follow party skills spells
+  time date news mail note bank deposit withdraw balance wimpy alias
+  chat pwho finger last nick unalias unnick dotimes wait stand sit rest
+  rescue assist absorb abilities accept bind throw shoot drink eat fill
+  change increase decrease entangle hone light language offer powerup
+  refill scalp slice tag thaw freeze store receive train keep unkeep
+  unlock fgreet ftell fshatter fs distill attach detach cook set join
+  deliver mine shape crush fish bait salt create breakdo spike smoke
+  view use wield roll
+]]):gmatch("%S+") do
+  NON_MOVE_VERBS[word] = true
+end
+
+-- Commands that take you somewhere fixed wherever you use them: never saved
+-- as an exit, even when they happen to land nearby.
+local TELEPORT_WORDS = { recall = true, home = true, teleport = true, transport = true, summon = true }
+
+-- What the game prints instead of a room when it's too dark to see.
+local DARK_PATTERNS = {
+  "^A dark room%.$",
+  "^It is too dark",
+  "^It's too dark",
+}
+
+local FAILURE_PATTERNS = {
+  "^What%?$",
+  "^There is no such exit%.$",
+  "^Maybe you should look for another exit%.$",
+  "^You do not think you can go there%.$",
+  "^The .+ is closed%.$",
+  "^.+ stops you from going %a+%.$",   -- a guard: "A palace guard stops you from going west."
+}
+
+-- Runtime state -------------------------------------------------------------
+
+local rooms = {}        -- id -> { id, sx, sy, name, desc, exits = set, doors = { dir = closed? }, note }
+local links = {}        -- from id -> { [command] = { to = id, hidden = bool } }
+local nextId = 1
+local current = nil     -- id of the room you're in, nil if unknown/lost
+local lastKnown = nil   -- last room you were definitely in (drawn while lost)
+local lostCount = 0     -- how many rooms matched when you got lost
+local square = { x = nil, y = nil }
+
+local buffer = {}       -- lines received since the last prompt
+local skipLines = 0     -- prompt lines still to come after the broadcast line
+local cmdQueue = {}     -- { text =, t =, requeued = }
+local pagerActive = false -- the game is showing "--More--": the next send pages on
+local promptSpec = nil  -- { regexes = { rex, ... }, last = index of the broadcast line }
+local warnedNoPrompt = false
+local lastDebug = nil
+local traceOn = false    -- amap trace: print a line per move
+local showIds = false    -- amap ids: draw room numbers on the map
+local mergeLog = {}      -- "#drop->#keep" for merges made while handling this prompt
+local mapChanged = false -- something to redraw even though no room was seen
+
+local db = nil
+local mapWin = nil
+local drawn = nil       -- layout of the last draw, for hotspots: { pos =, cx =, cy = }
+local panX, panY = 0, 0 -- how far the view is dragged from the room it's centred on
+local panFor = nil      -- the room the drag applies to: moving elsewhere re-centres
+local panStart = nil    -- { mx, my, px, py } while dragging
+
+-- ---------------------------------------------------------------------------
+-- Small helpers
+-- ---------------------------------------------------------------------------
+
+local function Note(msg)
+  ColourNote("orange", "", "[area_map] " .. msg)
+end
+
+local function PluginDir()
+  local dir = GetPluginInfo(GetPluginID(), 20) or ""
+  if dir ~= "" and dir:sub(-1) ~= "/" and dir:sub(-1) ~= "\\" then
+    dir = dir .. "/"
+  end
+  return dir
+end
+
+local function Trim(s)
+  return (s:gsub("^%s+", ""):gsub("%s+$", ""))
+end
+
+local function CollapseSpaces(s)
+  return Trim((s:gsub("%s+", " ")))
+end
+
+local function SetToString(set)
+  local keys = {}
+  for k in pairs(set) do keys[#keys + 1] = k end
+  table.sort(keys)
+  return table.concat(keys, ",")
+end
+
+local function StringToSet(s)
+  local set = {}
+  for k in (s or ""):gmatch("[^,]+") do set[k] = true end
+  return set
+end
+
+local function DoorsToString(doors)
+  local parts = {}
+  for dir, closed in pairs(doors) do
+    parts[#parts + 1] = dir .. "=" .. (closed and "c" or "o")
+  end
+  table.sort(parts)
+  return table.concat(parts, ",")
+end
+
+local function StringToDoors(s)
+  local doors = {}
+  for dir, state in (s or ""):gmatch("([^,=]+)=([co])") do
+    doors[dir] = (state == "c")
+  end
+  return doors
+end
+
+local function SameSquare(room, sx, sy)
+  return room.sx == sx and room.sy == sy
+end
+
+local function SquareLabel(sx, sy)
+  if sx == nil and sy == nil then return "?" end
+  return tostring(sx or "?") .. "," .. tostring(sy or "?")
+end
+
+-- How many rooms each square holds, kept up to date as rooms come and go.
+local squareCounts = {}  -- SquareLabel -> count
+
+local function CountRoom(room, delta)
+  local key = SquareLabel(room.sx, room.sy)
+  squareCounts[key] = (squareCounts[key] or 0) + delta
+end
+
+local function RoomsInSquare(sx, sy)
+  return squareCounts[SquareLabel(sx, sy)] or 0
+end
+
+-- Squares marked with 'amap irregular': areas whose rooms don't sit on a
+-- grid (a long hall beside small rooms, a path around that's longer on one
+-- side than the other). There, grid positions prove nothing, so rooms are
+-- matched by the paths between them instead (see TryJoinByPath).
+local irregular = {}     -- SquareLabel -> true
+
+local function IsIrregular(sx, sy)
+  return irregular[SquareLabel(sx, sy)] == true
+end
+
+-- An overland map tile: every overland square is a single room, while an
+-- area fills its square with many. (A new area's first room looks the same
+-- until a second room in its square is mapped.)
+local function IsOverland(room)
+  return RoomsInSquare(room.sx, room.sy) == 1
+end
+
+-- ---------------------------------------------------------------------------
+-- Storage (SQLite)
+-- ---------------------------------------------------------------------------
+
+local statements = {}   -- sql -> prepared statement, reused
+
+local function DbRun(sql, ...)
+  local stmt = statements[sql]
+  if not stmt then
+    stmt = db:prepare(sql)
+    if not stmt then
+      Note("database error: " .. db:errmsg())
+      return
+    end
+    statements[sql] = stmt
+  end
+  stmt:bind_values(...)
+  stmt:step()
+  stmt:reset()
+end
+
+local function SaveRoom(room)
+  mapVersion = (mapVersion or 0) + 1
+  DbRun("INSERT OR REPLACE INTO rooms (id, sq_x, sq_y, name, descr, exits, doors, note, dark, noexits, build, subarea) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+    room.id, room.sx, room.sy, room.name, room.desc, SetToString(room.exits), DoorsToString(room.doors), room.note,
+    room.dark and 1 or 0, SetToString(room.noexits or {}), room.build, room.subarea)
+end
+
+local function SaveLink(fromId, cmd, link)
+  mapVersion = (mapVersion or 0) + 1
+  DbRun("INSERT OR REPLACE INTO exits (from_id, cmd, to_id, hidden, build, boundary) VALUES (?, ?, ?, ?, ?, ?)",
+    fromId, cmd, link.to, link.hidden and 1 or 0, link.build, link.boundary and 1 or 0)
+end
+
+-- Marks a room as confirmed by this build (walked through, created, updated).
+local function StampRoom(room)
+  if room.build ~= BUILD then
+    room.build = BUILD
+    SaveRoom(room)
+  end
+end
+
+-- Every exit in a brief room line is a direction (or one of these few
+-- words), so other lines ending in brackets aren't rooms: a channel message
+-- "[Chat] Bashers: fill pouch (when outdoor)", or a who list's
+-- "GRiXiS the Guardian of the House of Midiar (evil)".
+local BRIEF_EXIT_WORDS = { enter = true, out = true, ["in"] = true, exit = true, leave = true }
+
+local function ValidBriefExits(text)
+  if text == "" or text == "no exits" then return true end
+  for token in (text .. ","):gmatch("([^,]*),") do
+    token = Trim(token):gsub("^|(.*)|$", "%1"):lower()
+    if not (DIR_WORDS[token] or BRIEF_EXIT_WORDS[token]) then return false end
+  end
+  return true
+end
+
+-- Builds before 2026-10-16k read any line ending in brackets as a brief
+-- room: "(no exits)" became an exit called "no exits", and chat or who-list
+-- lines ("... (evil)") became rooms. The first is cleaned up; brief-only
+-- rooms whose exits can't be real are deleted (with their exits) at load.
+function RepairMisreadRooms()
+  local bad = {}
+  for id, room in pairs(rooms) do
+    if room.exits["no exits"] then
+      room.exits["no exits"] = nil
+      SaveRoom(room)
+    end
+    -- Only rooms seen just in brief mode: a verbose exit list can name
+    -- unusual exits ("portal").
+    if not room.desc and not ValidBriefExits(SetToString(room.exits)) then bad[#bad + 1] = id end
+  end
+  table.sort(bad)
+  for _, id in ipairs(bad) do
+    local room = rooms[id]
+    Note("removed room #" .. id .. " \"" .. tostring(room.name or "?") .. "\": it was a misread line, not a room.")
+    rooms[id] = nil
+    CountRoom(room, -1)
+    DbRun("DELETE FROM rooms WHERE id = ?", id)
+    DbRun("DELETE FROM exits WHERE from_id = ? OR to_id = ?", id, id)
+  end
+end
+
+-- The game's own aliases and nicknames (its 'alias' and 'nick' commands),
+-- learned from their listings and from new definitions as you send them.
+-- The plugin only sees what you type, and the game expands it, so "ep" has
+-- to be read as "enter portal" to tell a move from a fight command.
+gameWords = { alias = {}, nick = {} }
+
+local function OpenDb()
+  db = sqlite3.open(PluginDir() .. "area_map.db")
+  -- Every write used to wait for the disk (slow, especially under Wine).
+  -- WAL with synchronous=NORMAL only waits at checkpoints, and still can't
+  -- corrupt the database if MUSHclient crashes.
+  db:exec("PRAGMA journal_mode = WAL; PRAGMA synchronous = NORMAL;")
+  db:exec[[
+    CREATE TABLE IF NOT EXISTS rooms (
+      id INTEGER PRIMARY KEY,
+      sq_x INTEGER, sq_y INTEGER,
+      name TEXT, descr TEXT,
+      exits TEXT, doors TEXT,
+      note TEXT
+    );
+    CREATE TABLE IF NOT EXISTS exits (
+      from_id INTEGER, cmd TEXT, to_id INTEGER, hidden INTEGER,
+      PRIMARY KEY (from_id, cmd)
+    );
+    CREATE INDEX IF NOT EXISTS rooms_square ON rooms (sq_x, sq_y);
+    CREATE TABLE IF NOT EXISTS trace (
+      n INTEGER PRIMARY KEY AUTOINCREMENT,
+      t TEXT, cmd TEXT,
+      from_id INTEGER, to_id INTEGER,
+      sq_x INTEGER, sq_y INTEGER,
+      seen TEXT, decision TEXT
+    );
+    CREATE TABLE IF NOT EXISTS game_words (
+      kind TEXT, name TEXT, expansion TEXT,
+      PRIMARY KEY (kind, name)
+    );
+    CREATE TABLE IF NOT EXISTS squares (
+      sq_x INTEGER, sq_y INTEGER, irregular INTEGER,
+      PRIMARY KEY (sq_x, sq_y)
+    );
+  ]]
+
+  -- Added after the trace table first shipped; fails harmlessly if present.
+  db:exec("ALTER TABLE trace ADD COLUMN build TEXT")
+  db:exec("ALTER TABLE rooms ADD COLUMN dark INTEGER")
+  db:exec("ALTER TABLE rooms ADD COLUMN noexits TEXT")
+  db:exec("ALTER TABLE rooms ADD COLUMN build TEXT")
+  db:exec("ALTER TABLE exits ADD COLUMN build TEXT")
+  db:exec("ALTER TABLE exits ADD COLUMN boundary INTEGER")
+  db:exec("ALTER TABLE rooms ADD COLUMN subarea TEXT")
+
+  for row in db:nrows("SELECT * FROM rooms") do
+    rooms[row.id] = {
+      id = row.id, sx = row.sq_x, sy = row.sq_y,
+      name = row.name, desc = row.descr,
+      exits = StringToSet(row.exits), doors = StringToDoors(row.doors),
+      note = row.note, dark = row.dark == 1,
+      noexits = StringToSet(row.noexits),
+      build = row.build,
+      subarea = row.subarea,
+    }
+    CountRoom(rooms[row.id], 1)
+    if row.id >= nextId then nextId = row.id + 1 end
+  end
+  -- Never reuse a room number, even after rooms are forgotten, so a number
+  -- in the trace always means the same room.
+  for row in db:nrows("SELECT MAX(MAX(IFNULL(from_id, 0)), MAX(IFNULL(to_id, 0))) AS top FROM trace") do
+    if row.top and row.top >= nextId then nextId = row.top + 1 end
+  end
+
+  RepairMisreadRooms()
+
+  for row in db:nrows("SELECT * FROM game_words") do
+    if gameWords[row.kind] then gameWords[row.kind][row.name] = row.expansion end
+  end
+
+  for row in db:nrows("SELECT * FROM squares WHERE irregular = 1") do
+    irregular[SquareLabel(row.sq_x, row.sq_y)] = true
+  end
+
+  for row in db:nrows("SELECT * FROM exits") do
+    links[row.from_id] = links[row.from_id] or {}
+    links[row.from_id][row.cmd] = { to = row.to_id, hidden = row.hidden == 1, build = row.build,
+      boundary = row.boundary == 1 or nil }
+  end
+
+  -- Builds before 2026-10-16m saved an unlisted command that led to a new
+  -- room as an exit however far away it went (a blue door across the
+  -- world); those are teleports, so they go.
+  for fromId, cmds in pairs(links) do
+    for cmd, link in pairs(cmds) do
+      local a, b = rooms[fromId], rooms[link.to]
+      if link.hidden and not DIRS[cmd] and a and b and a.sx and b.sx and a.sy and b.sy
+          and (math.abs(a.sx - b.sx) > 1 or math.abs(a.sy - b.sy) > 1) then
+        cmds[cmd] = nil
+        DbRun("DELETE FROM exits WHERE from_id = ? AND cmd = ?", fromId, cmd)
+      end
+    end
+  end
+end
+
+-- ---------------------------------------------------------------------------
+-- Rooms and links
+-- ---------------------------------------------------------------------------
+
+local function NewRoom(obs, sx, sy)
+  local room = {
+    id = nextId, sx = sx, sy = sy,
+    name = obs.name, desc = obs.desc,
+    exits = {}, doors = {}, noexits = {},
+    dark = obs.dark or nil,
+    build = BUILD,
+  }
+  nextId = nextId + 1
+  for e in pairs(obs.exits) do room.exits[e] = true end
+  for d, closed in pairs(obs.doors) do room.doors[d] = closed end
+  rooms[room.id] = room
+  CountRoom(room, 1)
+  SaveRoom(room)
+  return room
+end
+
+-- Fills in whatever this sighting adds: the name or description from the
+-- other mode, exits, and door states.
+local function UpdateRoom(room, obs)
+  if obs.dark then return end
+  local changed = false
+  if room.dark then room.dark = nil; changed = true end   -- seen lit at last
+  if obs.name and not room.name then room.name = obs.name; changed = true end
+  if obs.desc and not room.desc then room.desc = obs.desc; changed = true end
+  for e in pairs(obs.exits) do
+    if not room.exits[e] then room.exits[e] = true; changed = true end
+  end
+  for d, closed in pairs(obs.doors) do
+    if room.doors[d] ~= closed then room.doors[d] = closed; changed = true end
+  end
+  -- Brief mode only marks closed doors (|w|), so a known door listed
+  -- plainly has been opened.
+  if obs.mode == "brief" then
+    for d in pairs(obs.exits) do
+      if room.doors[d] == true and obs.doors[d] == nil then room.doors[d] = false; changed = true end
+    end
+  end
+  if changed then
+    room.build = BUILD
+    SaveRoom(room)
+  end
+end
+
+local function SetLink(fromId, cmd, toId, hidden)
+  -- A move always goes somewhere else; an exit into the same room is a
+  -- tracking mistake, never saved.
+  if fromId == toId and DIRS[cmd] then return end
+  links[fromId] = links[fromId] or {}
+  local link = links[fromId][cmd]
+  if link and link.to == toId and link.hidden == hidden and link.build == BUILD then return end
+  -- A sub-area boundary stays one while the exit leads to the same room.
+  local boundary = link and link.to == toId and link.boundary or nil
+  link = { to = toId, hidden = hidden, build = BUILD, boundary = boundary }
+  links[fromId][cmd] = link
+  SaveLink(fromId, cmd, link)
+end
+
+local function DeleteRoom(id)
+  mapVersion = (mapVersion or 0) + 1
+  if rooms[id] then CountRoom(rooms[id], -1) end
+  rooms[id] = nil
+  links[id] = nil
+  for _, cmds in pairs(links) do
+    for cmd, link in pairs(cmds) do
+      if link.to == id then cmds[cmd] = nil end
+    end
+  end
+  DbRun("DELETE FROM rooms WHERE id = ?", id)
+  DbRun("DELETE FROM exits WHERE from_id = ? OR to_id = ?", id, id)
+  if current == id then current = nil end
+  if lastKnown == id then lastKnown = nil end
+end
+
+-- ---------------------------------------------------------------------------
+-- Matching
+-- ---------------------------------------------------------------------------
+
+-- Exit lists may only differ by doors: verbose mode leaves a closed door's
+-- exit out of the list.
+local function ExitsCompatible(room, obs)
+  -- A dark room shows no exits, so it can't contradict anything.
+  if obs.dark or room.dark then return true end
+  for e in pairs(obs.exits) do
+    if not room.exits[e] and room.doors[e] == nil and obs.doors[e] == nil then return false end
+  end
+  for e in pairs(room.exits) do
+    if not obs.exits[e] and room.doors[e] == nil and obs.doors[e] == nil then return false end
+  end
+  return true
+end
+
+local function NameCompatible(room, obs)
+  return not obs.name or not room.name or obs.name == room.name
+end
+
+-- Nothing contradicts: a room seen only in brief mode is compatible with a
+-- verbose sighting, since one has only a name and the other only a description.
+local function Compatible(room, obs)
+  return ExitsCompatible(room, obs) and NameCompatible(room, obs)
+    and (not obs.desc or not room.desc or obs.desc == room.desc)
+end
+
+-- Positively the same text: needed whenever there's no path to go by.
+local function Recognised(room, obs)
+  -- Every dark room looks the same: never recognised by text, only by path.
+  if obs.dark or room.dark then return false end
+  if not ExitsCompatible(room, obs) then return false end
+  return (obs.name ~= nil and obs.name == room.name) or (obs.desc ~= nil and obs.desc == room.desc)
+end
+
+-- ---------------------------------------------------------------------------
+-- Correcting old data
+-- ---------------------------------------------------------------------------
+
+-- Folds drop into keep: text, exits, doors, note, and every link from or to it.
+local function MergeRooms(keep, drop)
+  keep.name = keep.name or drop.name
+  keep.desc = keep.desc or drop.desc
+  keep.note = keep.note or drop.note
+  for e in pairs(drop.exits) do keep.exits[e] = true end
+  for d, closed in pairs(drop.doors) do
+    if keep.doors[d] == nil then keep.doors[d] = closed end
+  end
+  keep.build = BUILD
+  SaveRoom(keep)
+
+  keep.subarea = keep.subarea or drop.subarea
+  local function carry(fromId, cmd, old)
+    local new = links[fromId] and links[fromId][cmd]
+    if new and old.boundary and not new.boundary then
+      new.boundary = true
+      SaveLink(fromId, cmd, new)
+    end
+  end
+  for cmd, link in pairs(links[drop.id] or {}) do
+    local to = (link.to == drop.id) and keep.id or link.to
+    if not (links[keep.id] and links[keep.id][cmd]) then
+      SetLink(keep.id, cmd, to, link.hidden)
+      carry(keep.id, cmd, link)
+    end
+  end
+  for fromId, cmds in pairs(links) do
+    if fromId ~= drop.id then
+      for cmd, link in pairs(cmds) do
+        if link.to == drop.id then
+          SetLink(fromId, cmd, keep.id, link.hidden)
+          carry(fromId, cmd, link)
+        end
+      end
+    end
+  end
+
+  mergeLog[#mergeLog + 1] = "#" .. drop.id .. "->#" .. keep.id
+  if current == drop.id then current = keep.id end
+  if lastKnown == drop.id then lastKnown = keep.id end
+  DeleteRoom(drop.id)
+end
+
+-- An overland square is a single room, so if every room in a square is the
+-- same room by its text and exits, they're copies of one overland tile made
+-- before it could be recognised, and get merged. Rooms linked to each other
+-- are never copies (two "Main Street (e,w)" side by side in a new town).
+-- Returns how many rooms were merged away.
+local function MergeDuplicatesInSquare(sx, sy)
+  if RoomsInSquare(sx, sy) < 2 then return 0 end
+  local list, inSquare = {}, {}
+  for _, room in pairs(rooms) do
+    if SameSquare(room, sx, sy) then
+      list[#list + 1] = room
+      inSquare[room.id] = true
+    end
+  end
+  table.sort(list, function(a, b) return a.id < b.id end)
+  local keep = list[1]
+  for i = 2, #list do
+    if not (Recognised(keep, list[i]) and Recognised(list[i], keep)) then return 0 end
+  end
+  for _, room in ipairs(list) do
+    for _, link in pairs(links[room.id] or {}) do
+      if inSquare[link.to] then return 0 end
+    end
+  end
+  for i = 2, #list do MergeRooms(keep, list[i]) end
+  return #list - 1
+end
+
+-- Defined further down (needs Layout); declared here for MergeAllDuplicates.
+local TryJoin
+
+local function MergeAllDuplicates()
+  local squares = {}
+  for _, room in pairs(rooms) do
+    squares[SquareLabel(room.sx, room.sy)] = { room.sx, room.sy }
+  end
+  local merged = 0
+  db:exec("BEGIN")
+  for _, sq in pairs(squares) do
+    merged = merged + MergeDuplicatesInSquare(sq[1], sq[2])
+  end
+  -- Then join pieces of areas mapped from different entrances, until
+  -- nothing more joins.
+  for _ = 1, 5 do
+    local ids = {}
+    for id in pairs(rooms) do ids[#ids + 1] = id end
+    table.sort(ids)
+    local joinedThisPass = 0
+    for _, id in ipairs(ids) do
+      if rooms[id] then
+        local n = TryJoin(id)
+        joinedThisPass = joinedThisPass + n
+      end
+    end
+    merged = merged + joinedThisPass
+    if joinedThisPass == 0 then break end
+  end
+  db:exec("COMMIT")
+  return merged
+end
+
+-- Places rooms on a grid outward from startId, following compass exits
+-- (not across a sub-area boundary: a sub-area is laid out on its own).
+-- Positions are worked out fresh each time rather than stored, so rooms that
+-- don't fit the geometry only ever collide far away from you. It carries on
+-- into neighbouring squares, since an area can span several. With
+-- skipOverland, overland tiles are left out (the room you start from is
+-- always placed).
+local function Layout(startId, radius, skipOverland)
+  local pos = { [startId] = { 0, 0 } }
+  local cellAt = { ["0,0"] = startId }
+  local queue, head = { startId }, 1
+  while queue[head] do
+    local id = queue[head]
+    head = head + 1
+    do
+      local p = pos[id]
+      for _, d in ipairs(PLANAR) do
+        local link = links[id] and links[id][d]
+        if link and rooms[link.to] and not pos[link.to] and not link.boundary
+            and not (skipOverland and IsOverland(rooms[link.to])) then
+          local x, y = p[1] + DIRS[d].dx, p[2] + DIRS[d].dy
+          local key = x .. "," .. y
+          if not cellAt[key] and math.abs(x) <= radius and math.abs(y) <= radius then
+            pos[link.to] = { x, y }
+            cellAt[key] = link.to
+            queue[#queue + 1] = link.to
+          end
+        end
+      end
+    end
+  end
+  return pos, cellAt
+end
+
+-- Irregular squares are drawn by fitting every exit at once instead of
+-- stepping from room to room. Each exit keeps its room exactly on the line
+-- of its direction (a "ne" street stays a diagonal) and at least one step
+-- away; it may be longer, though as short as it can. So where a way around
+-- is longer on one side, the short side stretches instead of two rooms
+-- landing on one spot. Then rooms snap to the grid; one landing on a taken
+-- cell moves to the nearest free one.
+--
+-- The whole area (up to its sub-area boundaries) is laid out at once from
+-- its lowest-numbered room and kept until the map changes, so it looks the
+-- same from every room and the view just moves as you walk. When a room is
+-- added, the others start from where they were, so they hardly move.
+-- (Drawing only: matching never uses these positions.)
+local IRREGULAR_SIDE = 300    -- cost of an exit running off its line
+local IRREGULAR_SHORT = 30    -- cost of an exit shorter than a step (longer costs 1)
+local IRREGULAR_ROUNDS = 20
+local IRREGULAR_CROSS = 40    -- cost of two unrelated exits crossing on the map
+local IRREGULAR_ON_LINE = 400 -- cost of a room sitting on an exit's line (it looks connected)
+local IRREGULAR_BEND = 20     -- per cell squared an exit is bent or short, when untangling
+-- Cells per step ('amap spread'): an irregular area is drawn spread out,
+-- so a loop that doesn't add up has room to stretch and rooms can sit
+-- between the usual spots instead of on top of each other.
+irregularScale = 2
+
+mapVersion = 0               -- bumped whenever a room or exit changes
+local irregularCache = {}    -- room id -> { version =, pos =, fx =, fy = } for its area
+local lastFit = {}           -- room id -> { x, y }: last unsnapped spot, to start from
+
+local function SolveIrregular(startId)
+  -- The area: rooms joined by compass exits either way, not across a
+  -- boundary, overland left out.
+  local incoming = {}
+  for fromId, cmds in pairs(links) do
+    for _, d in ipairs(PLANAR) do
+      local link = cmds[d]
+      if link and not link.boundary then
+        incoming[link.to] = incoming[link.to] or {}
+        incoming[link.to][#incoming[link.to] + 1] = { fromId, d }
+      end
+    end
+  end
+  local inArea, members = { [startId] = true }, { startId }
+  local head = 1
+  while members[head] do
+    local id = members[head]
+    head = head + 1
+    local near = {}
+    for _, d in ipairs(PLANAR) do
+      local link = links[id] and links[id][d]
+      if link and not link.boundary then near[#near + 1] = link.to end
+    end
+    for _, inc in ipairs(incoming[id] or {}) do near[#near + 1] = inc[1] end
+    for _, other in ipairs(near) do
+      if rooms[other] and not inArea[other] and not IsOverland(rooms[other]) then
+        inArea[other] = true
+        members[#members + 1] = other
+      end
+    end
+  end
+  table.sort(members)
+  local rootId = members[1]
+
+  -- Starting spots: where each room was last time; new rooms one step from
+  -- a neighbour that has one (stepping out from the root, as on a grid).
+  local fx, fy = {}, {}
+  local order = { rootId }
+  local placed = { [rootId] = true }
+  if lastFit[rootId] then
+    fx[rootId], fy[rootId] = lastFit[rootId][1], lastFit[rootId][2]
+  else
+    fx[rootId], fy[rootId] = 0, 0
+  end
+  head = 1
+  while order[head] do
+    local id = order[head]
+    head = head + 1
+    local function reach(to, dx, dy)
+      if inArea[to] and not placed[to] then
+        placed[to] = true
+        if lastFit[to] then
+          fx[to], fy[to] = lastFit[to][1], lastFit[to][2]
+        else
+          fx[to], fy[to] = fx[id] + dx * irregularScale, fy[id] + dy * irregularScale
+        end
+        order[#order + 1] = to
+      end
+    end
+    for _, d in ipairs(PLANAR) do
+      local link = links[id] and links[id][d]
+      if link and not link.boundary then reach(link.to, DIRS[d].dx, DIRS[d].dy) end
+    end
+    for _, inc in ipairs(incoming[id] or {}) do
+      reach(inc[1], -DIRS[inc[2]].dx, -DIRS[inc[2]].dy)
+    end
+  end
+
+  local edges = {}
+  for _, id in ipairs(order) do
+    for _, d in ipairs(PLANAR) do
+      local link = links[id] and links[id][d]
+      if link and not link.boundary and inArea[link.to] and link.to ~= id then
+        edges[#edges + 1] = { id, link.to, DIRS[d].dx, DIRS[d].dy }
+      end
+    end
+  end
+
+  -- The best fit of all the exits at once (least squares): each exit wants
+  -- its room one step away in its direction. Being off the line or shorter
+  -- than a step costs a lot, being longer only a little, so the short side
+  -- of a loop that doesn't add up stretches, spread evenly along it. Solved
+  -- with conjugate gradients, then again with the costs updated for which
+  -- exits came out short, a few times over. The root stays at its spot.
+  local index = {}
+  for i, id in ipairs(order) do index[id] = i end
+  local geo = {}
+  for k, e in ipairs(edges) do
+    local len = math.sqrt(e[3] * e[3] + e[4] * e[4])
+    geo[k] = { ux = e[3] / len, uy = e[4] / len, len = len * irregularScale, w = 1 }
+  end
+  local function apply(px, py, outx, outy)
+    for i = 1, #order do outx[i], outy[i] = 0, 0 end
+    for k, e in ipairs(edges) do
+      local g = geo[k]
+      local a, b = index[e[1]], index[e[2]]
+      local dx, dy = px[b] - px[a], py[b] - py[a]
+      local along = g.ux * dx + g.uy * dy
+      local side = -g.uy * dx + g.ux * dy
+      local fxv = g.w * along * g.ux - IRREGULAR_SIDE * side * g.uy
+      local fyv = g.w * along * g.uy + IRREGULAR_SIDE * side * g.ux
+      outx[b], outy[b] = outx[b] + fxv, outy[b] + fyv
+      outx[a], outy[a] = outx[a] - fxv, outy[a] - fyv
+    end
+    outx[1], outy[1] = 0, 0   -- the root
+  end
+  local px, py = {}, {}
+  for i, id in ipairs(order) do px[i], py[i] = fx[id] - fx[rootId], fy[id] - fy[rootId] end
+  for _ = 1, IRREGULAR_ROUNDS do
+    local bx, by = {}, {}
+    for i = 1, #order do bx[i], by[i] = 0, 0 end
+    for k, e in ipairs(edges) do
+      local g = geo[k]
+      local a, b = index[e[1]], index[e[2]]
+      local gx, gy = g.w * g.len * g.ux, g.w * g.len * g.uy
+      bx[b], by[b] = bx[b] + gx, by[b] + gy
+      bx[a], by[a] = bx[a] - gx, by[a] - gy
+    end
+    bx[1], by[1] = 0, 0
+    local ax, ay = {}, {}
+    apply(px, py, ax, ay)
+    local rx, ry, dxv, dyv = {}, {}, {}, {}
+    local rr = 0
+    for i = 1, #order do
+      rx[i], ry[i] = bx[i] - ax[i], by[i] - ay[i]
+      dxv[i], dyv[i] = rx[i], ry[i]
+      rr = rr + rx[i] * rx[i] + ry[i] * ry[i]
+    end
+    for _ = 1, 4 * #order + 20 do
+      if rr < 1e-10 then break end
+      apply(dxv, dyv, ax, ay)
+      local dAd = 0
+      for i = 1, #order do dAd = dAd + dxv[i] * ax[i] + dyv[i] * ay[i] end
+      if dAd <= 0 then break end
+      local alpha = rr / dAd
+      local rr2 = 0
+      for i = 1, #order do
+        px[i], py[i] = px[i] + alpha * dxv[i], py[i] + alpha * dyv[i]
+        rx[i], ry[i] = rx[i] - alpha * ax[i], ry[i] - alpha * ay[i]
+        rr2 = rr2 + rx[i] * rx[i] + ry[i] * ry[i]
+      end
+      local beta = rr2 / rr
+      rr = rr2
+      for i = 1, #order do dxv[i], dyv[i] = rx[i] + beta * dxv[i], ry[i] + beta * dyv[i] end
+    end
+    -- Exits that came out shorter than a step cost more next round.
+    for k, e in ipairs(edges) do
+      local g = geo[k]
+      local a, b = index[e[1]], index[e[2]]
+      local along = g.ux * (px[b] - px[a]) + g.uy * (py[b] - py[a])
+      g.w = (along < g.len - 0.01) and IRREGULAR_SHORT or 1
+    end
+  end
+  for i, id in ipairs(order) do fx[id], fy[id] = px[i], py[i] end
+
+  for _, id in ipairs(order) do lastFit[id] = { fx[id], fy[id] } end
+
+  -- Snap to the grid, nearest the root first.
+  local pos, taken = {}, {}
+  for _, id in ipairs(order) do
+    local x, y = math.floor(fx[id] + 0.5), math.floor(fy[id] + 0.5)
+    if taken[x .. "," .. y] then
+      local best, bestDist = nil, nil
+      for r = 1, 4 do
+        for ddy = -r, r do
+          for ddx = -r, r do
+            local cx, cy = x + ddx, y + ddy
+            if not taken[cx .. "," .. cy] then
+              local dist = (cx - fx[id]) ^ 2 + (cy - fy[id]) ^ 2
+              if not bestDist or dist < bestDist then best, bestDist = { cx, cy }, dist end
+            end
+          end
+        end
+        if best then break end
+      end
+      if best then x, y = best[1], best[2] end
+    end
+    taken[x .. "," .. y] = id
+    pos[id] = { x, y }
+  end
+
+  -- A room sitting on a long exit's line (an exit stretched past it) moves
+  -- to the nearest free cell off every such line, so no exit seems to lead
+  -- into it.
+  local function onLines()
+    local cells = {}
+    for _, e in ipairs(edges) do
+      local pa, pb = pos[e[1]], pos[e[2]]
+      local sx, sy = pb[1] - pa[1], pb[2] - pa[2]
+      local k = math.max(math.abs(sx), math.abs(sy))
+      if k >= 2 and (sx == 0 or sy == 0 or math.abs(sx) == math.abs(sy)) then
+        for j = 1, k - 1 do
+          cells[(pa[1] + j * sx / k) .. "," .. (pa[2] + j * sy / k)] = true
+        end
+      end
+    end
+    return cells
+  end
+  for _ = 1, 3 do
+    local cells = onLines()
+    local movedAny = false
+    for _, id in ipairs(order) do
+      local p = pos[id]
+      local key = p[1] .. "," .. p[2]
+      if cells[key] then
+        local best, bestDist = nil, nil
+        for r = 1, 3 do
+          for ddy = -r, r do
+            for ddx = -r, r do
+              local cx, cy = p[1] + ddx, p[2] + ddy
+              local ck = cx .. "," .. cy
+              if not taken[ck] and not cells[ck] then
+                local dist = (cx - fx[id]) ^ 2 + (cy - fy[id]) ^ 2
+                if not bestDist or dist < bestDist then best, bestDist = { cx, cy }, dist end
+              end
+            end
+          end
+          if best then break end
+        end
+        if best then
+          taken[key] = nil
+          taken[best[1] .. "," .. best[2]] = id
+          pos[id] = best
+          movedAny = true
+        end
+      end
+    end
+    if not movedAny then break end
+  end
+
+  -- Exits of unrelated rooms shouldn't cross. Each room on a crossing tries
+  -- the free cells around it, and moves where crossings plus the cost of
+  -- bending its own exits (as above) come out lowest; a crossing costs
+  -- more than a slightly bent exit.
+  local byRoom = {}
+  for k, e in ipairs(edges) do
+    byRoom[e[1]] = byRoom[e[1]] or {}
+    byRoom[e[2]] = byRoom[e[2]] or {}
+    byRoom[e[1]][#byRoom[e[1]] + 1] = k
+    byRoom[e[2]][#byRoom[e[2]] + 1] = k
+  end
+  local function crosses(k1, k2)
+    local a, b, c, d = edges[k1][1], edges[k1][2], edges[k2][1], edges[k2][2]
+    if a == c or a == d or b == c or b == d then return false end
+    local p1, p2, p3, p4 = pos[a], pos[b], pos[c], pos[d]
+    local function orient(p, q, r)
+      local v = (q[1] - p[1]) * (r[2] - p[2]) - (q[2] - p[2]) * (r[1] - p[1])
+      return v > 0 and 1 or (v < 0 and -1 or 0)
+    end
+    local o1, o2 = orient(p1, p2, p3), orient(p1, p2, p4)
+    local o3, o4 = orient(p3, p4, p1), orient(p3, p4, p2)
+    if o1 ~= o2 and o3 ~= o4 and o1 ~= 0 and o2 ~= 0 and o3 ~= 0 and o4 ~= 0 then return true end
+    -- Running along the same line, overlapping.
+    if o1 == 0 and o2 == 0 then
+      local function within(p, q, r)
+        return math.min(p[1], q[1]) <= r[1] and r[1] <= math.max(p[1], q[1])
+          and math.min(p[2], q[2]) <= r[2] and r[2] <= math.max(p[2], q[2])
+      end
+      return within(p1, p2, p3) or within(p1, p2, p4) or within(p3, p4, p1) or within(p3, p4, p2)
+    end
+    return false
+  end
+  local function bendCost(k)
+    local e, g = edges[k], geo[k]
+    local dx, dy = pos[e[2]][1] - pos[e[1]][1], pos[e[2]][2] - pos[e[1]][2]
+    local along = g.ux * dx + g.uy * dy
+    local side = -g.uy * dx + g.ux * dy
+    local c = IRREGULAR_BEND * side * side
+    if along < g.len then c = c + IRREGULAR_BEND * (g.len - along) ^ 2 else c = c + (along - g.len) ^ 2 end
+    return c
+  end
+  -- Strictly between a and b on the line joining them.
+  local function onSegment(p, a, b)
+    if (b[1] - a[1]) * (p[2] - a[2]) ~= (b[2] - a[2]) * (p[1] - a[1]) then return false end
+    local t = ((p[1] - a[1]) * (b[1] - a[1]) + (p[2] - a[2]) * (b[2] - a[2]))
+    local len2 = (b[1] - a[1]) ^ 2 + (b[2] - a[2]) ^ 2
+    return t > 0 and t < len2
+  end
+  local function roomCost(id)
+    local c = 0
+    local mine = {}
+    for _, k in ipairs(byRoom[id] or {}) do
+      mine[k] = true
+      c = c + bendCost(k)
+      for k2 = 1, #edges do
+        if k2 ~= k and crosses(k, k2) then c = c + IRREGULAR_CROSS end
+      end
+      -- Another room sitting on this exit's line.
+      local a, b = pos[edges[k][1]], pos[edges[k][2]]
+      for _, other in ipairs(order) do
+        if other ~= edges[k][1] and other ~= edges[k][2] and onSegment(pos[other], a, b) then
+          c = c + IRREGULAR_ON_LINE
+        end
+      end
+    end
+    -- This room sitting on another exit's line.
+    for k2, e in ipairs(edges) do
+      if not mine[k2] and onSegment(pos[id], pos[e[1]], pos[e[2]]) then c = c + IRREGULAR_ON_LINE end
+    end
+    return c
+  end
+  -- A room needing a look: its exits cross others, or a room sits on one
+  -- of them, or it sits on another exit's line.
+  local function troubled(id)
+    for _, k in ipairs(byRoom[id]) do
+      for k2 = 1, #edges do
+        if k2 ~= k and crosses(k, k2) then return true end
+      end
+      local a, b = pos[edges[k][1]], pos[edges[k][2]]
+      for _, other in ipairs(order) do
+        if other ~= edges[k][1] and other ~= edges[k][2] and onSegment(pos[other], a, b) then return true end
+      end
+    end
+    for _, e in ipairs(edges) do
+      if e[1] ~= id and e[2] ~= id and onSegment(pos[id], pos[e[1]], pos[e[2]]) then return true end
+    end
+    return false
+  end
+  for _ = 1, 8 do
+    local improved = false
+    for _, id in ipairs(order) do
+      if id ~= rootId and byRoom[id] then
+        local here = roomCost(id)
+        if troubled(id) then
+          local p0 = pos[id]
+          local best, bestCost = nil, here
+          for ddy = -2, 2 do
+            for ddx = -2, 2 do
+              local cx, cy = p0[1] + ddx, p0[2] + ddy
+              local key = cx .. "," .. cy
+              if not taken[key] then
+                pos[id] = { cx, cy }
+                local c = roomCost(id)
+                if c < bestCost - 0.001 then best, bestCost = { cx, cy }, c end
+              end
+            end
+          end
+          pos[id] = p0
+          if best then
+            taken[p0[1] .. "," .. p0[2]] = nil
+            taken[best[1] .. "," .. best[2]] = id
+            pos[id] = best
+            improved = true
+          end
+        end
+      end
+    end
+    if not improved then break end
+  end
+  return pos, order
+end
+
+-- Positions relative to startId (at 0,0), from its area's kept layout.
+local function LayoutIrregular(startId)
+  local cached = irregularCache[startId]
+  if not cached or cached.version ~= mapVersion or not cached.pos[startId] then
+    local pos, members = SolveIrregular(startId)
+    cached = { version = mapVersion, pos = pos }
+    for _, id in ipairs(members) do irregularCache[id] = cached end
+  end
+  local o = cached.pos[startId]
+  local out = {}
+  for id, p in pairs(cached.pos) do out[id] = { p[1] - o[1], p[2] - o[2] } end
+  return out
+end
+
+-- Joining pieces of one area mapped from different entrances.
+--
+-- After a new room is created, the rooms laid out around it are compared
+-- with the rooms laid out around each already-mapped room in the square
+-- that looks the same but isn't connected to it. A candidate fits when every
+-- position the two layouts share holds the same room (by name or
+-- description and exits) and the squares still line up. It's accepted when
+-- it's the only room like this nearby and a neighbour agrees, or when at
+-- least JOIN_MIN_MATCHES neighbours agree and one of them is distinctive --
+-- and only if exactly one candidate fits. Then every pair of rooms the two
+-- layouts share is merged, so the pieces become one map.
+-- Wide enough to cover a whole area like Burnham Wood (about 11 x 11), so
+-- a contradiction anywhere in the overlap blocks a join, not just nearby.
+local JOIN_RADIUS = 15
+local JOIN_MIN_MATCHES = 2
+
+local function SameRoom(a, b)
+  return Recognised(a, b) and Recognised(b, a)
+end
+
+-- Returns the number of rooms merged (0 if nothing was joined).
+-- True if no other room in the room's square looks the same: a corner, an
+-- edge room with an odd exit, the castle. In a grid of look-alike rooms,
+-- matching only look-alikes proves nothing, so a join needs one of these.
+--
+-- "Unique among the rooms mapped so far" isn't enough: the first "Burnham
+-- Wood (n,e,s,w)" mapped in a square is unique there until the next one is.
+-- So look-alikes in the neighbouring squares count too. Rooms in ignore (the
+-- piece being joined, which holds this room's own copy) don't.
+local function Distinctive(room, ignore)
+  for _, other in pairs(rooms) do
+    if other ~= room and not (ignore and ignore[other.id])
+        and other.sx and other.sy and room.sx and room.sy
+        and math.abs(other.sx - room.sx) <= 1 and math.abs(other.sy - room.sy) <= 1
+        and SameRoom(other, room) then
+      return false
+    end
+  end
+  return true
+end
+
+-- Every grid row of a consistent map lies in one row of squares, and every
+-- grid column in one column of squares. Checks that still holds with the
+-- two layouts laid over each other (cellB shifted onto posA's frame).
+local function SquaresConsistent(posA, cellB)
+  local rowY, colX = {}, {}
+  local function add(room, x, y)
+    if room.sy ~= nil then
+      if rowY[y] ~= nil and rowY[y] ~= room.sy then return false end
+      rowY[y] = room.sy
+    end
+    if room.sx ~= nil then
+      if colX[x] ~= nil and colX[x] ~= room.sx then return false end
+      colX[x] = room.sx
+    end
+    return true
+  end
+  for id, p in pairs(posA) do
+    if not add(rooms[id], p[1], p[2]) then return false end
+  end
+  for key, id in pairs(cellB) do
+    local x, y = key:match("^(-?%d+),(-?%d+)$")
+    if not add(rooms[id], tonumber(x), tonumber(y)) then return false end
+  end
+  return true
+end
+
+-- Two rooms are only the same room if their exits agree: an exit both have
+-- must lead to the same place -- the same room, or rooms that line up on the
+-- two overlaid layouts (those get merged too). This catches what the layout
+-- can't see, like exits out to overland tiles: two entrance roads with the
+-- same name, one whose south exit leads out of town and one whose south exit
+-- leads to a street.
+function ExitsAgree(pairs_, posA, posB)
+  for _, pair in ipairs(pairs_) do
+    local la, lb = links[pair[1]] or {}, links[pair[2]] or {}
+    for cmd, linkA in pairs(la) do
+      local linkB = lb[cmd]
+      if linkB and linkA.to ~= linkB.to then
+        local pa, pb = posA[linkA.to], posB[linkB.to]
+        if not (pa and pb and pa[1] == pb[1] and pa[2] == pb[2]) then
+          return false
+        end
+      end
+    end
+  end
+  return true
+end
+
+-- Returns the pairs to merge for each candidate that fits.
+local function TryJoinByGrid(roomId)
+  local room = rooms[roomId]
+  local posA = Layout(roomId, JOIN_RADIUS, true)
+
+  local candidates = {}
+  for _, cand in pairs(rooms) do
+    if not posA[cand.id] and SameSquare(cand, room.sx, room.sy) and SameRoom(cand, room) then
+      candidates[#candidates + 1] = cand
+    end
+  end
+  local fits = {}
+  if #candidates == 0 then return fits end
+
+  for _, cand in ipairs(candidates) do
+    local posB, cellB = Layout(cand.id, JOIN_RADIUS, true)
+    local pairs_, matches, distinctive, ok = { { roomId, cand.id } }, 0, false, true
+    for id, p in pairs(posA) do
+      if id ~= roomId then
+        local other = cellB[p[1] .. "," .. p[2]]
+        if other then
+          if posA[other] then ok = false; break end   -- already connected
+          if SameRoom(rooms[id], rooms[other]) then
+            matches = matches + 1
+            pairs_[#pairs_ + 1] = { id, other }
+            if not distinctive and Distinctive(rooms[other], posA) then distinctive = true end
+          elseif not Compatible(rooms[other], rooms[id]) then
+            ok = false
+            break
+          end
+        end
+      end
+    end
+    ok = ok and SquaresConsistent(posA, cellB) and ExitsAgree(pairs_, posA, posB)
+    -- Even a distinctive room needs one neighbour to agree: "the only one
+    -- like it mapped so far" doesn't mean the only one there is.
+    local enough = (#candidates == 1 and matches >= 1 and (distinctive or Distinctive(cand, posA)))
+      or (matches >= JOIN_MIN_MATCHES and distinctive)
+    if ok and enough then
+      fits[#fits + 1] = pairs_
+    end
+  end
+  return fits
+end
+
+-- Irregular squares: the grid can't tell two look-alikes apart, and coming
+-- back around an uneven loop lands you in a room the grid puts somewhere
+-- else, so it gets mapped twice. Copies like that are found by the paths
+-- between rooms instead: from the new room and from a look-alike, follow
+-- the same commands side by side. Every pair of rooms reached that way must
+-- look the same (or at least not contradict), no room may pair up with two
+-- different rooms, and the two sides may not run into each other. Each
+-- pair that really looks the same, and each exit on both sides that leads
+-- to the very same room, is a neighbour that agrees.
+local PATH_JOIN_LIMIT = 60   -- pairs followed at most per candidate
+
+-- Returns the pairs and how many neighbours agree, or nil on a contradiction.
+local function MatchByPath(a, b)
+  local mapAB, mapBA = { [a] = b }, { [b] = a }
+  local pairs_, matches = { { a, b } }, 0
+  local head = 1
+  while pairs_[head] and #pairs_ <= PATH_JOIN_LIMIT do
+    local x, y = pairs_[head][1], pairs_[head][2]
+    head = head + 1
+    for cmd, lx in pairs(links[x] or {}) do
+      local ly = links[y] and links[y][cmd]
+      local p, q = lx.to, ly and ly.to
+      if q and rooms[p] and rooms[q] then
+        if p == q then
+          matches = matches + 1               -- both lead to the same room
+        elseif mapAB[p] or mapBA[q] then
+          if mapAB[p] ~= q then return nil end -- paired with something else
+        elseif mapBA[p] or mapAB[q] then
+          return nil                           -- the two sides run together
+        elseif SameRoom(rooms[p], rooms[q]) then
+          matches = matches + 1
+          mapAB[p], mapBA[q] = q, p
+          pairs_[#pairs_ + 1] = { p, q }
+        elseif not Compatible(rooms[q], rooms[p]) then
+          return nil
+        end
+      end
+    end
+  end
+  return pairs_, matches, mapAB
+end
+
+local function TryJoinByPath(roomId)
+  local room = rooms[roomId]
+  local fits = {}
+  for _, cand in pairs(rooms) do
+    if cand ~= room and SameSquare(cand, room.sx, room.sy) and SameRoom(cand, room) then
+      local pairs_, matches, aSide = MatchByPath(roomId, cand.id)
+      if pairs_ and matches >= 1 then
+        -- The same rule as on a grid: a neighbour must agree, and something
+        -- must be the only one like it (not counting this side's copies).
+        local distinctive = Distinctive(cand, aSide)
+        for i = 2, #pairs_ do
+          if distinctive then break end
+          distinctive = Distinctive(rooms[pairs_[i][2]], aSide)
+        end
+        if distinctive then fits[#fits + 1] = pairs_ end
+      end
+    end
+  end
+  return fits
+end
+
+function TryJoin(roomId)
+  local room = rooms[roomId]
+  if not room or IsOverland(room) then return 0 end
+  local fits = IsIrregular(room.sx, room.sy) and TryJoinByPath(roomId) or TryJoinByGrid(roomId)
+  if #fits ~= 1 then return 0 end
+
+  for _, pair in ipairs(fits[1]) do
+    local drop, keep = rooms[pair[1]], rooms[pair[2]]
+    if drop and keep and drop ~= keep then MergeRooms(keep, drop) end
+  end
+  return #fits[1]
+end
+
+-- On a grid, a room mapped twice that the paths between rooms could prove
+-- (but the grid can't) means the area doesn't fit a grid: say so, once per
+-- square per session.
+local suggested = {}
+
+function SuggestIrregular(roomId)
+  local room = rooms[roomId]
+  if not room or IsOverland(room) then return end
+  local label = SquareLabel(room.sx, room.sy)
+  if suggested[label] or IsIrregular(room.sx, room.sy) then return end
+  local fits = TryJoinByPath(roomId)
+  if #fits ~= 1 then return end
+  -- Only a copy you can walk to from the original without leaving the
+  -- area: pieces mapped from different entrances aren't connected yet, and
+  -- the grid joins those.
+  local cand = fits[1][1][2]
+  local seen, queue, head = { [roomId] = true }, { roomId }, 1
+  while queue[head] and not seen[cand] and #queue < 500 do
+    for _, link in pairs(links[queue[head]] or {}) do
+      if rooms[link.to] and not seen[link.to] and not IsOverland(rooms[link.to]) then
+        seen[link.to] = true
+        queue[#queue + 1] = link.to
+      end
+    end
+    head = head + 1
+  end
+  if seen[cand] then
+    suggested[label] = true
+    Note("room #" .. roomId .. " looks like one already mapped, which the grid puts elsewhere: this area's " ..
+      "rooms probably don't line up on a grid. If the map shows rooms twice here, type 'amap irregular'.")
+  end
+end
+
+-- Every room in an irregular square, until nothing more joins: a copy made
+-- on an uneven loop can be proven only later, when a walk elsewhere gives
+-- it and the original an exit in common.
+local function JoinSquare(sx, sy)
+  local merged = 0
+  for _ = 1, 5 do
+    local list = {}
+    for _, room in pairs(rooms) do
+      if SameSquare(room, sx, sy) then list[#list + 1] = room end
+    end
+    table.sort(list, function(a, b) return a.id < b.id end)
+    -- Only rooms with a look-alike in the square can be copies.
+    local ids = {}
+    for i, a in ipairs(list) do
+      for j, b in ipairs(list) do
+        if i ~= j and SameRoom(a, b) then
+          ids[#ids + 1] = a.id
+          break
+        end
+      end
+    end
+    local pass = 0
+    for _, id in ipairs(ids) do
+      if rooms[id] then pass = pass + TryJoin(id) end
+    end
+    merged = merged + pass
+    if pass == 0 then break end
+  end
+  return merged
+end
+
+-- ---------------------------------------------------------------------------
+-- Reading a block of output
+-- ---------------------------------------------------------------------------
+
+-- "north, east and west" / "east" -> list of short directions (or words).
+local function ParseExitList(text)
+  text = text:gsub("%.%s*$", ""):gsub(" and ", ",")
+  local list = {}
+  for word in text:gmatch("[^,]+") do
+    word = Trim(word):lower()
+    if word ~= "" then list[#list + 1] = DIR_WORDS[word] or word end
+  end
+  return list
+end
+
+-- Pulls "There is a closed gate leading west [and an open door leading
+-- east]." out of a description, returning the cleaned text and the doors.
+local function ExtractDoors(desc)
+  local doors = {}
+  local cleaned = desc:gsub("There is ([^%.]- leading [^%.]-)%.%s*", function(body)
+    local found = false
+    for clause in (body .. " and "):gmatch("(.-) and ") do
+      local state, dirWord = clause:match("^an? (%a+) .- leading (%a+)$")
+      local dir = dirWord and DIR_WORDS[dirWord:lower()]
+      if dir and (state == "open" or state == "closed") then
+        doors[dir] = (state == "closed")
+        found = true
+      end
+    end
+    if found then return "" end
+  end)
+  return Trim(cleaned), doors
+end
+
+local function NewObs(mode)
+  return { mode = mode, exits = {}, doors = {}, items = {} }
+end
+
+local function CopyItems(obs, lines, from)
+  for i = from, #lines do obs.items[#obs.items + 1] = lines[i] end
+end
+
+local function FinishVerbose(obs, descLines)
+  -- A short first line in a multi-line description is a message printed
+  -- before the room ("You jump down."): wrapped description lines are
+  -- nearly full width.
+  while #descLines > 1 and #descLines[1] < 60 do
+    table.remove(descLines, 1)
+  end
+  local desc, doors = ExtractDoors(CollapseSpaces(table.concat(descLines, " ")))
+  if desc ~= "" then obs.desc = desc end
+  for d, closed in pairs(doors) do
+    obs.doors[d] = closed
+    obs.exits[d] = true
+  end
+  return obs
+end
+
+local function ParseBrief(name, text)
+  local obs = NewObs("brief")
+  obs.name = name
+  if text == "no exits" then return obs end
+  for token in text:gmatch("[^,]+") do
+    token = Trim(token)
+    local inner = token:match("^|(.*)|$")
+    local word = (inner or token):lower()
+    local dir = DIR_WORDS[word] or word
+    obs.exits[dir] = true
+    if inner then obs.doors[dir] = true end
+  end
+  return obs
+end
+
+-- Returns obs, or nil plus "fail" and the failure line.
+local function ParseBlock(lines)
+  -- Verbose: find the exits line.
+  for i, line in ipairs(lines) do
+    local exitsText, itemsFrom
+    local rest = line:match("^%s*Obvious directions are:%s*(.-)%s*$")
+    if rest then
+      local parts = { rest }
+      local j = i
+      while not parts[#parts]:match("%.$") and lines[j + 1] do
+        j = j + 1
+        parts[#parts + 1] = Trim(lines[j])
+      end
+      exitsText, itemsFrom = table.concat(parts, " "), j + 1
+    else
+      local one = line:match("^%s*The only obvious exit is (.-)%.?%s*$")
+      if one then
+        exitsText, itemsFrom = one, i + 1
+      elseif line:match("^%s*There are no obvious exits") then
+        exitsText, itemsFrom = "", i + 1
+      end
+    end
+    if exitsText then
+      local obs = NewObs("verbose")
+      for _, e in ipairs(ParseExitList(exitsText)) do obs.exits[e] = true end
+      local descLines = {}
+      for k = 1, i - 1 do descLines[#descLines + 1] = lines[k] end
+      CopyItems(obs, lines, itemsFrom)
+      return FinishVerbose(obs, descLines)
+    end
+  end
+
+  -- Brief: "Room Name (n,e,|w|,se)".
+  for i, line in ipairs(lines) do
+    local name, text = line:match("^(%S.-) %(([^()]*)%)$")
+    if name and ValidBriefExits(text) then
+      local obs = ParseBrief(name, text)
+      CopyItems(obs, lines, i + 1)
+      return obs
+    end
+  end
+
+  -- Dark: no name, no description, no exits -- only the path tells where.
+  for i, line in ipairs(lines) do
+    for _, pattern in ipairs(DARK_PATTERNS) do
+      if line:match(pattern) then
+        local obs = NewObs("dark")
+        obs.dark = true
+        CopyItems(obs, lines, i + 1)
+        return obs
+      end
+    end
+  end
+
+  for _, line in ipairs(lines) do
+    for _, pattern in ipairs(FAILURE_PATTERNS) do
+      if line:match(pattern) then return nil, "fail", line end
+    end
+  end
+  return nil
+end
+
+-- Verbose room with no exits line at all (every exit behind a closed door).
+-- Only tried after a direction or look, since it's a guess: the description
+-- runs on while the previous line was near full width. It must contain a
+-- "There is a closed ... leading ..." sentence -- that's the only way a room
+-- ends up with no exits line -- so a long message that wraps (an NPC
+-- blocking you) isn't mistaken for a room.
+local function ParseLooseVerbose(lines)
+  if #lines == 0 then return nil end
+  local descLines = { lines[1] }
+  local i = 2
+  while lines[i] and #lines[i - 1] >= 60 do
+    descLines[#descLines + 1] = lines[i]
+    i = i + 1
+  end
+  local obs = FinishVerbose(NewObs("verbose"), descLines)
+  if not next(obs.doors) then return nil end
+  CopyItems(obs, lines, i)
+  return obs
+end
+
+-- ---------------------------------------------------------------------------
+-- Commands you send
+-- ---------------------------------------------------------------------------
+
+-- Returns kind ("move", "look", "nonmove", "other" or nil) and the exit key.
+-- Game aliases --------------------------------------------------------------
+
+local function SaveGameWord(kind, name, expansion)
+  gameWords[kind][name] = expansion
+  if expansion then
+    DbRun("INSERT OR REPLACE INTO game_words (kind, name, expansion) VALUES (?, ?, ?)", kind, name, expansion)
+  else
+    DbRun("DELETE FROM game_words WHERE kind = ? AND name = ?", kind, name)
+  end
+end
+
+-- Fills in an alias's $ arguments: $1..$9 one word each, $* everything,
+-- $ the first word and $@ the words after it (or everything when there's
+-- no $). Without any, the words go on the end.
+local function FillArgs(template, args)
+  local words = {}
+  for w in args:gmatch("%S+") do words[#words + 1] = w end
+  local usedDollar = template:find("%$[^%d%*@]") or template:find("%$$")
+  local used = false
+  local out = template:gsub("%$([%d%*@]?)", function(c)
+    used = true
+    if c == "*" then return args end
+    if c == "@" then return usedDollar and table.concat(words, " ", 2) or args end
+    if c == "" then return words[1] or "" end
+    return words[tonumber(c)] or ""
+  end)
+  if not used and args ~= "" then out = out .. " " .. args end
+  return CollapseSpaces(out)
+end
+
+local function ApplyNicks(cmd)
+  local first = cmd:match("^(%S+)")
+  if first == "alias" or first == "nick" or first == "unalias" or first == "unnick" then return cmd end
+  return (cmd:gsub("%S+", function(w) return gameWords.nick[w] or w end))
+end
+
+-- What a typed line really sends, as a list of commands: aliases expanded
+-- (">name" inside one calls another alias), "do a, b" split up, nicknames
+-- replaced. Definitions sent along the way are learned.
+local function ExpandCommand(text, depth, out)
+  out = out or {}
+  depth = depth or 0
+  text = CollapseSpaces(text)
+  if depth > 6 or text == "" then return out end
+  local first, args = text:match("^(%S+)%s*(.*)$")
+  local template = gameWords.alias[first]
+  if template then
+    text = FillArgs(template, args)
+    if text:sub(1, 1) == ">" then return ExpandCommand(text:sub(2), depth + 1, out) end
+  end
+  if text:match("^do ") then
+    for part in (text:sub(4) .. ","):gmatch("%s*([^,]-)%s*,") do
+      if part:sub(1, 1) == ">" then part = part:sub(2) end
+      -- Each part of a "do" goes through the alias table again.
+      ExpandCommand(part, depth + 1, out)
+    end
+    return out
+  end
+  text = ApplyNicks(text)
+  local kind, name, expansion = nil, nil, nil
+  name, expansion = text:match("^alias (%S+) (.+)$")
+  if name then kind = "alias" else
+    name, expansion = text:match("^nick (%S+) (.+)$")
+    if name then kind = "nick" end
+  end
+  if kind then SaveGameWord(kind, name, expansion) end
+  out[#out + 1] = text
+  return out
+end
+
+-- Reading the 'alias' / 'nick' listing ("ep         = enter portal"), page
+-- by page. A complete listing replaces what was known; a cut-short one only
+-- adds to it.
+local listing = nil   -- { kind =, words = {}, count =, total = }
+
+local function StartListing(kind)
+  listing = { kind = kind, words = {}, count = 0, total = nil }
+end
+
+-- Hidden exits saved under an alias name ("ep") are renamed to what the
+-- alias sends ("enter portal"), the name new ones get.
+local function RenameAliasLinks()
+  for fromId, cmds in pairs(links) do
+    local renames = {}
+    for cmd, link in pairs(cmds) do
+      if not DIRS[cmd] then
+        local list = ExpandCommand(cmd)
+        local real = #list == 1 and CollapseSpaces(list[1]:lower()) or nil
+        if real and real ~= cmd and not DIRS[real] and not cmds[real] then renames[cmd] = real end
+      end
+    end
+    for cmd, real in pairs(renames) do
+      local link = cmds[cmd]
+      cmds[cmd] = nil
+      DbRun("DELETE FROM exits WHERE from_id = ? AND cmd = ?", fromId, cmd)
+      SetLink(fromId, real, link.to, link.hidden)
+    end
+  end
+end
+
+local function FinishListing()
+  local l = listing
+  listing = nil
+  if l.count == 0 then return end
+  if l.total == nil or l.count >= l.total then
+    for name in pairs(gameWords[l.kind]) do
+      if not l.words[name] then SaveGameWord(l.kind, name, nil) end
+    end
+  end
+  for name, expansion in pairs(l.words) do SaveGameWord(l.kind, name, expansion) end
+  RenameAliasLinks()
+  mapChanged = true
+  Note("learned " .. l.count .. " game " .. (l.kind == "alias" and "aliases" or "nicknames") ..
+    " (commands are read through them, e.g. an alias for 'enter portal').")
+end
+
+-- Returns true if the line belongs to the listing.
+local function ListingLine(text)
+  if not listing then return false end
+  local more, total = text:match("^%-%-More%-%-%((%d+)/(%d+)%)")
+  if more then
+    listing.total = tonumber(total)
+    return true
+  end
+  if Trim(text) == "" then return true end
+  local name, expansion = text:match("^(%S+) +=%s(.*)$")
+  if name then
+    if not listing.words[name] then listing.count = listing.count + 1 end
+    listing.words[name] = Trim(expansion)
+    return true
+  end
+  FinishListing()
+  return false
+end
+
+local ClassifyOne
+
+-- A typed line through the game's aliases. A line that sends several
+-- commands counts as a move only if one of them could move you, and keeps
+-- what you typed as its name (it's what would be sent again).
+local function Classify(cmd)
+  if not cmd then return nil end
+  local list = ExpandCommand(cmd)
+  if #list == 0 then return nil end
+  if #list == 1 then return ClassifyOne(list[1]) end
+  for _, part in ipairs(list) do
+    local kind = ClassifyOne(part)
+    if kind == "move" or kind == "other" then return "other", CollapseSpaces(cmd:lower()) end
+  end
+  return "nonmove"
+end
+
+function ClassifyOne(cmd)
+  local t = CollapseSpaces(cmd:lower())
+  if t == "" then return nil end
+  if DIR_WORDS[t] then return "move", DIR_WORDS[t] end
+  if LOOK_WORDS[t] then return "look" end
+  local first = t:match("^(%S+)")
+  if PEER_WORDS[first] then return "peer" end
+  if NON_MOVE_VERBS[first] or LOOK_WORDS[first] or first:match("^['\":]") then
+    return "nonmove"
+  end
+  return "other", t
+end
+
+function OnPluginSent(text)
+  -- Paging on through "--More--" gets no prompt of its own.
+  if pagerActive then
+    pagerActive = false
+    return
+  end
+  local expanded = ExpandCommand(text)
+  if #expanded == 1 and (expanded[1] == "alias" or expanded[1] == "nick") then
+    StartListing(expanded[1])
+  end
+  -- A move that got no reply yet is only kept while nothing newer was sent.
+  for i = #cmdQueue, 1, -1 do
+    if cmdQueue[i].requeued then table.remove(cmdQueue, i) end
+  end
+  cmdQueue[#cmdQueue + 1] = { text = text, t = os.time() }
+  if #cmdQueue > 20 then table.remove(cmdQueue, 1) end
+end
+
+local function PopCommand()
+  local now = os.time()
+  while cmdQueue[1] and now - cmdQueue[1].t > 10 do
+    table.remove(cmdQueue, 1)
+  end
+  return table.remove(cmdQueue, 1)
+end
+
+-- ---------------------------------------------------------------------------
+-- Following you around
+-- ---------------------------------------------------------------------------
+
+local function Arrive(room)
+  StampRoom(room)
+  current = room.id
+  lastKnown = room.id
+  lostCount = 0
+  -- Kept up to date (not only when MUSHclient saves state), so a reload
+  -- can pick up where you were.
+  SetVariable("last_room", tostring(room.id))
+end
+
+-- After a reload (or a new session) the plugin doesn't know where you are,
+-- but you're most likely still in the last room it saw you in. That room
+-- is taken back on the first room you see, if it fits: you look and it's
+-- that room, or you move by an exit it has and land where that exit is
+-- known to lead (or, for an exit not taken yet, in the same or a
+-- neighbouring square). Otherwise you're found the usual way.
+local resumeId = nil
+
+local function TryResume(kind, key, obs, sx, sy)
+  local r = resumeId and rooms[resumeId]
+  resumeId = nil
+  if not r or current then return false end
+  local fits = false
+  if kind == "look" or kind == "nonmove" or kind == nil then
+    fits = Recognised(r, obs)
+  elseif kind == "move" or kind == "other" then
+    local link = links[r.id] and links[r.id][key]
+    if link and rooms[link.to] then
+      local to = rooms[link.to]
+      fits = SameSquare(to, sx, sy) and Recognised(to, obs)
+    elseif r.exits[key] and r.sx and r.sy and sx and sy then
+      fits = math.abs(r.sx - sx) <= 1 and math.abs(r.sy - sy) <= 1
+    end
+  end
+  if fits then current = r.id end
+  return fits
+end
+
+-- No path to go by: find the room by its text within the current square.
+-- exclude: a room it can't be (the one you just left).
+local function Relocate(obs, sx, sy, exclude)
+  if not obs.name and not obs.desc then
+    current = nil
+    return "position unknown: a room with no name or description can't be recognised"
+  end
+  local matches = {}
+  for _, room in pairs(rooms) do
+    if room ~= exclude and SameSquare(room, sx, sy) and Recognised(room, obs) then
+      matches[#matches + 1] = room
+    end
+  end
+  if #matches == 1 and not Distinctive(matches[1]) and RoomsInSquare(sx, sy) > 1 then
+    -- The only one mapped in this square, but look-alikes are all around:
+    -- it could just as well be an unmapped one. (Not for an overland tile:
+    -- an overland square holds exactly one room, so a match there is certain.)
+    current = nil
+    lostCount = 1
+    return "lost: looks like room #" .. matches[1].id .. ", but rooms like it are common here"
+  elseif #matches == 1 then
+    UpdateRoom(matches[1], obs)
+    Arrive(matches[1])
+    return "recognised room #" .. matches[1].id
+  elseif #matches == 0 then
+    local room = NewRoom(obs, sx, sy)
+    Arrive(room)
+    return "new room #" .. room.id .. " (not linked: no move to go by)"
+  end
+  current = nil
+  lostCount = #matches
+  return "lost: " .. #matches .. " rooms in this square look like this"
+end
+
+local function FollowMove(prev, kind, key, obs, sx, sy)
+  local link = links[prev.id] and links[prev.id][key]
+  local target, how
+
+  if link and rooms[link.to] then
+    local cand = rooms[link.to]
+    -- Descriptions can change (weather, time of day), so a known exit only
+    -- needs the exits and name to agree.
+    -- A room never changes square, so if the game reports a different
+    -- one, the stored exit is wrong.
+    if SameSquare(cand, sx, sy) and ExitsCompatible(cand, obs) and NameCompatible(cand, obs) then
+      target, how = cand, "followed known exit to room #" .. cand.id
+      if link.build ~= BUILD then
+        link.build = BUILD
+        SaveLink(prev.id, key, link)
+      end
+    end
+  end
+
+  -- Overland tiles are left out of the layout: one overland step spans a
+  -- whole area, so grid positions measured through them mean nothing.
+  local pos, cellAt = Layout(prev.id, 12, true)
+
+  -- (Not in an irregular square, where the grid spot proves nothing.)
+  if not target and kind == "move" and DIRS[key].dx and not IsIrregular(sx, sy) then
+    local cid = cellAt[DIRS[key].dx .. "," .. DIRS[key].dy]
+    local cand = cid and rooms[cid]
+    -- In the dark, the grid position is all there is to go by.
+    if cand and SameSquare(cand, sx, sy) and (Recognised(cand, obs) or (obs.dark and cand.dark)) then
+      target, how = cand, "closed a loop into room #" .. cand.id
+    end
+  end
+
+  if not target and kind == "move" then
+    -- A look-alike whose exit back towards you already leads to exactly the
+    -- room you came from is the room you're in (e.g. stepping back into an
+    -- entrance from the overland tile it leads out to).
+    local rev = DIRS[key].rev
+    local back = nil
+    for _, cand in pairs(rooms) do
+      local l = links[cand.id] and links[cand.id][rev]
+      if cand ~= prev and l and l.to == prev.id and SameSquare(cand, sx, sy)
+          and (Recognised(cand, obs) or (obs.dark and cand.dark)) then
+        if back then back = false; break end
+        back = cand
+      end
+    end
+    if back then
+      target, how = back, "recognised room #" .. back.id .. " (its exit back leads to where you came from)"
+    end
+  end
+
+  -- (Coming into a part of an area mapped from another entrance is left to
+  -- TryJoin: a room that's merely the only one like it mapped so far -- the
+  -- first "Main Street (n,e,s,w)" of two in a town -- isn't evidence on its
+  -- own, so a join needs a neighbour that agrees as well.)
+
+  if not target and kind == "move" and RoomsInSquare(sx, sy) == 1
+      and not SameSquare(prev, sx, sy) then
+    -- Stepping onto an overland tile you've been on before, from a side
+    -- you haven't come from yet.
+    for _, cand in pairs(rooms) do
+      if SameSquare(cand, sx, sy) then
+        if Recognised(cand, obs) then
+          target, how = cand, "recognised overland room #" .. cand.id
+        end
+        break
+      end
+    end
+  end
+
+  if not target then
+    -- Going back the way you came, by an exit that doesn't mirror the one
+    -- you took (e.g. "u" out of a pit you entered with "jump down").
+    -- Compass ways in are left out: those already get a reverse link, and
+    -- look-alike rooms in a row (Main Street, Main Street) are common.
+    local back = {}
+    for fromId, cmds in pairs(links) do
+      if rooms[fromId] and SameSquare(rooms[fromId], sx, sy) then
+        for cmd, l in pairs(cmds) do
+          local planar = DIRS[cmd] and DIRS[cmd].dx
+          if l.to == prev.id and not planar and Recognised(rooms[fromId], obs) then
+            back[fromId] = true
+          end
+        end
+      end
+    end
+    local only = next(back)
+    if only and next(back, only) == nil then
+      target, how = rooms[only], "went back to room #" .. only
+    end
+  end
+
+  if not target and link then
+    -- The known exit led somewhere unexpected: trust what just happened
+    -- over the old link.
+    local result = Relocate(obs, sx, sy, prev)
+    -- Correct the exit only within the same square. An exit into another
+    -- square that the game contradicts more likely means the room you were
+    -- in was misidentified than that the exit is wrong.
+    if current and current ~= prev.id and SameSquare(rooms[link.to], sx, sy) then
+      SetLink(prev.id, key, current, link.hidden)
+      return result .. " (exit '" .. key .. "' led somewhere else; exit corrected)"
+    end
+    return result .. " (exit '" .. key .. "' didn't lead where expected)"
+  end
+
+  if not target and kind == "other" and not prev.exits[key] and not obs.dark then
+    -- An unlisted command that lands in a known room: if it's nearby (same
+    -- or neighbouring square), it's a hidden exit like "ep" back out of a
+    -- portal; if it's far away, it's a teleport (recall, a spell), so arrive
+    -- there without saving an exit.
+    local before = current
+    local result = Relocate(obs, sx, sy)
+    local here = current and rooms[current]
+    local near = here and prev.sx and prev.sy and here.sx and here.sy
+      and math.abs(prev.sx - here.sx) <= 1 and math.abs(prev.sy - here.sy) <= 1
+    if here and result:match("^recognised") then
+      if not near or TELEPORT_WORDS[key:match("^(%S+)")] then
+        return result .. " (via '" .. key .. "', a teleport: not saved as an exit)"
+      end
+      SetLink(prev.id, key, here.id, true)
+      return result .. " (via hidden exit '" .. key .. "')"
+    end
+    -- Relocate created a new room (or got lost); a new room after an
+    -- unlisted command is a hidden exit -- unless it's far away (a blue
+    -- door from Tantallon to Drakhiya, 37 squares off) or a teleport.
+    if current and current ~= before and (not near or TELEPORT_WORDS[key:match("^(%S+)")]) then
+      return result .. " (via '" .. key .. "', a teleport: not saved as an exit)"
+    end
+    if current and current ~= before then
+      target = rooms[current]
+      how = "new room #" .. target.id .. " (hidden exit '" .. key .. "')"
+    else
+      return result
+    end
+  end
+
+  if not target then
+    target = NewRoom(obs, sx, sy)
+    how = "new room #" .. target.id
+  end
+
+  UpdateRoom(target, obs)
+  if prev.noexits and prev.noexits[key] then
+    prev.noexits[key] = nil   -- it was blocked before (a door, a guard), but it is an exit
+    SaveRoom(prev)
+  end
+  -- A dark room's exits are unknown, so a compass move out of one isn't hidden.
+  SetLink(prev.id, key, target.id, not (prev.exits[key] or (prev.dark and DIRS[key])))
+  local rev = DIRS[key] and DIRS[key].rev
+  -- The way back is assumed: listed in the new room, or the new room is dark
+  -- (no exits to check, and the path is all there is to go by).
+  if rev and (target.exits[rev] or target.dark) and not (links[target.id] and links[target.id][rev]) then
+    SetLink(target.id, rev, prev.id, false)
+  end
+  Arrive(target)
+  return how
+end
+
+local function StripPrompt(lines)
+  if not promptSpec then
+    -- Only the broadcast line itself is known to be part of the prompt.
+    table.remove(lines)
+    return
+  end
+  local last = promptSpec.last
+  local function matches(line, idx)
+    return line and promptSpec.regexes[idx]:match(line) ~= nil
+  end
+  local n = #lines
+  local all = true
+  for k = 1, last do
+    if not matches(lines[n - last + k], k) then all = false; break end
+  end
+  if all then
+    for _ = 1, last do table.remove(lines) end
+  else
+    table.remove(lines)
+  end
+  skipLines = #promptSpec.regexes - last
+end
+
+local function FetchPromptSpec()
+  if not IsPluginInstalled(WINDOWS_PLUGIN_ID) then return end
+  local _, text = CallPlugin(WINDOWS_PLUGIN_ID, "MW_GetPromptLines")
+  if type(text) ~= "string" or text == "" then
+    promptSpec = nil
+    if not warnedNoPrompt then
+      warnedNoPrompt = true
+      Note("mush_windows hasn't read your prompt yet -- type wf_prompt_setup.")
+    end
+    return
+  end
+  local parts = {}
+  for line in (text .. "\n"):gmatch("(.-)\n") do parts[#parts + 1] = line end
+  local last = tonumber(table.remove(parts))
+  local regexes = {}
+  for i, pattern in ipairs(parts) do
+    local ok, re = pcall(rex.new, pattern)
+    if not ok then
+      Note("couldn't use prompt line " .. i .. " (" .. tostring(re) .. ").")
+      promptSpec = nil
+      return
+    end
+    regexes[i] = re
+  end
+  promptSpec = { regexes = regexes, last = last or #regexes }
+end
+
+local function ProcessBlock(sx, sy)
+  local lines = {}
+  for _, line in ipairs(buffer) do
+    line = line:gsub("%s+$", "")
+    if line ~= "" then lines[#lines + 1] = line end
+  end
+  buffer = {}
+  StripPrompt(lines)
+
+  local entry = PopCommand()
+  local cmd = entry and entry.text
+  local kind, key = Classify(cmd)
+  local obs, status, failLine = ParseBlock(lines)
+  if not obs and not status and (kind == "move" or kind == "look") then
+    obs = ParseLooseVerbose(lines)
+  end
+
+  local debug = { cmd = cmd, kind = kind, key = key, lines = lines, obs = obs, sx = sx, sy = sy }
+  lastDebug = debug
+
+  if not obs then
+    if status == "fail" then
+      debug.failLine = failLine
+      debug.decision = "move failed: " .. failLine
+      -- In a dark room, a failed move is the only way to learn its exits:
+      -- remember the direction as "no exit". A closed door or a guard in
+      -- the way doesn't count.
+      local here = current and rooms[current]
+      if kind == "move" and here and here.dark and not failLine:match("^The .+ is closed%.$")
+          and not failLine:match(" stops you from going ") then
+        here.noexits = here.noexits or {}
+        if not here.noexits[key] then
+          here.noexits[key] = true
+          SaveRoom(here)
+          debug.decision = debug.decision .. " (no exit '" .. key .. "' noted for dark room #" .. here.id .. ")"
+          mapChanged = true
+        end
+      end
+    else
+      debug.decision = "no room in this output"
+      -- A move whose reply hasn't arrived yet (e.g. a combat round's prompt
+      -- came first): keep it for the next prompt, unless more was sent.
+      if kind == "move" and #cmdQueue == 0 and os.time() - entry.t <= 3 and not entry.requeued then
+        entry.requeued = true
+        table.insert(cmdQueue, 1, entry)
+        debug.decision = debug.decision .. " (kept the move for the next prompt)"
+      end
+    end
+    return false
+  end
+
+  if kind == "peer" then
+    debug.decision = "looked into another room ('" .. tostring(cmd) .. "'): not where you are"
+    return false
+  end
+
+  local resumed = TryResume(kind, key, obs, sx, sy)
+  local prev = current and rooms[current]
+
+  if kind == "look" or kind == "nonmove" or (kind == nil and prev and Compatible(prev, obs)) then
+    if prev and Compatible(prev, obs) then
+      UpdateRoom(prev, obs)
+      debug.decision = "same room #" .. prev.id
+    else
+      debug.decision = Relocate(obs, sx, sy)
+    end
+  elseif kind == "other" and prev and Recognised(prev, obs) then
+    UpdateRoom(prev, obs)
+    debug.decision = "same room #" .. prev.id .. " ('" .. key .. "' didn't move you)"
+  elseif prev and (kind == "move" or kind == "other") then
+    debug.decision = FollowMove(prev, kind, key, obs, sx, sy)
+  else
+    debug.decision = Relocate(obs, sx, sy)
+  end
+  if resumed then
+    debug.decision = debug.decision .. " (picked up from room #" .. prev.id .. ", where you were before the reload)"
+  end
+  return true
+end
+
+-- ---------------------------------------------------------------------------
+-- Plugin callbacks
+-- ---------------------------------------------------------------------------
+
+function OnPluginLineReceived(text)
+  if skipLines > 0 then
+    -- Only skip what really is the rest of the prompt.
+    local idx = #promptSpec.regexes - skipLines + 1
+    local re = promptSpec.regexes[idx]
+    if re and re:match(text) then
+      skipLines = skipLines - 1
+      return true
+    end
+    skipLines = 0
+  end
+  if ListingLine(text) then
+    pagerActive = text:match("^%-%-More%-%-") ~= nil
+    return true
+  end
+  pagerActive = text:match("^%-%-More%-%-") ~= nil
+  buffer[#buffer + 1] = text
+  if #buffer > 300 then table.remove(buffer, 1) end
+  return true
+end
+
+local function RedrawMap()
+  if mapWin then mapWin:redraw() end
+end
+
+-- A short "what was seen" for the trace: brief name or the start of the
+-- description, plus exits.
+local function SeenSummary(obs)
+  local text = obs.name or (obs.desc and obs.desc:sub(1, 40)) or (obs.dark and "(dark)") or "?"
+  return text .. " (" .. SetToString(obs.exits) .. ")"
+end
+
+local TRACE_KEEP = 20000
+
+-- Every move (and failed move) goes into the trace table, so what the
+-- plugin really decided in the client can be read back from area_map.db;
+-- with 'amap trace' on, it's also printed.
+function RecordTrace(d, fromId, toId)
+  if not d or not d.cmd and not d.obs then return end
+  local isFail = d.decision and d.decision:match("^move failed")
+  if not d.obs and not isFail then return end
+  local seen = d.obs and SeenSummary(d.obs) or d.failLine
+  DbRun("INSERT INTO trace (t, cmd, from_id, to_id, sq_x, sq_y, seen, decision, build) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+    os.date("%Y-%m-%d %H:%M:%S"), d.cmd, fromId, toId, d.sx, d.sy, seen, d.decision, BUILD)
+  DbRun("DELETE FROM trace WHERE n <= (SELECT MAX(n) FROM trace) - ?", TRACE_KEEP)
+  if traceOn then
+    local text = string.format("[amap] %s: #%s -> #%s @%s  %s -- %s",
+      d.cmd or "(no command)", tostring(fromId or "?"), tostring(toId or "?"),
+      SquareLabel(d.sx, d.sy), seen, d.decision or "")
+    ColourNote("gray", "", text)
+  end
+end
+
+function OnPluginBroadcast(msg, id, name, text)
+  if id ~= WINDOWS_PLUGIN_ID then return end
+  if msg == MW_BROADCAST_PROMPT_CHANGED then
+    warnedNoPrompt = false
+    FetchPromptSpec()
+  elseif msg == MW_BROADCAST_PROMPT then
+    if not promptSpec then FetchPromptSpec() end
+    local sx, sy = (text or ""):match("^(-?%d*),(-?%d*)$")
+    square.x, square.y = tonumber(sx), tonumber(sy)
+    local before = current
+    local t0 = utils.timer()
+    mergeLog = {}
+    mapChanged = false
+    -- One transaction per move: a new room is several writes (room, exit,
+    -- reverse exit), which would otherwise each wait for the disk.
+    db:exec("BEGIN")
+    local idBefore = nextId
+    local happened = ProcessBlock(square.x, square.y)
+    if nextId ~= idBefore then
+      local merged = MergeDuplicatesInSquare(square.x, square.y)
+      if merged > 0 and lastDebug then
+        lastDebug.decision = lastDebug.decision .. " (merged " .. merged .. " duplicate(s) in this square)"
+      end
+    end
+    -- Tried on every move, not only new rooms, so pieces mapped before
+    -- (or by an older version) join up as you walk through them.
+    local joined = (happened and current) and TryJoin(current) or 0
+    if happened and IsIrregular(square.x, square.y) then
+      joined = joined + JoinSquare(square.x, square.y)
+    elseif happened and joined == 0 and current then
+      SuggestIrregular(current)
+    end
+    if joined > 0 and lastDebug then
+      lastDebug.decision = lastDebug.decision .. (IsIrregular(square.x, square.y)
+        and (" (rooms mapped twice, proven by the paths between them: " .. joined .. " room(s) merged)")
+        or (" (joined onto the part of this area mapped from another entrance: " .. joined .. " room(s) merged)"))
+    end
+    if lastDebug and #mergeLog > 0 then
+      lastDebug.decision = lastDebug.decision .. " [merged " .. table.concat(mergeLog, " ") .. "]"
+    end
+    RecordTrace(lastDebug, before, current)
+    db:exec("COMMIT")
+    local t1 = utils.timer()
+    if happened or before ~= current or mapChanged then
+      -- Only redraw when something happened: a redraw rebuilds every
+      -- hotspot, which would cancel a tooltip the mouse is waiting on.
+      RedrawMap()
+    end
+    if lastDebug then
+      lastDebug.processMs = (t1 - t0) * 1000
+      lastDebug.drawMs = (utils.timer() - t1) * 1000
+    end
+  end
+end
+
+-- ---------------------------------------------------------------------------
+-- Drawing
+-- ---------------------------------------------------------------------------
+
+-- Sub-areas --------------------------------------------------------------
+
+-- A sub-area is the part of an area you can walk around in without
+-- crossing an exit marked as a boundary ('amap boundary'), like a palace
+-- inside a city: drawn on its own, at its own scale. Its name ('amap
+-- subarea <name>') is kept on whichever of its rooms it was given in.
+local function SubAreaRooms(startId)
+  local incoming = {}
+  for fromId, cmds in pairs(links) do
+    for _, link in pairs(cmds) do
+      if not link.boundary then
+        incoming[link.to] = incoming[link.to] or {}
+        incoming[link.to][#incoming[link.to] + 1] = fromId
+      end
+    end
+  end
+  local seen, list = { [startId] = true }, { startId }
+  local head = 1
+  while list[head] do
+    local id = list[head]
+    head = head + 1
+    local near = {}
+    for _, link in pairs(links[id] or {}) do
+      if not link.boundary then near[#near + 1] = link.to end
+    end
+    for _, from in ipairs(incoming[id] or {}) do near[#near + 1] = from end
+    for _, other in ipairs(near) do
+      if rooms[other] and not seen[other] and not IsOverland(rooms[other]) then
+        seen[other] = true
+        list[#list + 1] = other
+      end
+    end
+  end
+  return list, seen
+end
+
+-- The name of the sub-area a room is in (nil if it has none).
+local function SubAreaName(roomId)
+  local list = SubAreaRooms(roomId)
+  table.sort(list)
+  for _, id in ipairs(list) do
+    if rooms[id].subarea then return rooms[id].subarea, id end
+  end
+  return nil
+end
+
+local function ExitLabel(room, cmd)
+  local link = links[room.id] and links[room.id][cmd]
+  local label = DIRS[cmd] and DIRS[cmd].long or cmd
+  if room.doors[cmd] ~= nil then
+    label = label .. (room.doors[cmd] and " (closed door)" or " (open door)")
+  end
+  if link and link.hidden then label = label .. " (hidden)" end
+  if link and link.boundary then label = label .. " (into " .. (SubAreaName(link.to) or "another part") .. ")" end
+  if not link then label = label .. " (unexplored)" end
+  return label
+end
+
+local function RoomExitLabels(room)
+  local seen, labels = {}, {}
+  local order = {}
+  for _, d in ipairs(PLANAR) do order[#order + 1] = d end
+  order[#order + 1] = "u"
+  order[#order + 1] = "d"
+  for _, d in ipairs(order) do
+    if room.exits[d] or (links[room.id] and links[room.id][d]) then
+      labels[#labels + 1] = ExitLabel(room, d)
+      seen[d] = true
+    end
+  end
+  local others = {}
+  for e in pairs(room.exits) do if not seen[e] then others[#others + 1] = e; seen[e] = true end end
+  for cmd in pairs(links[room.id] or {}) do if not seen[cmd] then others[#others + 1] = cmd; seen[cmd] = true end end
+  table.sort(others)
+  for _, e in ipairs(others) do labels[#labels + 1] = ExitLabel(room, e) end
+  return labels
+end
+
+local function RoomTooltip(room)
+  local title = room.name or (room.dark and "(dark room)") or "(name not seen yet)"
+  local parts = { title .. "  [#" .. room.id .. ", square " .. SquareLabel(room.sx, room.sy) .. "]" }
+  if room.desc then
+    local d = room.desc
+    if #d > 160 then d = d:sub(1, 157) .. "..." end
+    parts[#parts + 1] = d
+  end
+  parts[#parts + 1] = "Exits: " .. table.concat(RoomExitLabels(room), ", ")
+  if room.noexits and next(room.noexits) then
+    local walls = {}
+    for _, d in ipairs({ "n", "ne", "e", "se", "s", "sw", "w", "nw", "u", "d" }) do
+      if room.noexits[d] then walls[#walls + 1] = DIRS[d].long end
+    end
+    parts[#parts + 1] = "No exit: " .. table.concat(walls, ", ")
+  end
+  if room.note then parts[#parts + 1] = "Note: " .. room.note end
+  return table.concat(parts, "\n")
+end
+
+local function HasSpecialExit(room)
+  for cmd, link in pairs(links[room.id] or {}) do
+    if link.hidden or not DIRS[cmd] then return true end
+  end
+  for e in pairs(room.exits) do
+    if not DIRS[e] then return true end
+  end
+  return false
+end
+
+local function StatusText()
+  local where = "square " .. SquareLabel(square.x, square.y)
+  if current and rooms[current] then
+    local room = rooms[current]
+    return where .. "  " .. (room.name or (room.dark and "a dark room") or ("room #" .. room.id)) ..
+      (IsOverland(room) and "  (overland)" or "") ..
+      (IsIrregular(square.x, square.y) and "  (irregular)" or "") ..
+      (SubAreaName(room.id) and ("  [" .. SubAreaName(room.id) .. "]") or "")
+  elseif lostCount > 0 then
+    return where .. "  LOST (" .. lostCount .. " rooms look alike)"
+  end
+  return where .. "  position unknown"
+end
+
+-- The FORGET button, top right on the status line. Shared by drawing and
+-- hotspots so the two can't drift apart.
+local FORGET_LABEL = "FORGET"
+local function ForgetButtonRect(contentW)
+  local win = mapWin.win
+  local lineH = WindowFontInfo(win, FONT_ID, 1) or 12
+  local w = (WindowTextWidth(win, FONT_ID, FORGET_LABEL, false) or 40) + 12
+  local top = mapWin:contentTop() + 1
+  local r = contentW - EDGE_INSET - 2
+  return { l = r - w, t = top, r = r, b = top + lineH + 2 }
+end
+
+local function DrawForgetButton(contentW)
+  local win = mapWin.win
+  local rect = ForgetButtonRect(contentW)
+  WindowRectOp(win, 2, rect.l, rect.t, rect.r, rect.b, BUTTON_BG, 0)
+  WindowRectOp(win, 1, rect.l, rect.t, rect.r, rect.b, BUTTON_BORDER, 0)
+  local tw = WindowTextWidth(win, FONT_ID, FORGET_LABEL, false) or 0
+  WindowText(win, FONT_ID, FORGET_LABEL, rect.l + math.floor((rect.r - rect.l - tw) / 2), rect.t + 1,
+    rect.r, rect.b, BUTTON_TEXT, false)
+  return rect
+end
+
+-- The unusual ways out of a room, for the line under the map: commands
+-- used from it (enter ring, jump down), compass exits it doesn't list,
+-- exits into another sub-area, and listed exits that aren't compass
+-- directions but haven't been tried yet.
+local function SpecialExits(room)
+  local list = {}
+  for cmd, link in pairs(links[room.id] or {}) do
+    if not DIRS[cmd] or link.hidden or link.boundary then
+      local to = rooms[link.to]
+      local where = to and (to.name or (to.dark and "a dark room") or ("room #" .. to.id)) or "?"
+      if link.boundary then where = where .. "  [" .. (SubAreaName(link.to) or "another part") .. "]" end
+      list[#list + 1] = { cmd = cmd, text = cmd .. " -> " .. where }
+    end
+  end
+  for e in pairs(room.exits) do
+    if not DIRS[e] and not (links[room.id] and links[room.id][e]) then
+      list[#list + 1] = { cmd = e, text = e .. " (not explored)" }
+    end
+  end
+  table.sort(list, function(a, b) return a.cmd < b.cmd end)
+  return list
+end
+
+local MAX_SPECIAL_LINES = 5
+
+local function DrawMap(contentW, contentH)
+  local win = mapWin.win
+  local top = mapWin:contentTop()
+  local lineH = WindowFontInfo(win, FONT_ID, 1) or 12
+  drawn = nil
+
+  local button = DrawForgetButton(contentW)
+  local statusColour = (not current and lostCount > 0) and LOST_COLOUR or TEXT_COLOUR
+  WindowText(win, FONT_ID, StatusText(), 4, top + 2, button.l - 4, top + 2 + lineH, statusColour, false)
+
+  local centerId = current or lastKnown
+  local center = centerId and rooms[centerId]
+  if not center then
+    WindowText(win, FONT_ID, "No room here mapped yet -- walk around or 'look'.", 4, top + 4 + lineH,
+      contentW - 4, top + 4 + 2 * lineH, TEXT_COLOUR, false)
+    return
+  end
+
+  -- Unusual exits from the room you're in are listed under the map, one per
+  -- line; clicking one sends its command (see AddHotspots).
+  local specials = (current and rooms[current]) and SpecialExits(rooms[current]) or {}
+  local shown = {}
+  for i = 1, math.min(#specials, MAX_SPECIAL_LINES) do shown[i] = specials[i] end
+  if #specials > MAX_SPECIAL_LINES then
+    shown[MAX_SPECIAL_LINES] = { text = "... " .. (#specials - MAX_SPECIAL_LINES + 1) .. " more (hover a room for all exits)" }
+  end
+  local areaBottom = top + contentH
+  local specialRects = {}
+  if #shown > 0 then
+    areaBottom = top + contentH - #shown * lineH - 6
+    WindowLine(win, 4, areaBottom + 1, contentW - 4, areaBottom + 1, UNEXPLORED_COLOUR, PEN_SOLID, 1)
+    for i, item in ipairs(shown) do
+      local t = areaBottom + 3 + (i - 1) * lineH
+      local w = WindowText(win, FONT_ID, item.text, 4, t, contentW - EDGE_INSET, t + lineH, HIDDEN_COLOUR, false) or 0
+      if item.cmd then
+        specialRects[#specialRects + 1] = { cmd = item.cmd, l = 4, t = t, r = math.min(4 + w, contentW - EDGE_INSET), b = t + lineH }
+      end
+    end
+  end
+
+  local areaTop = top + lineH + 4
+  local areaH = areaBottom - areaTop
+  if panFor ~= centerId then panX, panY, panFor = 0, 0, centerId end
+  local cx = math.floor(contentW / 2) + panX
+  local cy = areaTop + math.floor(areaH / 2) + panY
+  local radius = math.ceil(math.max(contentW, areaH) / CELL / 2) + 1 +
+    math.ceil(math.max(math.abs(panX), math.abs(panY)) / CELL)
+  local pos = IsIrregular(center.sx, center.sy) and LayoutIrregular(centerId)
+    or Layout(centerId, radius, true)
+
+  local function inside(x, y)
+    return x >= 0 and x <= contentW and y >= areaTop and y <= areaBottom
+  end
+  -- The part of a line inside the map area (nil if none), so an exit to a
+  -- room off the edge still shows, running off toward it.
+  local function clip(x1, y1, x2, y2)
+    local t0, t1 = 0, 1
+    local dx, dy = x2 - x1, y2 - y1
+    for _, edge in ipairs({ { -dx, x1 }, { dx, contentW - x1 }, { -dy, y1 - areaTop }, { dy, areaBottom - y1 } }) do
+      local p, q = edge[1], edge[2]
+      if p == 0 then
+        if q < 0 then return nil end
+      else
+        local t = q / p
+        if p < 0 then
+          if t > t1 then return nil end
+          if t > t0 then t0 = t end
+        else
+          if t < t0 then return nil end
+          if t < t1 then t1 = t end
+        end
+      end
+    end
+    return x1 + t0 * dx, y1 + t0 * dy, x1 + t1 * dx, y1 + t1 * dy
+  end
+  local function screen(p)
+    return cx + p[1] * CELL, cy + p[2] * CELL
+  end
+
+  -- Exits first, so boxes are drawn over the line ends.
+  local half = BOX / 2
+  for id, p in pairs(pos) do
+    local room = rooms[id]
+    local x, y = screen(p)
+    for _, d in ipairs(PLANAR) do
+      local link = links[id] and links[id][d]
+      if room.exits[d] or link then
+        local dx, dy = DIRS[d].dx, DIRS[d].dy
+        local x1, y1 = x + dx * half, y + dy * half
+        local tp = link and pos[link.to]
+        local x2, y2, colour
+        local offX, offY = tp and (tp[1] - p[1] - dx), tp and (tp[2] - p[2] - dy)
+        local boundaryMark = false
+        if link and link.boundary then
+          -- Into another sub-area, drawn on its own: a coloured stub with a
+          -- dot at the end.
+          x2, y2 = x + dx * (CELL * 0.3), y + dy * (CELL * 0.3)
+          colour = BOUNDARY_COLOUR
+          boundaryMark = true
+        elseif tp and offX == 0 and offY == 0 then
+          local tx, ty = screen(tp)
+          x2, y2 = tx - dx * half, ty - dy * half
+          colour = LINK_COLOUR
+        elseif tp and IsIrregular(room.sx, room.sy) and math.abs(offX) <= 6 and math.abs(offY) <= 6 then
+          -- Irregular square: rooms don't line up, so the exit is drawn
+          -- all the way to wherever its room ended up, to the side of the
+          -- room the way back leaves from.
+          local tx, ty = screen(tp)
+          local back = DIRS[DIRS[d].rev]
+          x2, y2 = tx + back.dx * half, ty + back.dy * half
+          colour = LINK_COLOUR
+        else
+          -- Unexplored, or leads somewhere that doesn't fit here: a stub.
+          x2, y2 = x + dx * (CELL / 2 - 2), y + dy * (CELL / 2 - 2)
+          colour = link and LINK_COLOUR or UNEXPLORED_COLOUR
+        end
+        local style = (link and link.hidden) and PEN_DOT or PEN_SOLID
+        if link and link.hidden and not boundaryMark then colour = HIDDEN_COLOUR end
+        local c1, c2, c3, c4 = clip(x1, y1, x2, y2)
+        if c1 then
+          WindowLine(win, math.floor(c1 + 0.5), math.floor(c2 + 0.5), math.floor(c3 + 0.5), math.floor(c4 + 0.5),
+            colour, style, boundaryMark and 2 or 1)
+        end
+        if c1 and inside(x1, y1) and inside(x2, y2) then
+          if boundaryMark then
+            WindowRectOp(win, 2, x2 - 2, y2 - 2, x2 + 3, y2 + 3, BOUNDARY_COLOUR, 0)
+          end
+          local closed = room.doors[d]
+          if closed ~= nil then
+            -- A door, open or closed: a bar across the exit.
+            local mx, my = math.floor((x1 + x2) / 2), math.floor((y1 + y2) / 2)
+            WindowLine(win, mx - dy * 5, my + dx * 5, mx + dy * 5, my - dx * 5, DOOR_COLOUR, PEN_SOLID, 2)
+          end
+        end
+      end
+    end
+  end
+
+  for id, p in pairs(pos) do
+    local room = rooms[id]
+    local x, y = screen(p)
+    local l, t, r, b = x - half, y - half, x + half, y + half
+    if inside(l, t) and inside(r, b) then
+      local fill = room.dark and DARK_FILL or ROOM_FILL
+      if id == current then
+        fill = CURRENT_FILL
+      end
+      WindowRectOp(win, 2, l, t, r, b, fill, 0)
+      WindowRectOp(win, 1, l, t, r, b, ROOM_BORDER, 0)
+
+      local linkU = links[id] and links[id].u
+      local linkD = links[id] and links[id].d
+      if room.exits.u or linkU then
+        WindowPolygon(win, string.format("%d,%d,%d,%d,%d,%d", x - 4, y - 2, x + 4, y - 2, x, y - 7),
+          UPDOWN_COLOUR, PEN_SOLID, 1, UPDOWN_COLOUR, 0, true, false)
+      end
+      if room.exits.d or linkD then
+        WindowPolygon(win, string.format("%d,%d,%d,%d,%d,%d", x - 4, y + 2, x + 4, y + 2, x, y + 7),
+          UPDOWN_COLOUR, PEN_SOLID, 1, UPDOWN_COLOUR, 0, true, false)
+      end
+      if room.noexits then
+        -- A short wall on each side known to have no exit (dark rooms).
+        for _, d in ipairs(PLANAR) do
+          if room.noexits[d] then
+            local dx, dy = DIRS[d].dx, DIRS[d].dy
+            local mx, my = x + dx * (half + 3), y + dy * (half + 3)
+            if dx ~= 0 and dy ~= 0 then
+              WindowRectOp(win, 2, mx - 1, my - 1, mx + 2, my + 2, WALL_COLOUR, 0)
+            else
+              WindowLine(win, mx - dy * 6, my - dx * 6, mx + dy * 6, my + dx * 6, WALL_COLOUR, PEN_SOLID, 2)
+            end
+          end
+        end
+      end
+      if HasSpecialExit(room) then
+        WindowRectOp(win, 2, l + 2, b - 5, l + 5, b - 2, HIDDEN_COLOUR, 0)
+      end
+      if room.note then
+        WindowRectOp(win, 2, r - 5, t + 2, r - 2, t + 5, NOTE_COLOUR, 0)
+      end
+      if showIds then
+        local label = tostring(id)
+        local tw = WindowTextWidth(win, ID_FONT_ID, label, false) or 0
+        WindowText(win, ID_FONT_ID, label, x - math.floor(tw / 2), b + 1, x + CELL, b + 12, ID_COLOUR, false)
+      end
+    end
+  end
+
+  drawn = { pos = pos, cx = cx, cy = cy, areaTop = areaTop, areaBottom = areaBottom, specials = specialRects }
+end
+
+local function AddHotspots(contentW, contentH)
+  local button = ForgetButtonRect(contentW)
+  WindowAddHotspot(mapWin.win, "amap_btn_forget", button.l, button.t, button.r, button.b,
+    "", "", "AmapRoomMouseDown", "", "AmapForgetMenu", "Forget mapped rooms...", miniwin.cursor_hand, 0)
+
+  if not drawn then return end
+  local win = mapWin.win
+  for i, rect in ipairs(drawn.specials or {}) do
+    WindowAddHotspot(win, "amap_special_" .. i, rect.l, rect.t, rect.r, rect.b,
+      "", "", "AmapRoomMouseDown", "", "AmapSpecialClick", "Click to send: " .. rect.cmd, miniwin.cursor_hand, 0)
+  end
+  local top = mapWin:contentTop()
+  -- Dragging the map's background pans it. Named to sort after every other
+  -- hotspot (rooms, buttons, the window's own edges), so it never takes
+  -- their clicks.
+  local pb = math.min(drawn.areaBottom, top + contentH - EDGE_INSET)
+  WindowAddHotspot(win, "zzz_amap_pan", EDGE_INSET, drawn.areaTop, contentW - EDGE_INSET, pb,
+    "", "", "AmapPanDown", "", "", "", miniwin.cursor_both_arrow or 10, 0)
+  WindowDragHandler(win, "zzz_amap_pan", "AmapPanMove", "AmapPanRelease", 0)
+  local half = BOX / 2
+  for id, p in pairs(drawn.pos) do
+    local room = rooms[id]
+    if room then
+      local x, y = drawn.cx + p[1] * CELL, drawn.cy + p[2] * CELL
+      local l, t, r, b = x - half, y - half, x + half, y + half
+      if l >= EDGE_INSET and r <= contentW - EDGE_INSET and t >= drawn.areaTop
+          and b <= math.min(drawn.areaBottom, top + contentH - EDGE_INSET) then
+        WindowAddHotspot(win, "amap_room_" .. id, l, t, r, b,
+          "", "", "AmapRoomMouseDown", "", "AmapRoomMouseUp",
+          RoomTooltip(room), miniwin.cursor_hand, 0)
+      end
+    end
+  end
+end
+
+local function PrintRoom(room)
+  for line in RoomTooltip(room):gmatch("[^\n]+") do
+    Note(line)
+  end
+end
+
+-- Clicking one of the listed unusual exits sends its command, as if typed.
+function AmapSpecialClick(flags, hotspotId)
+  local i = tonumber(hotspotId:match("^amap_special_(%d+)$"))
+  local rect = i and drawn and drawn.specials and drawn.specials[i]
+  if rect then Execute(rect.cmd) end
+end
+
+-- Panning: drag the background; the view re-centres when you move.
+function AmapPanDown(flags, hotspotId)
+  if mapWin then mapWin:bringToFront() end
+  -- 17/18 (mouse relative to the output window) at both ends: 14/15 are
+  -- relative to this window, a different frame, and mixing them makes the
+  -- view jump by the window's position on the first move.
+  panStart = { WindowInfo(mapWin.win, 17), WindowInfo(mapWin.win, 18), panX, panY }
+end
+function AmapPanMove(flags, hotspotId)
+  if not panStart then return end
+  panX = panStart[3] + (WindowInfo(mapWin.win, 17) - panStart[1])
+  panY = panStart[4] + (WindowInfo(mapWin.win, 18) - panStart[2])
+  -- Not redraw(): that rebuilds hotspots, ending this drag.
+  mapWin:repaintContent()
+end
+function AmapPanRelease(flags, hotspotId)
+  panStart = nil
+  RedrawMap()
+end
+
+function AmapRoomMouseDown(flags, hotspotId)
+  if mapWin then mapWin:bringToFront() end
+end
+
+function AmapRoomMouseUp(flags, hotspotId)
+  local id = tonumber(hotspotId:match("^amap_room_(%d+)$"))
+  local room = id and rooms[id]
+  if not room then return end
+
+  if bit.band(flags, miniwin.hotspot_got_rh_mouse) == 0 then
+    PrintRoom(room)
+    return
+  end
+
+  local x, y = WindowInfo(mapWin.win, 14), WindowInfo(mapWin.win, 15)
+  local items = { room.note and "Edit note..." or "Add note..." }
+  if room.note then items[#items + 1] = "Clear note" end
+  items[#items + 1] = "-"
+  items[#items + 1] = "Delete room"
+  local choice = WindowMenu(mapWin.win, x, y, table.concat(items, "|")) or ""
+
+  if choice == "Add note..." or choice == "Edit note..." then
+    local text = utils.inputbox("Note for " .. (room.name or ("room #" .. room.id)), "area_map", room.note or "")
+    if text then
+      text = Trim(text)
+      room.note = (text ~= "") and text or nil
+      SaveRoom(room)
+    end
+  elseif choice == "Clear note" then
+    room.note = nil
+    SaveRoom(room)
+  elseif choice == "Delete room" then
+    DeleteRoom(room.id)
+    Note("deleted room #" .. id .. ".")
+  else
+    return
+  end
+  RedrawMap()
+end
+
+-- ---------------------------------------------------------------------------
+-- Commands
+-- ---------------------------------------------------------------------------
+
+-- Drops area rooms that no build since MIN_TRUSTED_BUILD has confirmed (see
+-- the comment at MIN_TRUSTED_BUILD), after copying the database to a backup.
+function PurgeUntrusted()
+  local drop = {}
+  for id, room in pairs(rooms) do
+    if (room.build == nil or room.build < MIN_TRUSTED_BUILD) and not room.note and not IsOverland(room) then
+      drop[#drop + 1] = id
+    end
+  end
+  if #drop == 0 then return end
+
+  -- Back up first: write everything from the WAL into the main file, then
+  -- copy that file byte for byte (works with any SQLite version). Nothing is
+  -- removed if the backup can't be written.
+  local backup = PluginDir() .. "area_map-before-" .. MIN_TRUSTED_BUILD .. ".db"
+  local existing = io.open(backup, "rb")
+  if existing then
+    existing:close()
+  else
+    db:exec("PRAGMA wal_checkpoint(TRUNCATE)")
+    local src = io.open(PluginDir() .. "area_map.db", "rb")
+    local data = src and src:read("*a")
+    if src then src:close() end
+    local dst = data and io.open(backup, "wb")
+    if not dst then
+      Note("couldn't back up area_map.db, so rooms from older builds were left as they are.")
+      return
+    end
+    dst:write(data)
+    dst:close()
+  end
+
+  db:exec("BEGIN")
+  for _, id in ipairs(drop) do DeleteRoom(id) end
+  db:exec("COMMIT")
+  Note("removed " .. #drop .. " area room(s) not confirmed since build " .. MIN_TRUSTED_BUILD ..
+    " (mapping fixes since). Walk through to remap them; overland tiles and rooms with notes are kept. " ..
+    "Backup: " .. backup)
+end
+
+local function ShowStatus()
+  local count, squares = 0, {}
+  for _, room in pairs(rooms) do
+    count = count + 1
+    squares[SquareLabel(room.sx, room.sy)] = true
+  end
+  local nSquares = 0
+  for _ in pairs(squares) do nSquares = nSquares + 1 end
+  local confirmed = 0
+  for _, room in pairs(rooms) do
+    if room.build == BUILD then confirmed = confirmed + 1 end
+  end
+  Note("build " .. BUILD .. ": " .. count .. " room(s) mapped in " .. nSquares .. " square(s), " ..
+    confirmed .. " confirmed by this build.")
+  Note(StatusText())
+  if not promptSpec then
+    Note("prompt not known yet -- type wf_prompt_setup (mush_windows).")
+  end
+end
+
+local function ShowDebug()
+  local d = lastDebug
+  if not d then
+    Note("nothing read yet this session.")
+    return
+  end
+  Note("last command: " .. (d.cmd and ("'" .. d.cmd .. "'") or "(none)") ..
+    " -> " .. tostring(d.kind) .. (d.key and (" '" .. d.key .. "'") or "") ..
+    ", square " .. SquareLabel(d.sx, d.sy))
+  Note("output (" .. #d.lines .. " line(s), prompt removed):")
+  for _, line in ipairs(d.lines) do Note("  | " .. line) end
+  local obs = d.obs
+  if obs then
+    Note("read as " .. obs.mode .. " room:")
+    if obs.name then Note("  name:  " .. obs.name) end
+    if obs.desc then Note("  desc:  " .. obs.desc) end
+    Note("  exits: " .. SetToString(obs.exits))
+    if next(obs.doors) then Note("  doors: " .. DoorsToString(obs.doors) .. "  (c = closed, o = open)") end
+    Note("  items: " .. #obs.items)
+  end
+  Note("decision: " .. (d.decision or "?"))
+  if d.processMs then
+    Note(string.format("took %.1f ms to read and save, %.1f ms to draw", d.processMs, d.drawMs or 0))
+  end
+end
+
+-- Every room connected to startId by any exit, in either direction, without
+-- crossing overland tiles: the area you're standing in, across all its squares.
+local function AreaRoomIds(startId)
+  local incoming = {}
+  for fromId, cmds in pairs(links) do
+    for _, link in pairs(cmds) do
+      incoming[link.to] = incoming[link.to] or {}
+      incoming[link.to][#incoming[link.to] + 1] = fromId
+    end
+  end
+  local seen, ids = { [startId] = true }, { startId }
+  local head = 1
+  while ids[head] do
+    local id = ids[head]
+    head = head + 1
+    local neighbours = {}
+    for _, link in pairs(links[id] or {}) do neighbours[#neighbours + 1] = link.to end
+    for _, fromId in ipairs(incoming[id] or {}) do neighbours[#neighbours + 1] = fromId end
+    for _, other in ipairs(neighbours) do
+      if rooms[other] and not seen[other] and not IsOverland(rooms[other]) then
+        seen[other] = true
+        ids[#ids + 1] = other
+      end
+    end
+  end
+  return ids
+end
+
+-- Asks, then deletes the given rooms in one transaction.
+local function ForgetRooms(ids, what)
+  if #ids == 0 then
+    Note("no rooms to forget.")
+    return
+  end
+  local squares, labels = {}, {}
+  for _, id in ipairs(ids) do
+    local label = SquareLabel(rooms[id].sx, rooms[id].sy)
+    if not squares[label] then
+      squares[label] = true
+      labels[#labels + 1] = label
+    end
+  end
+  table.sort(labels)
+  local answer = utils.msgbox("Delete " .. #ids .. " room(s) -- " .. what .. " -- in square(s) " ..
+    table.concat(labels, "  ") .. "?", "area_map", "yesno", "?", 2)
+  if answer ~= "yes" then return end
+  db:exec("BEGIN")
+  for _, id in ipairs(ids) do DeleteRoom(id) end
+  db:exec("COMMIT")
+  Note("deleted " .. #ids .. " room(s). Walk through again to remap.")
+  RedrawMap()
+end
+
+function AmapCommand(name, line, wildcards)
+  local arg = Trim(wildcards[1] or ""):lower()
+  if arg == "" then
+    ShowStatus()
+  elseif arg == "trace" or arg == "trace on" or arg == "trace off" then
+    if arg == "trace" then traceOn = not traceOn else traceOn = (arg == "trace on") end
+    SetVariable("trace", traceOn and "1" or "0")
+    Note(traceOn and "trace on: a line per move, also saved in area_map.db (table 'trace')."
+      or "trace off (moves are still saved in area_map.db, table 'trace').")
+  elseif arg == "ids" then
+    showIds = not showIds
+    SetVariable("show_ids", showIds and "1" or "0")
+    Note(showIds and "showing room numbers on the map." or "room numbers hidden.")
+    RedrawMap()
+  elseif arg == "debug" then
+    ShowDebug()
+  elseif arg == "boundary" or arg:match("^boundary ") then
+    local room = current and rooms[current]
+    if not room then
+      Note("you're not in a known room.")
+      return
+    end
+    local which = Trim(arg:sub(9))
+    if which == "" then
+      local list = {}
+      for cmd, link in pairs(links[room.id] or {}) do
+        if link.boundary then list[#list + 1] = cmd end
+      end
+      table.sort(list)
+      Note(#list == 0 and "no exit from this room is a sub-area boundary. 'amap boundary <exit>' marks one."
+        or ("sub-area boundaries from this room: " .. table.concat(list, ", ")))
+      return
+    end
+    local cmd = DIR_WORDS[which] or which
+    local link = links[room.id] and links[room.id][cmd]
+    if not link or not rooms[link.to] then
+      Note("no known exit '" .. which .. "' from this room (walk through it first).")
+      return
+    end
+    local on = not link.boundary
+    link.boundary = on or nil
+    SaveLink(room.id, cmd, link)
+    -- The way back is the same boundary.
+    for backCmd, back in pairs(links[link.to] or {}) do
+      if back.to == room.id then
+        back.boundary = on or nil
+        SaveLink(link.to, backCmd, back)
+      end
+    end
+    local to = rooms[link.to]
+    Note("exit '" .. cmd .. "' to " .. (to.name or ("room #" .. to.id)) ..
+      (on and " is now a sub-area boundary (both ways): each side is drawn on its own."
+        or " is no longer a sub-area boundary."))
+    RedrawMap()
+  elseif arg == "subarea" or arg:match("^subarea ") then
+    local room = current and rooms[current]
+    if not room then
+      Note("you're not in a known room.")
+      return
+    end
+    local name = Trim((wildcards[1] or ""):match("^%s*[Ss][Uu][Bb][Aa][Rr][Ee][Aa]%s*(.-)%s*$") or "")
+    local list = SubAreaRooms(room.id)
+    if name == "" then
+      local current_name = SubAreaName(room.id)
+      Note("you're in " .. (current_name and ("sub-area '" .. current_name .. "'") or "an unnamed part") ..
+        " (" .. #list .. " room(s)). Mark the exits around a part with 'amap boundary <exit>', " ..
+        "then name it with 'amap subarea <name>' ('amap subarea none' to clear).")
+      return
+    end
+    for _, id in ipairs(list) do
+      if rooms[id].subarea then
+        rooms[id].subarea = nil
+        SaveRoom(rooms[id])
+      end
+    end
+    if name:lower() ~= "none" then
+      room.subarea = name
+      SaveRoom(room)
+      Note("named the " .. #list .. " room(s) you can reach from here without crossing a boundary: '" .. name .. "'.")
+    else
+      Note("name cleared for the " .. #list .. " room(s) around you.")
+    end
+    RedrawMap()
+  elseif arg == "spread" or arg:match("^spread ") then
+    local n = tonumber(arg:match("^spread%s+(%d+)$") or "")
+    if not n or n < 1 or n > 4 then
+      Note("irregular areas are drawn " .. irregularScale .. " cell(s) per step. 'amap spread <1-4>' changes it " ..
+        "(more spreads the map out so uneven parts have room; fewer fits more on screen).")
+      return
+    end
+    irregularScale = n
+    SetVariable("spread", tostring(n))
+    for id in pairs(lastFit) do lastFit[id] = nil end
+    mapVersion = mapVersion + 1
+    Note("irregular areas are now drawn " .. n .. " cell(s) per step.")
+    RedrawMap()
+  elseif arg == "irregular" or arg == "irregular on" or arg == "irregular off" then
+    if not square.x or not square.y then
+      Note("your square isn't known yet.")
+      return
+    end
+    local label = SquareLabel(square.x, square.y)
+    local on = not irregular[label]
+    if arg ~= "irregular" then on = (arg == "irregular on") end
+    irregular[label] = on or nil
+    DbRun("INSERT OR REPLACE INTO squares (sq_x, sq_y, irregular) VALUES (?, ?, ?)", square.x, square.y, on and 1 or 0)
+    if on then
+      db:exec("BEGIN")
+      local merged = JoinSquare(square.x, square.y)
+      db:exec("COMMIT")
+      Note("square " .. label .. " is irregular: rooms there are matched by the paths between them, not " ..
+        "by grid position" .. (merged > 0 and (" (" .. merged .. " room(s) mapped twice were merged)") or "") .. ".")
+    else
+      Note("square " .. label .. " is a grid again: rooms there are placed and matched by grid position.")
+    end
+    RedrawMap()
+  elseif arg == "show" then
+    if mapWin then mapWin:show() else Note("no window -- the 'mush_windows' plugin isn't installed.") end
+  elseif arg == "hide" then
+    if mapWin then mapWin:hide() end
+  elseif arg == "forget room" then
+    if not current then
+      Note("you're not in a known room.")
+      return
+    end
+    local id = current
+    DeleteRoom(id)
+    Note("deleted room #" .. id .. ". 'look' to map it again.")
+    RedrawMap()
+  elseif arg == "forget square" then
+    local ids = {}
+    for id, room in pairs(rooms) do
+      if SameSquare(room, square.x, square.y) then ids[#ids + 1] = id end
+    end
+    ForgetRooms(ids, "all rooms")
+  elseif arg == "forget area" then
+    local start = current and rooms[current]
+    if not start or IsOverland(start) then
+      Note("stand inside the area you want to forget first.")
+      return
+    end
+    ForgetRooms(AreaRoomIds(start.id), "the area you're in")
+  elseif arg:match("^forget near") then
+    local n = tonumber(arg:match("^forget near%s+(%d+)$") or (arg == "forget near" and "1"))
+    if not n then
+      Note("usage: amap forget near [n]  (n = how many squares around yours, default 1)")
+      return
+    end
+    if not square.x or not square.y then
+      Note("your square isn't known yet.")
+      return
+    end
+    local ids = {}
+    for id, room in pairs(rooms) do
+      if room.sx and room.sy and math.abs(room.sx - square.x) <= n and math.abs(room.sy - square.y) <= n
+          and not IsOverland(room) then
+        ids[#ids + 1] = id
+      end
+    end
+    ForgetRooms(ids, "area rooms within " .. n .. " square(s) of you")
+  else
+    Note("commands: amap, amap debug, amap trace, amap ids, amap irregular, amap spread [n], amap boundary [exit], " ..
+      "amap subarea [name], " ..
+      "amap show, amap hide, amap forget room, " ..
+      "amap forget area, amap forget near [n], amap forget square")
+  end
+end
+
+-- The FORGET button's menu: the same as typing the commands, including the
+-- confirmation. Entries that don't apply right now are greyed out.
+function AmapForgetMenu(flags, hotspotId)
+  local room = current and rooms[current]
+  local inArea = room and not IsOverland(room)
+  local squareKnown = square.x ~= nil and square.y ~= nil
+  local entries = {
+    { "Forget this room", room ~= nil, "forget room" },
+    { "Forget this area", inArea, "forget area" },
+    { "Forget nearby squares (yours and the 8 around it)", squareKnown, "forget near" },
+    { "Forget this square", squareKnown, "forget square" },
+  }
+  local items = {}
+  for i, e in ipairs(entries) do items[i] = (e[2] and "" or "^") .. e[1] end
+
+  local rect = ForgetButtonRect(mapWin.content_w)
+  local choice = WindowMenu(mapWin.win, rect.l, rect.b, table.concat(items, "|")) or ""
+  for _, e in ipairs(entries) do
+    if choice == e[1] and e[2] then
+      AmapCommand("amap_cmd", "amap " .. e[3], { e[3] })
+      return
+    end
+  end
+end
+
+-- ---------------------------------------------------------------------------
+-- Lifecycle
+-- ---------------------------------------------------------------------------
+
+local function InitWindow()
+  local dir = GetPluginInfo(WINDOWS_PLUGIN_ID, 20) or ""
+  if dir ~= "" and dir:sub(-1) ~= "/" and dir:sub(-1) ~= "\\" then dir = dir .. "/" end
+  local winframe = assert(loadfile(dir .. "winframe.lua"))()
+  mapWin = winframe.new{
+    id = "area_map",
+    title = "Area Map",
+    bg_colour = BG_COLOUR,
+    min_content_w = CELL * 3,
+    min_content_h = CELL * 3,
+    default_content_w = CELL * 11,
+    default_content_h = CELL * 9,
+    on_draw = DrawMap,
+    on_hotspots = AddHotspots,
+  }
+  WindowFont(mapWin.win, FONT_ID, FONT_NAME, FONT_SIZE, false, false, false, false, 0, 49)
+  WindowFont(mapWin.win, ID_FONT_ID, FONT_NAME, 7, false, false, false, false, 0, 49)
+end
+
+local function EnsureWindowsPlugin()
+  if not IsPluginInstalled(WINDOWS_PLUGIN_ID) then
+    pcall(function() LoadPlugin(PluginDir() .. "../mush_windows/mush_windows.xml") end)
+  end
+  if not IsPluginInstalled(WINDOWS_PLUGIN_ID) then
+    Note("requires the 'mush_windows' plugin (window and prompt reading), which isn't installed. " ..
+      "Install mush_windows.xml first, then reload this plugin.")
+    return false
+  end
+  if not GetPluginInfo(WINDOWS_PLUGIN_ID, 17) then
+    EnablePlugin(WINDOWS_PLUGIN_ID, true)
+  end
+  return GetPluginInfo(WINDOWS_PLUGIN_ID, 17) == true
+end
+
+function OnPluginInstall()
+  -- The trace line per move and room numbers on the map were testing aids:
+  -- switched off once with build 2026-10-16x ('amap trace' / 'amap ids'
+  -- still turn them on).
+  if GetVariable("aids_reset") ~= "x" then
+    SetVariable("trace", "0")
+    SetVariable("show_ids", "0")
+    SetVariable("aids_reset", "x")
+  end
+  traceOn = GetVariable("trace") == "1"
+  irregularScale = tonumber(GetVariable("spread") or "") or irregularScale
+  showIds = GetVariable("show_ids") == "1"
+  OpenDb()
+  Note("build " .. BUILD .. " loaded.")
+  PurgeUntrusted()
+  RenameAliasLinks()
+  local merged = MergeAllDuplicates()
+  if merged > 0 then
+    Note("merged " .. merged .. " duplicate room(s) in the saved map.")
+  end
+  lastKnown = tonumber(GetVariable("last_room"))
+  if lastKnown and not rooms[lastKnown] then lastKnown = nil end
+  resumeId = lastKnown
+
+  if EnsureWindowsPlugin() then
+    local _, pos = CallPlugin(WINDOWS_PLUGIN_ID, "MW_GetPosition")
+    local sx, sy = (pos or ""):match("^(-?%d*),(-?%d*)$")
+    square.x, square.y = tonumber(sx), tonumber(sy)
+    FetchPromptSpec()
+    InitWindow()
+    mapWin:redraw()
+  end
+end
+
+function OnPluginSaveState()
+  SetVariable("last_room", lastKnown and tostring(lastKnown) or "")
+end
+
+function OnPluginClose()
+  if db then
+    for _, stmt in pairs(statements) do stmt:finalize() end
+    db:close()
+  end
+end
+
+]]>
+</script>
+
+</muclient>

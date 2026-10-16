@@ -1,0 +1,34 @@
+X:[0]Y:[0]
+look
+Grasslands (n,e,s,w)
+X:[0]Y:[0]
+north
+Light forest (n,e,s,w)
+X:[0]Y:[1]
+east
+Hills (n,e,s,w)
+X:[1]Y:[1]
+south
+Grasslands (n,e,s,w)
+X:[1]Y:[0]
+west
+Grasslands (n,e,s,w)
+X:[0]Y:[0]
+east
+Grasslands (n,e,s,w)
+X:[1]Y:[0]
+north
+Hills (n,e,s,w)
+X:[1]Y:[1]
+north
+Town gate (n,s)
+X:[1]Y:[2]
+north
+Main road (n,s,e)
+X:[1]Y:[2]
+east
+Shop (w)
+X:[1]Y:[2]
+west
+Main road (n,s,e)
+X:[1]Y:[2]

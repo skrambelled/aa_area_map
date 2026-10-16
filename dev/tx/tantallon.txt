@@ -1,0 +1,942 @@
+north
+Light and pleasant forest (n,e,s,w)
+0
+223/254:202>
+X:[0]Y:[24]
+north
+Round hills south of village (n,e,s,w)
+14 gold coins.
+0
+223/254:202>
+X:[0]Y:[25]
+west
+Round hills (n,e,s,w)
+0
+223/254:202>
+X:[-1]Y:[25]
+east
+Round hills south of village (n,e,s,w)
+14 gold coins.
+0
+223/254:202>
+X:[0]Y:[25]
+north
+You walk north into the small valley and enter the village. A big sign saying
+'WELCOME to Hobbitat' hangs over the gates.
+A road running through the village (n,s)
+0
+223/254:202>
+X:[0]Y:[26]
+south
+You walk south out of the village and leave the small valley. A big sign
+saying 'WELCOME BACK to Hobbitat' hangs over the gates.
+Round hills south of village (n,e,s,w)
+14 gold coins.
+0
+223/254:202>
+X:[0]Y:[25]
+south
+Light and pleasant forest (n,e,s,w)
+0
+223/254:202>
+X:[0]Y:[24]
+south
+Light and pleasant forest (n,e,s,w)
+0
+223/254:202>
+X:[0]Y:[23]
+south
+south
+south
+Grasslands (n,e,s,w)
+0
+223/254:202>
+X:[0]Y:[22]
+south
+south
+Grasslands (n,e,s,w)
+A curved knife.
+0
+223/254:202>
+X:[0]Y:[21]
+south
+south
+Grasslands (n,e,s,w)
+0
+223/254:202>
+X:[0]Y:[20]
+south
+south
+Light and pleasant forest (n,e,s,w)
+0
+223/254:202>
+X:[0]Y:[19]
+Light and pleasant forest (n,e,s,w)
+0
+223/254:202>
+X:[0]Y:[18]
+south
+south
+Dark but inviting forest (n,e,s,w)
+0
+223/254:202>
+X:[0]Y:[17]
+Dark but inviting forest (n,e,s)
+0
+223/254:202>
+X:[0]Y:[16]
+south
+south
+Nice forest (n,e,s,w)
+0
+223/254:202>
+X:[0]Y:[15]
+Nice forest (n,e,s,w)
+A green frog.
+0
+223/254:202>
+X:[0]Y:[14]
+south
+south
+Nice forest (n,e,s,w)
+0
+223/254:202>
+X:[0]Y:[13]
+Nice forest (n,e,s,w)
+0
+223/254:202>
+X:[0]Y:[12]
+south
+south
+Nice forest (n,e,s,w)
+0
+223/254:202>
+X:[0]Y:[11]
+Nice forest (n,e,s,w)
+0
+223/254:202>
+X:[0]Y:[10]
+south
+south
+Nice forest (n,e,s,w)
+0
+223/254:202>
+X:[0]Y:[9]
+Pine forest (n,e,s,w)
+0
+223/254:202>
+X:[0]Y:[8]
+south
+south
+Nice forest (n,e,s,w)
+0
+223/254:202>
+X:[0]Y:[7]
+Nice forest (n,e,s,w)
+0
+223/254:202>
+X:[0]Y:[6]
+south
+south
+Nice forest (n,e,s,w)
+Vargas the village bully.
+0
+223/254:202>
+X:[0]Y:[5]
+Nice forest (n,e,s)
+0
+223/254:202>
+X:[0]Y:[4]
+south
+south
+Light forest (n,e,s)
+0
+223/254:202>
+X:[0]Y:[3]
+Nice forest (n,e,s)
+0
+223/254:202>
+X:[0]Y:[2]
+south
+south
+East road (n,e,s)
+0
+223/254:202>
+X:[0]Y:[1]
+North gate (n,s)
+A cairn of stones with a bloody scythe banner.
+A town militiaman.
+0
+223/254:202>
+X:[0]Y:[0]
+south
+south
+Glory Walk (n,e,s,w)
+A bronze statue of Bazhi.
+0
+223/254:202>
+X:[0]Y:[0]
+Glory Walk (n,s)
+A shimmering blue door.
+0
+223/254:202>
+X:[0]Y:[0]
+Glory Walk (n,s)
+A shimmering blue door.
+0
+223/254:202>
+X:[0]Y:[0]
+Glory Walk (n,s,w)
+A shimmering blue door.
+0
+223/254:202>
+X:[0]Y:[0]
+south
+Glory Walk (n,e,s)
+A shimmering blue door.
+0
+223/254:202>
+X:[0]Y:[0]
+East Village Crossroads (n,e,s,w)
+A stone statue of Shadap.
+A stone statue of Office.
+A shimmering blue door.
+A huge hardwood trunk.
+0
+223/254:202>
+X:[0]Y:[0]
+Shoreline Road (n,s)
+A shimmering blue door.
+0
+223/254:202>
+X:[0]Y:[0]
+south
+Shoreline Road (n,s)
+A shimmering blue door.
+0
+223/254:202>
+X:[0]Y:[0]
+south
+Shoreline Road (n,s,w)
+A shimmering blue door.
+0
+223/254:202>
+X:[0]Y:[0]
+south
+Shoreline Road (n,s)
+A shimmering blue door.
+0
+223/254:202>
+X:[0]Y:[0]
+south
+Shoreline Road (n,s)
+0
+223/254:202>
+X:[0]Y:[0]
+south
+Southern Shoreline Road (n,s,w)
+0
+227/254:202>
+X:[0]Y:[0]
+south
+South gate (n,s)
+A cairn of stones with a bloody scythe banner.
+A town militiaman.
+0
+227/254:202>
+X:[0]Y:[0]
+south
+Fields (n,e,s,w)
+A black-tailed jackrabbit.
+0
+227/254:202>
+X:[0]Y:[-1]
+south
+Grasslands (n,e,s,w)
+Calen, the peaceful merchant.
+A bright yellow caravan.
+0
+227/254:202>
+X:[0]Y:[-2]
+south
+Grasslands (n,e,s,w)
+Avina, the sensuous dancer.
+0
+227/254:202>
+X:[0]Y:[-3]
+south
+Deep forest (n,w)
+A jumping mouse.
+0
+227/254:202>
+X:[0]Y:[-4]
+north
+Grasslands (n,e,s,w)
+Avina, the sensuous dancer.
+0
+227/254:202>
+X:[0]Y:[-3]
+north
+Grasslands (n,e,s,w)
+Calen, the peaceful merchant.
+A bright yellow caravan.
+0
+227/254:202>
+X:[0]Y:[-2]
+north
+Fields (n,e,s,w)
+A black-tailed jackrabbit.
+0
+227/254:202>
+X:[0]Y:[-1]
+north
+South gate (n,s)
+A cairn of stones with a bloody scythe banner.
+A town militiaman.
+0
+227/254:202>
+X:[0]Y:[0]
+north
+Southern Shoreline Road (n,s,w)
+0
+227/254:202>
+X:[0]Y:[0]
+north
+Shoreline Road (n,s)
+0
+227/254:202>
+X:[0]Y:[0]
+north
+Shoreline Road (n,s)
+A shimmering blue door.
+0
+227/254:202>
+X:[0]Y:[0]
+north
+Shoreline Road (n,s,w)
+A shimmering blue door.
+0
+227/254:202>
+X:[0]Y:[0]
+north
+Shoreline Road (n,s)
+A shimmering blue door.
+0
+227/254:202>
+X:[0]Y:[0]
+west
+Maybe you should look for another exit.
+0
+227/254:202>
+X:[0]Y:[0]
+north
+Shoreline Road (n,s)
+A shimmering blue door.
+0
+227/254:202>
+X:[0]Y:[0]
+west
+Maybe you should look for another exit.
+0
+227/254:202>
+X:[0]Y:[0]
+north
+East Village Crossroads (n,e,s,w)
+A stone statue of Shadap.
+A stone statue of Office.
+A shimmering blue door.
+A huge hardwood trunk.
+0
+227/254:202>
+X:[0]Y:[0]
+west
+Main Street (n,e,s,w)
+A shimmering blue door.
+0
+227/254:202>
+X:[0]Y:[0]
+east
+East Village Crossroads (n,e,s,w)
+A stone statue of Shadap.
+A stone statue of Office.
+A shimmering blue door.
+A huge hardwood trunk.
+0
+227/254:202>
+X:[0]Y:[0]
+north
+Glory Walk (n,e,s)
+A shimmering blue door.
+0
+227/254:202>
+X:[0]Y:[0]
+north
+Glory Walk (n,s,w)
+A shimmering blue door.
+0
+227/254:202>
+X:[0]Y:[0]
+west
+Fighters hall (e)
+A shimmering blue door.
+The Fighters' Cat Board.
+0
+227/254:202>
+X:[0]Y:[0]
+east
+Glory Walk (n,s,w)
+A shimmering blue door.
+0
+227/254:202>
+X:[0]Y:[0]
+south
+Glory Walk (n,e,s)
+A shimmering blue door.
+0
+227/254:202>
+X:[0]Y:[0]
+south
+East Village Crossroads (n,e,s,w)
+A stone statue of Shadap.
+A stone statue of Office.
+A shimmering blue door.
+A huge hardwood trunk.
+0
+227/254:202>
+X:[0]Y:[0]
+east
+Rickety quay (e,w)
+A shimmering blue door.
+0
+227/254:202>
+X:[0]Y:[0]
+south
+You do not think you can go there.
+0
+227/254:202>
+X:[0]Y:[0]
+south
+Maybe you should look for another exit.
+0
+227/254:202>
+X:[0]Y:[0]
+south
+You do not think you can go there.
+0
+227/254:202>
+X:[0]Y:[0]
+west
+East Village Crossroads (n,e,s,w)
+A stone statue of Shadap.
+A stone statue of Office.
+A shimmering blue door.
+A huge hardwood trunk.
+0
+227/254:202>
+X:[0]Y:[0]
+south
+Shoreline Road (n,s)
+A shimmering blue door.
+0
+227/254:202>
+X:[0]Y:[0]
+south
+Shoreline Road (n,s)
+A shimmering blue door.
+0
+227/254:202>
+X:[0]Y:[0]
+south
+Shoreline Road (n,s,w)
+A shimmering blue door.
+0
+227/254:202>
+X:[0]Y:[0]
+south
+Shoreline Road (n,s)
+A shimmering blue door.
+0
+227/254:202>
+X:[0]Y:[0]
+south
+south
+south
+Shoreline Road (n,s)
+0
+227/254:202>
+X:[0]Y:[0]
+south
+south
+Southern Shoreline Road (n,s,w)
+0
+227/254:202>
+X:[0]Y:[0]
+south
+south
+South gate (n,s)
+A cairn of stones with a bloody scythe banner.
+A town militiaman.
+0
+227/254:202>
+X:[0]Y:[0]
+south
+Fields (n,e,s,w)
+A black-tailed jackrabbit.
+0
+227/254:202>
+X:[0]Y:[-1]
+Grasslands (n,e,s,w)
+Calen, the peaceful merchant.
+A bright yellow caravan.
+0
+227/254:202>
+X:[0]Y:[-2]
+Grasslands (n,e,s,w)
+Avina, the sensuous dancer.
+0
+227/254:202>
+X:[0]Y:[-3]
+south
+Deep forest (n,w)
+A jumping mouse.
+0
+227/254:202>
+X:[0]Y:[-4]
+The bushes are too thick, preventing movement in that direction.
+0
+227/254:202>
+X:[0]Y:[-4]
+The bushes are too thick, preventing movement in that direction.
+0
+227/254:202>
+X:[0]Y:[-4]
+south
+The bushes are too thick, preventing movement in that direction.
+0
+227/254:202>
+X:[0]Y:[-4]
+south
+The bushes are too thick, preventing movement in that direction.
+0
+227/254:202>
+X:[0]Y:[-4]
+south
+The bushes are too thick, preventing movement in that direction.
+0
+227/254:202>
+X:[0]Y:[-4]
+south
+The bushes are too thick, preventing movement in that direction.
+0
+227/254:202>
+X:[0]Y:[-4]
+south
+The bushes are too thick, preventing movement in that direction.
+0
+227/254:202>
+X:[0]Y:[-4]
+south
+The bushes are too thick, preventing movement in that direction.
+0
+227/254:202>
+X:[0]Y:[-4]
+south
+The bushes are too thick, preventing movement in that direction.
+0
+227/254:202>
+X:[0]Y:[-4]
+west
+Deep forest (n,e,s,w)
+A wild boar.
+0
+227/254:202>
+X:[-1]Y:[-4]
+west
+Deep forest (n,e,s,w)
+A wild boar.
+0
+227/254:202>
+X:[-2]Y:[-4]
+west
+Deep forest (n,e,s,w)
+An ugly goblin.
+0
+227/254:202>
+X:[-3]Y:[-4]
+west
+Deep forest (n,e,s,w)
+0
+227/254:202>
+X:[-4]Y:[-4]
+north
+Deep forest (n,e,s,w)
+A mockingbird.
+A red fox.
+0
+227/254:202>
+X:[-4]Y:[-3]
+west
+Deep forest (n,e,s,w)
+A raccoon.
+A fat orc.
+An ugly orc.
+0
+227/254:202>
+X:[-5]Y:[-3]
+east
+Deep forest (n,e,s,w)
+A mockingbird.
+A red fox.
+0
+227/254:202>
+X:[-4]Y:[-3]
+east
+Deep forest (n,e,s,w)
+A mockingbird.
+0
+227/254:202>
+X:[-3]Y:[-3]
+north
+Deep forest (n,e,s,w)
+A hand axe.
+A small wooden shield.
+0
+227/254:202>
+X:[-3]Y:[-2]
+north
+Deep forest (n,e,s,w)
+0
+227/254:202>
+X:[-3]Y:[-1]
+east
+Deep forest (n,e,s,w)
+0
+227/254:202>
+X:[-2]Y:[-1]
+east
+Grasslands (n,e,s,w)
+A jumping mouse.
+0
+227/254:202>
+X:[-1]Y:[-1]
+west
+Deep forest (n,e,s,w)
+0
+227/254:202>
+X:[-2]Y:[-1]
+north
+Grasslands (n,e,s,w)
+0
+227/254:202>
+X:[-2]Y:[0]
+east
+On a humpbacked bridge (e,s,w)
+0
+227/254:202>
+X:[-1]Y:[0]
+east
+West Gate (e,w)
+A cairn of stones with a bloody scythe banner.
+A town militiaman.
+0
+227/254:202>
+X:[0]Y:[0]
+east
+Main Street (n,e,s,w)
+A shimmering blue door.
+A handsome, white horse.
+A large coach.
+0
+227/254:202>
+X:[0]Y:[0]
+east
+Trader Lane (n,e,s,w)
+A stone statue of Ire.
+A shimmering blue door.
+0
+227/254:202>
+X:[0]Y:[0]
+east
+Main Street (e,w)
+0
+227/254:202>
+X:[0]Y:[0]
+east
+Village Centre (n,e,s,w)
+A shimmering blue door.
+A young paperboy.
+0
+227/254:202>
+X:[0]Y:[0]
+east
+Main Street (e,w)
+0
+227/254:202>
+X:[0]Y:[0]
+east
+Main Street (n,e,s,w)
+A shimmering blue door.
+0
+227/254:202>
+X:[0]Y:[0]
+east
+East Village Crossroads (n,e,s,w)
+A stone statue of Shadap.
+A stone statue of Office.
+A shimmering blue door.
+A huge hardwood trunk.
+0
+227/254:202>
+X:[0]Y:[0]
+east
+Rickety quay (e,w)
+A shimmering blue door.
+0
+227/254:202>
+X:[0]Y:[0]
+east
+Harbour (n,s,w,d)
+A shimmering blue door.
+Dermott the fishmonger.
+0
+227/254:202>
+X:[0]Y:[0]
+east
+There is no such exit.
+0
+227/254:202>
+X:[0]Y:[0]
+east
+Maybe you should look for another exit.
+0
+227/254:202>
+X:[0]Y:[0]
+east
+There is no such exit.
+0
+227/254:202>
+X:[0]Y:[0]
+east
+Maybe you should look for another exit.
+0
+227/254:202>
+X:[0]Y:[0]
+east
+There is no such exit.
+0
+227/254:202>
+X:[0]Y:[0]
+west
+Rickety quay (e,w)
+A shimmering blue door.
+0
+227/254:202>
+X:[0]Y:[0]
+west
+East Village Crossroads (n,e,s,w)
+A stone statue of Shadap.
+A stone statue of Office.
+A shimmering blue door.
+A huge hardwood trunk.
+0
+227/254:202>
+X:[0]Y:[0]
+north
+Glory Walk (n,e,s)
+A shimmering blue door.
+0
+231/254:202>
+X:[0]Y:[0]
+north
+Glory Walk (n,s,w)
+A shimmering blue door.
+0
+231/254:202>
+X:[0]Y:[0]
+north
+Glory Walk (n,s)
+A shimmering blue door.
+0
+231/254:202>
+X:[0]Y:[0]
+north
+Glory Walk (n,s)
+A shimmering blue door.
+0
+231/254:202>
+X:[0]Y:[0]
+north
+Glory Walk (n,e,s,w)
+A bronze statue of Bazhi.
+0
+231/254:202>
+X:[0]Y:[0]
+north
+North gate (n,s)
+A cairn of stones with a bloody scythe banner.
+A town militiaman.
+0
+231/254:202>
+X:[0]Y:[0]
+north
+East road (n,e,s)
+0
+231/254:202>
+X:[0]Y:[1]
+north
+Nice forest (n,e,s)
+0
+231/254:202>
+X:[0]Y:[2]
+north
+Light forest (n,e,s)
+0
+231/254:202>
+X:[0]Y:[3]
+north
+Nice forest (n,e,s)
+0
+231/254:202>
+X:[0]Y:[4]
+south
+Light forest (n,e,s)
+0
+231/254:202>
+X:[0]Y:[3]
+south
+Nice forest (n,e,s)
+0
+231/254:202>
+X:[0]Y:[2]
+south
+East road (n,e,s)
+0
+231/254:202>
+X:[0]Y:[1]
+south
+North gate (n,s)
+A cairn of stones with a bloody scythe banner.
+A town militiaman.
+0
+231/254:202>
+X:[0]Y:[0]
+south
+Glory Walk (n,e,s,w)
+A bronze statue of Bazhi.
+0
+231/254:202>
+X:[0]Y:[0]
+south
+Glory Walk (n,s)
+A shimmering blue door.
+0
+231/254:202>
+X:[0]Y:[0]
+south
+Glory Walk (n,s)
+A shimmering blue door.
+0
+231/254:202>
+X:[0]Y:[0]
+south
+Glory Walk (n,s,w)
+A shimmering blue door.
+0
+231/254:202>
+X:[0]Y:[0]
+south
+Glory Walk (n,e,s)
+A shimmering blue door.
+0
+231/254:202>
+X:[0]Y:[0]
+south
+East Village Crossroads (n,e,s,w)
+A stone statue of Shadap.
+A stone statue of Office.
+A shimmering blue door.
+A huge hardwood trunk.
+0
+231/254:202>
+X:[0]Y:[0]
+west
+Main Street (n,e,s,w)
+A shimmering blue door.
+0
+231/254:202>
+X:[0]Y:[0]
+west
+Main Street (e,w)
+0
+231/254:202>
+X:[0]Y:[0]
+west
+Village Centre (n,e,s,w)
+A shimmering blue door.
+A young paperboy.
+0
+231/254:202>
+X:[0]Y:[0]
+east
+Main Street (e,w)
+0
+231/254:202>
+X:[0]Y:[0]
+east
+Main Street (n,e,s,w)
+A shimmering blue door.
+0
+231/254:202>
+X:[0]Y:[0]
+east
+East Village Crossroads (n,e,s,w)
+A stone statue of Shadap.
+A stone statue of Office.
+A shimmering blue door.
+A huge hardwood trunk.
+0
+231/254:202>
+X:[0]Y:[0]
+east
+Rickety quay (e,w)
+A shimmering blue door.
+0
+231/254:202>
+X:[0]Y:[0]
+east
+Harbour (n,s,w,d)
+A shimmering blue door.
+Dermott the fishmonger.
+0
+231/254:202>
+X:[0]Y:[0]
+east
+There is no such exit.
+0
+231/254:202>
+X:[0]Y:[0]
+east
+What?
+0
+231/254:202>
+X:[0]Y:[0]
+east
+What?
+0
+231/254:202>
+X:[0]Y:[0]
+west
+Rickety quay (e,w)
+A shimmering blue door.
+0
+231/254:202>
+X:[0]Y:[0]
+west
+East Village Crossroads (n,e,s,w)
+A stone statue of Shadap.
+A stone statue of Office.
+A shimmering blue door.
+A huge hardwood trunk.
+0
+231/254:202>
+X:[0]Y:[0]

@@ -1,0 +1,4 @@
+X:[-5]Y:[21]
+look
+Southwestern corner of Burnham Wood (n,e,s)
+X:[-5]Y:[21]

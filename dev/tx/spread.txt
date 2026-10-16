@@ -1,0 +1,8 @@
+254/254:202>
+look
+Great Hall (e,s,w)
+0
+254/254:202>
+amap spread
+amap spread 3
+amap spread 9

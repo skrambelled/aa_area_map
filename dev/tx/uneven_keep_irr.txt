@@ -1,0 +1,78 @@
+254/254:202>
+look
+Great Hall (e,s,w)
+0
+254/254:202>
+amap irregular
+w
+West Wing (e,s)
+0
+254/254:202>
+s
+A long corridor (n,s)
+0
+254/254:202>
+s
+Southwest tower (e,n)
+0
+254/254:202>
+e
+Courtyard (e,n,w)
+0
+254/254:202>
+n
+Great Hall (e,s,w)
+0
+254/254:202>
+e
+East Wing (s,w)
+0
+254/254:202>
+s
+A long corridor (n,s)
+0
+254/254:202>
+s
+Southeast tower (n,w)
+0
+254/254:202>
+w
+Courtyard (e,n,w)
+0
+254/254:202>
+n
+Great Hall (e,s,w)
+0
+254/254:202>
+w
+West Wing (e,s)
+0
+254/254:202>
+s
+A long corridor (n,s)
+0
+254/254:202>
+s
+Southwest tower (e,n)
+0
+254/254:202>
+e
+Courtyard (e,n,w)
+0
+254/254:202>
+e
+Southeast tower (n,w)
+0
+254/254:202>
+n
+A long corridor (n,s)
+0
+254/254:202>
+n
+East Wing (s,w)
+0
+254/254:202>
+w
+Great Hall (e,s,w)
+0
+254/254:202>

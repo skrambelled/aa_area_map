@@ -1,0 +1,911 @@
+Hh arrives.
+Hh leaves west.
+Eograph arrives.
+Eograph inhales some smoke and blows it out thoughtfully.
+Eograph leaves north.
+Hh arrives.
+Hh leaves north.
+west
+Main Street (n,e,s,w)
+A shimmering blue door.
+0
+401/471:200>
+X:[0]Y:[0]
+west
+Main Street (e,w)
+0
+401/471:200>
+X:[0]Y:[0]
+west
+Village Centre (n,e,s,w)
+A shimmering blue door.
+A young paperboy.
+0
+404/471:202>
+X:[0]Y:[0]
+west
+Main Street (e,w)
+0
+404/471:202>
+X:[0]Y:[0]
+west
+Trader Lane (n,e,s,w)
+A shimmering blue door.
+0
+404/471:202>
+X:[0]Y:[0]
+west
+Main Street (n,e,s,w)
+A large coach.
+A handsome, white horse.
+An empty tobacco tin.
+A shimmering blue door.
+A handsome, white horse.
+A large coach.
+0
+404/471:202>
+X:[0]Y:[0]
+north
+Ancient Inn of Tantallon (n,s)
+A player usage graph.
+0
+404/471:202>
+X:[0]Y:[0]
+north
+At a cozy firepit (s)
+2024 Move Info Board.
+A shimmering blue door.
+0
+404/471:201>
+X:[0]Y:[0]
+ed
+You step through the door...
+Artificer Hall (ne,se,sw,nw,d)
+5 chunks of lead ore.
+A small hammer.
+A shimmering blue door.
+A huge iron anvil.
+0
+404/471:201>
+X:[-11]Y:[-37]
+amap irregular
+nw
+Drakhiya, Avenue of Prosperity (ne,se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+0
+404/471:200>
+X:[-11]Y:[-37]
+se
+Artificer Hall (ne,se,sw,nw,d)
+5 chunks of lead ore.
+A small hammer.
+A shimmering blue door.
+A huge iron anvil.
+0
+404/471:199>
+X:[-11]Y:[-37]
+ne
+Artificers' Stores (sw)
+A cairn of stones with a bloody scythe banner.
+Some dented copper tubing.
+A forged salamander (burning).
+A desert orc store clerk.
+0
+404/471:199>
+X:[-11]Y:[-37]
+sw
+Artificer Hall (ne,se,sw,nw,d)
+5 chunks of lead ore.
+A small hammer.
+A shimmering blue door.
+A huge iron anvil.
+0
+404/471:199>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Avenue of Prosperity (ne,se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+0
+404/471:199>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Palace Gates (e,w,ne,se)
+A palace guard.
+A palace guard.
+A cairn of stones with a bloody scythe banner.
+0
+404/471:199>
+X:[-11]Y:[-37]
+A palace guard flicks an imaginary fleck of dust off his armour.
+east
+Drakhiya, Avenue of Dawn (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+404/471:198>
+X:[-11]Y:[-37]
+east
+Drakhiya, Avenue of Dawn (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+404/471:198>
+X:[-11]Y:[-37]
+east
+Drakhiya, Gates of Dawn (e,w,sw,nw,u)
+An orcish gate guard.
+A cairn of stones with a bloody scythe banner.
+0
+404/471:197>
+X:[-11]Y:[-37]
+west
+Drakhiya, Avenue of Dawn (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+404/471:197>
+X:[-11]Y:[-37]
+west
+Drakhiya, Avenue of Dawn (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+404/471:197>
+X:[-11]Y:[-37]
+west
+Drakhiya, Palace Gates (e,w,ne,se)
+A palace guard.
+A palace guard.
+A cairn of stones with a bloody scythe banner.
+0
+404/471:197>
+X:[-11]Y:[-37]
+north
+There is no such exit.
+0
+404/471:197>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Avenue of Prosperity (ne,se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+0
+404/471:197>
+X:[-11]Y:[-37]
+se
+Artificer Hall (ne,se,sw,nw,d)
+5 chunks of lead ore.
+A small hammer.
+A shimmering blue door.
+A huge iron anvil.
+0
+404/471:197>
+X:[-11]Y:[-37]
+ne
+Artificers' Stores (sw)
+A cairn of stones with a bloody scythe banner.
+Some dented copper tubing.
+A forged salamander (burning).
+A desert orc store clerk.
+0
+404/471:197>
+X:[-11]Y:[-37]
+ne
+Maybe you should look for another exit.
+0
+404/471:197>
+X:[-11]Y:[-37]
+se
+There is no such exit.
+0
+404/471:197>
+X:[-11]Y:[-37]
+se
+You do not think you can go there.
+0
+404/471:197>
+X:[-11]Y:[-37]
+se
+Maybe you should look for another exit.
+0
+404/471:197>
+X:[-11]Y:[-37]
+se
+Maybe you should look for another exit.
+0
+404/471:197>
+X:[-11]Y:[-37]
+se
+You do not think you can go there.
+0
+404/471:197>
+X:[-11]Y:[-37]
+se
+You do not think you can go there.
+0
+404/471:197>
+X:[-11]Y:[-37]
+sw
+Artificer Hall (ne,se,sw,nw,d)
+5 chunks of lead ore.
+A small hammer.
+A shimmering blue door.
+A huge iron anvil.
+0
+404/471:197>
+X:[-11]Y:[-37]
+sw
+Artificer's Shop (ne)
+A cairn of stones with a bloody scythe banner.
+A shimmering blue door.
+0
+404/471:197>
+X:[-11]Y:[-37]
+sw
+There is no such exit.
+0
+404/471:197>
+X:[-11]Y:[-37]
+sw
+What?
+0
+404/471:197>
+X:[-11]Y:[-37]
+sw
+You do not think you can go there.
+0
+404/471:197>
+X:[-11]Y:[-37]
+sw
+You do not think you can go there.
+0
+404/471:197>
+X:[-11]Y:[-37]
+sw
+Maybe you should look for another exit.
+0
+404/471:197>
+X:[-11]Y:[-37]
+nw
+Maybe you should look for another exit.
+0
+404/471:197>
+X:[-11]Y:[-37]
+nw
+What?
+0
+404/471:197>
+X:[-11]Y:[-37]
+ne
+Artificer Hall (ne,se,sw,nw,d)
+5 chunks of lead ore.
+A small hammer.
+A shimmering blue door.
+A huge iron anvil.
+0
+404/471:197>
+X:[-11]Y:[-37]
+l
+You are in a high, drafty hall, with large pillars of pale sandstone
+supporting the vaulted ceilings high above, from which are hung a trio of
+colourful banners. A large portal, the hall's main exit, stands to the
+northwest, while narrow side passages lead off in various other directions. A
+spiral stairway leads downward. A bronze plaque mounted prominently on a
+nearby pillar proclaims this to be:
+                             ARTIFICER HALL. 
+(Type 'help class' for help.) 
+ Obvious directions are:
+  northeast, southeast, southwest, northwest, down.
+5 chunks of lead ore.
+A small hammer.
+A shimmering blue door.
+A huge iron anvil.
+0
+404/471:197>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Avenue of Prosperity (ne,se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+0
+404/471:196>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Palace Gates (e,w,ne,se)
+A palace guard.
+A palace guard.
+A cairn of stones with a bloody scythe banner.
+0
+407/471:201>
+X:[-11]Y:[-37]
+east
+Drakhiya, Avenue of Dawn (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+407/471:201>
+X:[-11]Y:[-37]
+east
+Drakhiya, Avenue of Dawn (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+407/471:201>
+X:[-11]Y:[-37]
+east
+Drakhiya, Gates of Dawn (e,w,sw,nw,u)
+A serpentari militiaman.
+An orcish gate guard.
+A cairn of stones with a bloody scythe banner.
+0
+407/471:201>
+X:[-11]Y:[-37]
+east
+Militiaman leaves west.
+Rocky desert east of city (n,s,w)
+0
+407/471:201>
+X:[-10]Y:[-37]
+east
+The mountains are too steep and dangerous for you to climb.
+0
+407/471:201>
+X:[-10]Y:[-37]
+east
+The mountains are too steep and dangerous for you to climb.
+0
+407/471:201>
+X:[-10]Y:[-37]
+west
+Drakhiya, Gates of Dawn (e,w,sw,nw,u)
+An orcish gate guard.
+A cairn of stones with a bloody scythe banner.
+0
+407/471:200>
+X:[-11]Y:[-37]
+west
+Drakhiya, Avenue of Dawn (e,w)
+A serpentari militiaman.
+A cairn of stones with a bloody scythe banner.
+0
+407/471:200>
+X:[-11]Y:[-37]
+east
+Drakhiya, Gates of Dawn (e,w,sw,nw,u)
+An orcish gate guard.
+A cairn of stones with a bloody scythe banner.
+0
+407/471:200>
+X:[-11]Y:[-37]
+east
+Rocky desert east of city (n,s,w)
+0
+407/471:200>
+X:[-10]Y:[-37]
+east
+The mountains are too steep and dangerous for you to climb.
+0
+407/471:200>
+X:[-10]Y:[-37]
+south
+Salt-crusted desert (n,e,s,w)
+A peccary.
+0
+407/471:200>
+X:[-10]Y:[-38]
+north
+Rocky desert east of city (n,s,w)
+0
+407/471:199>
+X:[-10]Y:[-37]
+north
+Empty desert (n,e,s,w)
+0
+407/471:199>
+X:[-10]Y:[-36]
+north
+Harsh, sandy desert (e,s,w)
+A giant sand wasp.
+0
+407/471:199>
+X:[-10]Y:[-35]
+south
+south
+You take a quick step backwards, avoiding Giant sand wasp's attack.
+Giant sand wasp missed you.
+You are now hunted by Giant sand wasp.
+Empty desert (n,e,s,w)
+0
+407/471:199>
+X:[-10]Y:[-36]
+Rocky desert east of city (n,s,w)
+0
+407/471:199>
+X:[-10]Y:[-37]
+west
+Drakhiya, Gates of Dawn (e,w,sw,nw,u)
+An orcish gate guard.
+A cairn of stones with a bloody scythe banner.
+0
+407/471:199>
+X:[-11]Y:[-37]
+west
+Drakhiya, Avenue of Dawn (e,w)
+A serpentari militiaman.
+A cairn of stones with a bloody scythe banner.
+0
+407/471:199>
+X:[-11]Y:[-37]
+Militiaman leaves west.
+sw
+Maybe you should look for another exit.
+0
+407/470:198>
+X:[-11]Y:[-37]
+east
+Drakhiya, Gates of Dawn (e,w,sw,nw,u)
+An orcish gate guard.
+A cairn of stones with a bloody scythe banner.
+0
+407/470:198>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Street of Faith (ne,sw,nw)
+A cairn of stones with a bloody scythe banner.
+0
+407/470:198>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Street of Faith (ne,sw,nw,|d|)
+0
+407/470:197>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Street of Faith (s,ne,sw,nw)
+A cairn of stones with a bloody scythe banner.
+0
+407/470:197>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Grand Hammam Entrance (s,ne,nw)
+A cairn of stones with a bloody scythe banner.
+0
+407/470:197>
+X:[-11]Y:[-37]
+sw
+There is no such exit.
+0
+407/470:197>
+X:[-11]Y:[-37]
+sw
+Maybe you should look for another exit.
+0
+407/470:197>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Street of Snakes (ne,se,nw)
+A cairn of stones with a bloody scythe banner.
+0
+407/470:197>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Street of Snakes (ne,se,nw,|d|)
+A serpentari militiaman.
+0
+407/470:197>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Street of Snakes (ne,se,nw)
+A cairn of stones with a bloody scythe banner.
+0
+407/470:197>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Gates of Dusk (w,ne,se,u)
+A cairn of stones with a bloody scythe banner.
+An orcish gate guard.
+0
+407/470:197>
+X:[-11]Y:[-37]
+nw
+You do not think you can go there.
+0
+407/470:197>
+X:[-11]Y:[-37]
+nw
+Maybe you should look for another exit.
+0
+407/470:197>
+X:[-11]Y:[-37]
+nw
+Maybe you should look for another exit.
+0
+407/470:197>
+X:[-11]Y:[-37]
+west
+Harsh desert west of city (n,e,s,w)
+A rattlesnake.
+0
+407/470:197>
+X:[-12]Y:[-37]
+west
+Oppressive desert (n,e,s,w)
+A tiny basilisk.
+A small jackal.
+0
+407/470:197>
+X:[-13]Y:[-37]
+east
+Harsh desert west of city (n,e,s,w)
+A rattlesnake.
+0
+407/470:197>
+X:[-12]Y:[-37]
+ne
+You do not think you can go there.
+0
+407/470:196>
+X:[-12]Y:[-37]
+east
+Drakhiya, Gates of Dusk (w,ne,se,u)
+A cairn of stones with a bloody scythe banner.
+An orcish gate guard.
+0
+407/470:196>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Street of Pigs (ne,se,sw)
+A cairn of stones with a bloody scythe banner.
+0
+407/470:196>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Street of Pigs (ne,se,sw,|d|)
+A cairn of stones with a bloody scythe banner.
+0
+407/470:196>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Street of Pigs (ne,se,sw)
+A male serpentari.
+A cairn of stones with a bloody scythe banner.
+0
+407/470:196>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Bazaar of Wonders (se,sw)
+A serpentari huckster.
+A serpentari militiaman.
+A serpentari huckster.
+An azhad merchant.
+A desert orc salesman.
+A cairn of stones with a bloody scythe banner.
+A shimmering blue door.
+0
+407/470:196>
+X:[-11]Y:[-37]
+ne
+Maybe you should look for another exit.
+0
+407/470:196>
+X:[-11]Y:[-37]
+ne
+You do not think you can go there.
+0
+407/470:196>
+X:[-11]Y:[-37]
+se
+Drakhiya, Street of Gold (se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+0
+407/470:196>
+X:[-11]Y:[-37]
+se
+Drakhiya, Street of Gold (se,sw,nw,|d|)
+A cairn of stones with a bloody scythe banner.
+0
+407/470:196>
+X:[-11]Y:[-37]
+se
+Drakhiya, Street of Gold (se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+0
+407/470:196>
+X:[-11]Y:[-37]
+se
+Drakhiya, Gates of Dawn (e,w,sw,nw,u)
+An orcish gate guard.
+A cairn of stones with a bloody scythe banner.
+0
+407/470:196>
+X:[-11]Y:[-37]
+se
+There is no such exit.
+0
+407/470:196>
+X:[-11]Y:[-37]
+se
+Maybe you should look for another exit.
+0
+407/470:196>
+X:[-11]Y:[-37]
+west
+Drakhiya, Avenue of Dawn (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+407/470:196>
+X:[-11]Y:[-37]
+west
+Drakhiya, Avenue of Dawn (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+407/470:196>
+X:[-11]Y:[-37]
+west
+Drakhiya, Palace Gates (e,w,ne,se)
+A serpentari militiaman.
+A palace guard.
+A palace guard.
+A cairn of stones with a bloody scythe banner.
+0
+410/470:201>
+X:[-11]Y:[-37]
+west
+A palace guard stops you from going west.
+A palace guard says: No admittance.
+0
+410/470:201>
+X:[-11]Y:[-37]
+west
+A palace guard stops you from going west.
+A palace guard says: No admittance.
+0
+410/470:201>
+X:[-11]Y:[-37]
+west
+A palace guard stops you from going west.
+A palace guard says: No admittance.
+0
+410/470:201>
+X:[-11]Y:[-37]
+east
+Drakhiya, Avenue of Dawn (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+410/470:201>
+X:[-11]Y:[-37]
+east
+Drakhiya, Avenue of Dawn (e,w)
+A cairn of stones with a bloody scythe banner.
+0
+410/470:201>
+X:[-11]Y:[-37]
+south
+You do not think you can go there.
+0
+410/470:201>
+X:[-11]Y:[-37]
+east
+Drakhiya, Gates of Dawn (e,w,sw,nw,u)
+An orcish gate guard.
+A cairn of stones with a bloody scythe banner.
+0
+410/470:201>
+X:[-11]Y:[-37]
+south
+What?
+0
+410/470:201>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Street of Faith (ne,sw,nw)
+A cairn of stones with a bloody scythe banner.
+0
+410/470:201>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Street of Faith (ne,sw,nw,|d|)
+0
+410/470:201>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Street of Faith (s,ne,sw,nw)
+A cairn of stones with a bloody scythe banner.
+0
+410/470:201>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Temple of Draq (se)
+A cairn of stones with a bloody scythe banner.
+A serpentari priest.
+0
+410/470:201>
+X:[-11]Y:[-37]
+ne
+You do not think you can go there.
+0
+410/470:201>
+X:[-11]Y:[-37]
+north
+You do not think you can go there.
+0
+410/470:201>
+X:[-11]Y:[-37]
+ne
+What?
+0
+410/470:201>
+X:[-11]Y:[-37]
+nw
+What?
+0
+410/470:201>
+X:[-11]Y:[-37]
+sw
+What?
+0
+410/470:201>
+X:[-11]Y:[-37]
+se
+Drakhiya, Street of Faith (s,ne,sw,nw)
+A cairn of stones with a bloody scythe banner.
+0
+410/470:201>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Grand Hammam Entrance (s,ne,nw)
+A cairn of stones with a bloody scythe banner.
+0
+410/470:201>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Street of Snakes (ne,se,nw)
+A cairn of stones with a bloody scythe banner.
+0
+410/470:201>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Public House (sw)
+A cairn of stones with a bloody scythe banner.
+A jug of water.
+A jug of water.
+A jug of water.
+A pub keeper.
+0
+410/470:201>
+X:[-11]Y:[-37]
+nw
+Maybe you should look for another exit.
+0
+410/470:201>
+X:[-11]Y:[-37]
+se
+There is no such exit.
+0
+410/470:201>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Street of Snakes (ne,se,nw)
+A cairn of stones with a bloody scythe banner.
+0
+410/470:201>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Street of Snakes (ne,se,nw,|d|)
+A male serpentari.
+A serpentari militiaman.
+0
+410/470:201>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Avenue of Sand (ne,se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+0
+410/470:201>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Equipment Shop (se)
+A cairn of stones with a bloody scythe banner.
+A serpentari shopkeeper.
+0
+410/470:200>
+X:[-11]Y:[-37]
+se
+Drakhiya, Avenue of Sand (ne,se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+0
+410/470:200>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Street of Snakes (ne,se,nw,|d|)
+A serpentari militiaman.
+0
+410/470:200>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Avenue of Sand (ne,se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+0
+410/470:200>
+X:[-11]Y:[-37]
+se
+Drakhiya, Serpentari Hovel (nw)
+A cairn of stones with a bloody scythe banner.
+0
+410/470:200>
+X:[-11]Y:[-37]
+se
+What?
+0
+410/470:200>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Avenue of Sand (ne,se,sw,nw)
+A cairn of stones with a bloody scythe banner.
+0
+410/470:200>
+X:[-11]Y:[-37]
+sw
+Drakhiya, Street of Snakes (ne,se,nw,|d|)
+A serpentari militiaman.
+0
+410/470:200>
+X:[-11]Y:[-37]
+se
+Drakhiya, Street of Snakes (ne,se,nw)
+A male serpentari.
+A cairn of stones with a bloody scythe banner.
+0
+410/470:200>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Street of Snakes (ne,se,nw,|d|)
+A serpentari militiaman.
+0
+410/470:200>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Street of Snakes (ne,se,nw)
+A cairn of stones with a bloody scythe banner.
+0
+413/470:202>
+X:[-11]Y:[-37]
+nw
+Drakhiya, Gates of Dusk (w,ne,se,u)
+A cairn of stones with a bloody scythe banner.
+An orcish gate guard.
+0
+413/470:202>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Street of Pigs (ne,se,sw)
+A cairn of stones with a bloody scythe banner.
+0
+413/470:201>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Street of Pigs (ne,se,sw,|d|)
+A cairn of stones with a bloody scythe banner.
+0
+413/470:201>
+X:[-11]Y:[-37]
+ne
+Drakhiya, Street of Pigs (ne,se,sw)
+A cairn of stones with a bloody scythe banner.
+0
+413/470:201>
+X:[-11]Y:[-37]
+Serpentari arrives.
+A male serpentari says: Many great monument in desert built by serpentari.
+Serpentari leaves southwest.
+Orc carpenter arrives.
+Orc carpenter leaves northeast.
+Orc carpenter arrives.
+Militiaman arrives.
+Orc carpenter leaves southwest.
+Militiaman leaves southwest.
+Horseorc rides in on a bay mare.
+Horseorc rides southwest.
+Militiaman arrives.
+Militiaman leaves northeast.
+finger horseorc
+Horseorc is a reserved name.
+0
+431/470:198>
+X:[-11]Y:[-37]
+
+0
+431/470:198>
+X:[-11]Y:[-37]

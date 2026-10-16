@@ -1,0 +1,101 @@
+254/254:202>
+look
+Pike Street (e,w)
+0
+254/254:202>
+west
+Graveyard entrance (e,|w|,se)
+0
+254/254:202>
+west
+The gate is closed.
+0
+254/254:202>
+east
+Pike Street (e,w)
+0
+254/254:202>
+west
+Graveyard entrance (e,|w|,se)
+0
+254/254:202>
+west
+The gate is closed.
+0
+254/254:202>
+o w
+You open the gate.
+0
+254/254:202>
+west
+In a graveyard (e,s,w)
+0
+254/254:202>
+east
+Graveyard entrance (e,w,se)
+0
+254/254:202>
+brief
+Verbose mode.
+0
+254/254:202>
+west
+You are standing on a narrow gravel path, in the midst of gravestones placed
+on a healthy green carpet of grass.  A dozen big birch trees have been
+allowed to grow here and they are moving slowly in the wind.  Occasionally, a
+lone leaf falls to the ground from one of the trees.  The path stretches west
+along the city walls, and south deeper into the graveyard. There is an open
+gate leading east.
+ Obvious directions are:
+  east, south, west.
+0
+254/254:202>
+east
+You are standing next to a black iron fence.  On the west side of the fence
+you see a small graveyard, with a narrow gravel path meandering through it. 
+At the far end of the graveyard, where the path ends, you see a small chapel.
+Pike street runs east from here and a gravel path runs to the south-east.
+There is an open gate leading west.
+ Obvious directions are:
+  east, west, southeast.
+0
+254/254:202>
+close w
+You close the gate.
+0
+254/254:202>
+west
+The gate is closed.
+0
+254/254:202>
+east
+You are at the western end of Pike Street. The road is bordered by gnarled
+cypress trees. Between the trees to the north you can see parts of the
+village wall. To the west the road leads towards a graveyard. Far to the east
+you believe you can see the Glory Walk. 
+ Obvious directions are:
+  east, west.
+0
+254/254:202>
+west
+You are standing next to a black iron fence.  On the west side of the fence
+you see a small graveyard, with a narrow gravel path meandering through it. 
+At the far end of the graveyard, where the path ends, you see a small chapel.
+Pike street runs east from here and a gravel path runs to the south-east.
+There is a closed gate leading west.
+ Obvious directions are:
+  east, southeast.
+0
+254/254:202>
+brief
+Brief mode.
+0
+254/254:202>
+east
+Pike Street (e,w)
+0
+254/254:202>
+west
+Graveyard entrance (e,|w|,se)
+0
+254/254:202>
