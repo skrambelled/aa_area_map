@@ -3097,7 +3097,7 @@ end
 
 local function EnsureWindowsPlugin()
   if not IsPluginInstalled(WINDOWS_PLUGIN_ID) then
-    pcall(function() LoadPlugin(PluginDir() .. "../mush_windows/mush_windows.xml") end)
+    pcall(function() LoadPlugin(PluginDir() .. "../aa_mush_windows/mush_windows.xml") end)
   end
   if not IsPluginInstalled(WINDOWS_PLUGIN_ID) then
     Note("requires the 'mush_windows' plugin (window and prompt reading), which isn't installed. " ..
